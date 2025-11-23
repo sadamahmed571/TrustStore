@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مجموعة الثقة التجارية | حلول صناعية متكاملة</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	
+	
+    <link rel="stylesheet" href="css/style1.css">
+    <style>
+:root {
+--primary-orange: #ff6600;
+--bg-gray: #f2f3f7;
+--white: #ffffff;
+--text-dark: #222222;
+--text-gray: #666666;
+--border-color: #e6e6e6;
+}
+
+body.dark-mode {
+--bg-gray: #1a1a1a;
+--white: #2d2d2d;
+--text-dark: #f0f0f0;
+--text-gray: #b0b0b0;
+--border-color: #404040;
+}
+
+* { margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ -webkit-tap-highlight-color: transparent;
+}
+
+body {
+font-family: 'Tajawal', sans-serif;
+background-color: var(--bg-gray);
+color: var(--text-dark);
+padding-bottom: 80px; 
+overflow-x: hidden;
+}
+
+a { 
+text-decoration: none;
+ color: inherit;
+ display: block;
+ }
+
+img { 
+max-width: 100%;
+ display: block;
+ }
+
+.header2 {
+background-color: var(--primary-orange);
+padding: 10px 8px;
+position: sticky;
+top: 0;
+z-index: 1000;
+height: auto;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.logo-section2 {
+width: 20%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.logo-img2 {
+width: 40px;
+height: 40px;
+background-color: white;
+border-radius: 5px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 4px;
+}
+
+.logo-text2 {
+color: white;
+font-size: 10px;
+font-weight: 800;
+text-align: center;
+}
+
+.header-content2 {
+width: 80%;
+margin-left: 8px;
+}
+
+.top-tabs2 {
+display: flex;
+justify-content: flex-end;
+gap: 15px;
+margin-bottom: 8px;
+margin-left: 8px;
+color: white;
+font-size: 14px;
+font-weight: 500;
+}
+
+.top-tab2 {
+display: flex;
+align-items: center;
+gap: 5px;
+cursor: pointer;
+}
+
+.tool-btn {
+display: flex;
+justify-content: flex-end;
+gap: 15px;
+margin-bottom: 8px;
+margin-left: 8px;
+color: white;
+font-size: 15px;
+font-weight: 500;
+}
+.tool-btn2 {
+background: none;
+ border: none;
+ color: #fff;
+ cursor: pointer;
+display: flex;
+ align-items: center;
+ gap: 5px;
+ font-size: 15px;
+}
+.search-container2 {
+display: flex;
+align-items: center;
+background: #fff;
+border-radius: 8px;
+padding: 4px;
+height: 32px;
+margin-bottom: 8px;
+}
+
+.ai-icon2 {
+color: var(--primary-orange);
+font-size: 18px;
+padding: 0 8px;
+border-left: 1px solid #eee;
+}
+
+.search-input2 {
+flex: 1;
+border: none;
+outline: none;
+padding: 0 8px;
+font-family: 'Tajawal', sans-serif;
+font-size: 12px;
+}
+
+.search-btn2 {
+background-color: var(--primary-orange);
+color: #fff;
+border: none;
+border-radius: 6px;
+width: 25px;
+height: 25px;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+}
+
+.vision-banner {
+background: var(--white);
+padding: 20px;
+margin-bottom: 10px;
+border-bottom: 1px solid var(--border-color);
+}
+.vision-title {
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--primary-orange);
+    margin-bottom: 5px;
+}
+
+.vision-text {
+    font-size: 13px;
+    color: var(--text-gray);
+    line-height: 1.7;
+}
+
+  /* Hero Section */
+        .hero {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+            color: white;
+			margin-bottom: 10px;
+			margin-top: 10px;
+        }
+        
+        .hero-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height:250px;
+        }
+        
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+           height:250px;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        
+        .slide.active {
+            opacity: 1;
+        }
+        
+        .slide1 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/slider1.jpg');
+        }
+        
+        .slide2 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/slider2.jpg');
+        }
+        
+        .slide3 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/slider3.jpg');
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+        
+        .hero p {
+            font-size: 16px;
+			padding-right: 40px;
+			padding-left: 40px;
+			margin-bottom: 20px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+			flex-direction: row;
+            justify-content: center;
+            gap: 25px;
+        }
+        
+        .slider-button1 {
+            background-color: var(--primary-orange);
+            color: #fff;
+            border: none;
+			border-radius: 5px;
+			padding:4px 12px;
+			font-size: 12px;
+			font-weight: 500;
+        }
+        
+        .slider-button1:hover {
+            background-color: white;
+            color: #333;
+        }
+        .slider-button2 {
+            background-color: transparent;
+            color: #fff;
+            border: 1px solid #fff;
+			border-radius: 5px;
+			padding:4px 12px;
+			font-size: 12px;
+			font-weight: 500;
+        }
+        
+        .slider-button2:hover {
+            background-color: white;
+            color: #333;
+        }
+        .slider-indicators {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 3;
+        }
+        
+        .indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .indicator.active {
+            background-color: var(--primary-orange);
+        }
+	
+
+
+.main-cats-scroll {
+    padding: 15px 10px;
+    background: var(--white);
+    margin-bottom: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.main-cats-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.cat-cards-container {
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+    min-width: 100%;
+}
+
+.main-cat-card {
+    flex: 1;
+    min-width: 70px;
+    text-align: center;
+}
+
+.cat-icon-circle {
+    width: 85px;
+    height: 60px;
+    background: none;
+    border-radius:10px;
+    margin: 0 auto 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--border-color);
+}
+
+.cat-icon-circle img {
+   width: 78px;
+    height: 54px;
+    border-radius: 8px;
+    border:none;
+}
+
+.cat-title {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--text-dark);
+    line-height: 1.3;
+}
+
+.section-container {
+    background: var(--white);
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.section-header {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.sec-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+.sec-desc {
+    font-size: 11px;
+    color: var(--text-gray);
+    display: block;
+    line-height: 1.4;
+    max-width: 90%;
+}
+
+.more-btn {
+    font-size: 12px;
+    color: var(--text-gray);
+    background: #f0f0f0;
+    padding: 4px 12px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.horizontal-products-wrapper {
+    position: relative;
+    padding: 10px 5px 0 5px;
+}
+
+.horizontal-products-list {
+    display: flex;
+    overflow-x: auto;
+    gap: 8px;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.horizontal-products-list::-webkit-scrollbar {
+    display: none;
+}
+
+.h-product-card {
+    flex: 0 0 32%;
+    min-width: 115px;
+    max-width: 130px;
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.h-product-img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    background: #eee;
+}
+
+.h-product-info {
+    padding: 6px;
+}
+
+.h-product-name {
+    font-size: 11px;
+    color: var(--text-dark);
+    height: 28px;
+    overflow: hidden;
+    line-height: 1.3;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.h-product-spec {
+    font-size: 10px;
+    color: #888;
+    margin-bottom: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.h-product-badge {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--primary-orange);
+    display: inline-block;
+    background: rgba(255, 102, 0, 0.1);
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.scroll-arrow-left {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    border-radius: 0 50% 50% 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.tabs-header {
+    display: flex;
+    overflow-x: auto;
+    border-bottom: 1px solid var(--border-color);
+    background: var(--white);
+}
+
+.tab-btn {
+    padding: 12px 15px;
+    font-size: 13px;
+    color: var(--text-gray);
+    cursor: pointer;
+    white-space: nowrap;
+    position: relative;
+    font-weight: 500;
+    flex: 1;
+    text-align: center;
+}
+
+.tab-btn.active {
+    color: var(--primary-orange);
+    font-weight: 700;
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--primary-orange);
+}
+
+.tab-content {
+    display: none;
+    padding: 15px;
+    background: var(--white);
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.parts-alert {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    color: #856404;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.tab-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.btn-outline {
+    display: inline-block;
+    padding: 8px 30px;
+    border: 1px solid var(--primary-orange);
+    color: var(--primary-orange);
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 11px  ;
+	padding-bottom: 9px  ;
+    z-index: 2000;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-dark);
+    font-size: 8px;
+	font-weight: 600;
+    gap: 3px;
+    background: none;
+    border: none;
+    cursor: pointer;
+	font-family: 'Tajawal', sans-serif;
+}
+
+.nav-item.active {
+    color: var(--primary-orange);
+}
+
+.nav-item i {
+    font-size: 15px;
+}
+
+.categories-modal {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    border-radius: 20px 20px 0 0;
+    padding: 20px;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+    transition: bottom 0.3s ease-in-out;
+    z-index: 2100;
+}
+
+.categories-modal.show {
+    bottom: 60px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.cats-grid-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.cat-menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+}
+
+.cat-menu-icon {
+    width: 45px;
+    height: 45px;
+    background: #f0f0f0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: var(--primary-orange);
+}
+
+.cat-menu-name {
+    font-size: 11px;
+    color: var(--text-dark);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2050;
+    display: none;
+}
+
+.overlay.show {
+    display: block;
+}
+
+ 
+.categories-bar2 {
+background: var(--white, #fff);
+padding: 8px 12px;
+border-bottom: 1px solid #eee;
+display: flex;
+gap: 15px;
+overflow-x: auto;
+white-space: nowrap;
+}
+
+.cat-link2 {
+color: var(--text-dark);
+font-size: 14px;
+font-weight: 500;
+text-decoration: none;
+cursor: pointer;
+}
+
+.cat-link2.active {
+color: var(--primary-orange);
+font-weight: 700;
+position: relative;
+}
+
+.cat-link2.active::after {
+content: '';
+position: absolute;
+bottom: -8px;
+left: 50%;
+transform: translateX(-50%);
+width: 16px;
+height: 3px;
+background: var(--primary-orange, #ff6600);
+border-radius: 2px;
+}
+
+.products-grid2 {
+display: none;
+grid-template-columns: 1fr 1fr;
+gap: 8px;
+padding: 8px;
+}
+
+.products-grid2.active-section2 {
+display: grid;
+}
+
+.product-card2 {
+background: var(--white);
+border-radius: 8px;
+overflow: hidden;
+position: relative;
+}
+
+.product-image-wrap2 {
+position: relative;
+padding-top: 100%;
+background: #f0f0f0;
+}
+
+.product-image-wrap2 img {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.product-info2 {
+padding: 8px;
+}
+
+.product-title2 {
+font-size: 13px;
+color:var(--text-gray);
+margin-bottom: 6px;
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+overflow: hidden;
+line-height: 1.4;
+font-weight: 500;
+}
+
+.product-price2 {
+font-size: 14px;
+font-weight: 700;
+color: #333;
+margin-bottom: 2px;
+}
+
+.moq-label2 {
+font-size: 10px;
+color: #999;
+display: block;
+margin-bottom: 4px;
+}
+
+.product-tags2 {
+display: flex;
+flex-wrap: wrap;
+gap: 3px;
+}
+
+.tag2 {
+font-size: 9px;
+padding: 2px 4px;
+border-radius: 2px;
+}
+.tag-red2 { background: #ffecec; color: #ff3333; }
+.tag-blue2 { background: #e6f7ff; color: #1890ff; }
+
+.years-badge2 {
+font-size: 10px;
+color: #999;
+margin-top: 4px;
+display: flex;
+align-items: center;
+gap: 3px;
+}
+
+.img-search-icon2 {
+position: absolute;
+bottom: 6px;
+right: 6px;
+background: rgba(255,255,255,0.8);
+width: 22px;
+height: 22px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 11px;
+color: #333;
+}
+
+
+
+
+	
+		
+       
+/*** WhatsApp Button ***/
+.whats-float {
+    position: fixed;
+    transform: translate(70px, 0px);  
+    bottom:100px;
+    right: 0;
+    width: 130px;
+    overflow: hidden;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 28px 0 0 28px;
+    z-index: 10;
+    transition: all 0.8s ease-in-out;
+    direction: ltr;
+    vertical-align: middle;
+}
+
+.whats-float a span {
+    color: #fff;
+    font-size: 15px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    position: absolute;
+    line-height:1.5;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.whats-float-gif {
+    width: 65px;
+    height: 65px;  
+    padding: 9px;
+    transform: rotate(0deg);
+    transition: all 0.8s ease-in-out;
+    text-align: center;
+}
+
+ 
+.whats-float.active,
+.whats-float:hover {
+    transform: translate(0px, 0px);  
+}
+
+.whats-float-gif:hover {
+    transform: rotate(360deg);  
+}
+
+	
+@media (max-width: 768px) {
+
+            
+             
+            
+            .hero-buttons .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+           
+			 /* Start WhatsApp Float Button */
+    .whats-float {
+        width: 95px; 
+        transform: translate(57px, 0px); 
+        border-radius: 15px 0 0 15px;  
+        bottom: 80px;
+        right: 0;
+    }
+
+    .whats-float a span {
+        font-size: 12px;
+        padding-top: 8px;
+        padding-bottom: 10px;   
+    }
+
+    .whats-float-gif {
+        width: 43px;
+        height: 43px;  
+        padding: 6px;
+    }
+    /* End WhatsApp Float Button */
+}
+        
+@media (max-width: 480px) {
+
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+
+			/* Start WhatsApp Float Button */
+    .whats-float {
+       width: 95px; 
+        transform: translate(57px, 0px); 
+        border-radius: 15px 0 0 15px;  
+        bottom: 70px;
+        right: 0;
+    }
+
+    .whats-float a span {
+        font-size: 12px;
+        padding-top: 8px;
+        padding-bottom: 10px;   
+    }
+
+    .whats-float-gif {
+        width: 43px;
+        height: 43px;  
+        padding: 6px;
+    }
+    /* End WhatsApp Float Button */
+}
+    
+    </style>
+</head>
+<body>
+
+    <header class="header2">
+        <div class="logo-section2">
+            <div class="logo-img2">
+                <span style="color: var(--primary-orange); font-weight: bold;">TC</span>
+            </div>
+            <div class="logo-text2">الثقة التجارية</div>
+        </div>
+        
+        <div class="header-content2">
+            <div class="top-tabs2">
+                <div class="top-tab2">
+                    <i class="fas fa-home"></i>
+                    <span></span>
+                </div>
+                <div class="top-tab2">
+                    <i class="fas fa-globe"></i>
+                    <span>EN</span>
+                </div>
+                <div class="top-tab2">
+                      <button   class="tool-btn2" onclick="toggleTheme()"><i class="fas fa-moon" id="theme-icon"></i></button>
+                </div>
+            </div>
+            
+            <div class="search-container2">
+                <div class="ai-icon2">
+                    <i class="fas fa-sparkles"></i>
+                </div>
+                <input type="text" class="search-input2" placeholder="ما الذي تبحث عنه في مجموعة الثقة...">
+                <button class="search-btn2">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="vision-banner">
+        <h2 class="vision-title">شريككم الاستراتيجي للمشاريع الصناعية</h2>
+        <p class="vision-text">
+            نوفر حلولاً شاملة وموثوقة لدعم مشاريع البناء والإنتاج من مرحلة التأسيس حتى التشغيل. الجودة والدعم الفني هما التزامنا تجاهكم.
+        </p>
+    </section>
+ 
+ <section class="main-cats-scroll">
+        <div class="cat-cards-container">
+            <a href="machinery.html" class="main-cat-card">
+                <div class="cat-icon-circle"><img src="img/machinery.jpg" alt="ماكينات" ></div>
+                <div class="cat-title">ماكينات</div>
+            </a>
+            <a href="production-lines.html" class="main-cat-card">
+                <div class="cat-icon-circle"><img src="img/production-lines.jpg" alt="خطوط انتاج"  ></div>
+                <div class="cat-title">خطوط إنتاج</div>
+            </a>
+            <a href="precast.html" class="main-cat-card">
+                <div class="cat-icon-circle"> <img src="img/precast.jpg" alt="بريكاست"  ></div>
+                <div class="cat-title">بريكاست</div>
+            </a>
+            <a href="industrial.html" class="main-cat-card">
+                <div class="cat-icon-circle"><img src="img/industrial-equipment.jpg" alt="معدات صناعية"  ></div>
+                <div class="cat-title">معدات صناعية</div>
+            </a>
+        </div>
+    </section>
+
+
+     <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="slide slide1 active"></div>
+            <div class="slide slide2"></div>
+            <div class="slide slide3"></div>
+        </div>
+        
+        <div class="container hero-content">
+            <h1>مجموعة الثقة التجارية الرائدة</h1>
+            <p>اكتشف الملايين من المنتجات عالية الجودة من موردين موثوقين حول العالم. انضم إلى مجموعة الثقة التجارية لتحصل على أفضل الصفقات والعروض.</p>
+            <div class="hero-buttons">
+                <a href="#" class="slider-button1">ابدأ التسوق الآن</a>
+                <a href="#" class="slider-button2">كن موردًا معنا</a>
+            </div>
+        </div>
+        
+        <div class="slider-indicators">
+            <div class="indicator active" data-slide="0"></div>
+            <div class="indicator" data-slide="1"></div>
+            <div class="indicator" data-slide="2"></div>
+        </div>
+    </section>
+
+    <section class="section-container">
+        <div class="section-header">
+            <div class="header-top-row">
+                <span class="sec-title">الماكينات (Machinery)</span>
+                <a href="machinery.html" class="more-btn">المزيد <i class="fas fa-chevron-left"></i></a>
+            </div>
+            <span class="sec-desc">أداء قوي ودقة هندسية للتحمل والعمل الشاق.</span>
+        </div>
+
+        <div class="horizontal-products-wrapper">
+            <div class="scroll-arrow-left" onclick="scrollSection('machinery-list')"><i class="fas fa-chevron-left"></i></div>
+            <div class="horizontal-products-list" id="machinery-list">
+                <a href="product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">خلاطة خرسانة مركزية</div>
+                        <div class="h-product-spec">سعة 1.5 م³/دورة</div>
+                        <div class="h-product-badge">45 kW</div>
+                    </div>
+                </a>
+                <a href="product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">ماكينة لحام إنفرتر</div>
+                        <div class="h-product-spec">تيار 400 أمبير</div>
+                        <div class="h-product-badge">Heavy-Duty</div>
+                    </div>
+                </a>
+                <a href="product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">ضاغط هواء حلزوني</div>
+                        <div class="h-product-spec">القدرة 50 حصان</div>
+                        <div class="h-product-badge">صامت</div>
+                    </div>
+                </a>
+                 <a href="product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">خلاطة خرسانة أوتوماتيك</div>
+                        <div class="h-product-spec">نظام تشغيل آلي</div>
+                        <div class="h-product-badge">عالية السعة</div>
+                    </div>
+                </a>
+                 <a href="product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">لحام أنابيب ثقيلة</div>
+                        <div class="h-product-spec">دورة عمل 60%</div>
+                        <div class="h-product-badge">380 فولت</div>
+                    </div>
+                </a>
+                 <a href="product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">كمبروسر هواء جاف</div>
+                        <div class="h-product-spec">7.5 م³/دقيقة</div>
+                        <div class="h-product-badge">صناعي</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container">
+        <div class="section-header">
+            <div class="header-top-row">
+                <span class="sec-title">خطوط الإنتاج</span>
+                <a href="production-lines.html" class="more-btn">المزيد <i class="fas fa-chevron-left"></i></a>
+            </div>
+            <span class="sec-desc">حلول "تسليم مفتاح" لتبدأ مشروعك الإنتاجي فوراً.</span>
+        </div>
+
+        <div class="horizontal-products-wrapper">
+            <div class="scroll-arrow-left" onclick="scrollSection('lines-list')"><i class="fas fa-chevron-left"></i></div>
+            <div class="horizontal-products-list" id="lines-list">
+                <a href="product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">خط إنتاج بلوك آلي</div>
+                        <div class="h-product-spec">15,000 قطعة/وردية</div>
+                        <div class="h-product-badge">كبس 120 طن</div>
+                    </div>
+                </a>
+                <a href="product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">خط تعبئة مواد غذائية</div>
+                        <div class="h-product-spec">60 عبوة/دقيقة</div>
+                        <div class="h-product-badge">ستانلس 304</div>
+                    </div>
+                </a>
+                <a href="product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">خط خلط مواد لاصقة</div>
+                        <div class="h-product-spec">10 طن/ساعة</div>
+                        <div class="h-product-badge">خلاط أفقي</div>
+                    </div>
+                </a>
+                <a href="product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">ماكينة إنترلوك</div>
+                        <div class="h-product-spec">تحكم PLC</div>
+                        <div class="h-product-badge">عالي الجودة</div>
+                    </div>
+                </a>
+                <a href="product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">نظام تعبئة بودرة</div>
+                        <div class="h-product-spec">وزن دقيق</div>
+                        <div class="h-product-badge">Load Cell</div>
+                    </div>
+                </a>
+                <a href="product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">مصنع مونة جافة</div>
+                        <div class="h-product-spec">صمامات هوائية</div>
+                        <div class="h-product-badge">كامل</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container">
+        <div class="section-header">
+            <div class="header-top-row">
+                <span class="sec-title">البريكاست (Precast)</span>
+                <a href="precast.html" class="more-btn">المزيد <i class="fas fa-chevron-left"></i></a>
+            </div>
+            <span class="sec-desc">وحدات خرسانية لتقليل زمن الإنشاء وزيادة الدقة.</span>
+        </div>
+
+        <div class="horizontal-products-wrapper">
+            <div class="scroll-arrow-left" onclick="scrollSection('precast-list')"><i class="fas fa-chevron-left"></i></div>
+            <div class="horizontal-products-list" id="precast-list">
+                <a href="product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">بلاطات هولوكور</div>
+                        <div class="h-product-spec">سماكة 15-26 سم</div>
+                        <div class="h-product-badge">عزل حراري</div>
+                    </div>
+                </a>
+                <a href="product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">حواجز نيوجيرسي</div>
+                        <div class="h-product-spec">ارتفاع 100 سم</div>
+                        <div class="h-product-badge">تسليح داخلي</div>
+                    </div>
+                </a>
+                <a href="product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">غرف تفتيش (منهول)</div>
+                        <div class="h-product-spec">قطر 120 سم</div>
+                        <div class="h-product-badge">مقاوم للتآكل</div>
+                    </div>
+                </a>
+                 <a href="product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">أسقف مسبقة الصب</div>
+                        <div class="h-product-spec">عرض 120 سم</div>
+                        <div class="h-product-badge">C40/50</div>
+                    </div>
+                </a>
+                <a href="product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">فواصل طرق خرسانية</div>
+                        <div class="h-product-spec">طول 4 متر</div>
+                        <div class="h-product-badge">سلامة مرورية</div>
+                    </div>
+                </a>
+                <a href="product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">وحدات صرف صحي</div>
+                        <div class="h-product-spec">مقاومة كيميائية</div>
+                        <div class="h-product-badge">بنية تحتية</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container">
+        <div class="section-header">
+            <div class="header-top-row">
+                <span class="sec-title">معدات صناعية</span>
+                <a href="industrial.html" class="more-btn">المزيد <i class="fas fa-chevron-left"></i></a>
+            </div>
+            <span class="sec-desc">معدات دعم أساسية لضمان سلامة وكفاءة سير العمل.</span>
+        </div>
+
+        <div class="horizontal-products-wrapper">
+            <div class="scroll-arrow-left" onclick="scrollSection('industrial-list')"><i class="fas fa-chevron-left"></i></div>
+            <div class="horizontal-products-list" id="industrial-list">
+                <a href="product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">مولد كهرباء كاتم</div>
+                        <div class="h-product-spec">200 KVA</div>
+                        <div class="h-product-badge">موفر للوقود</div>
+                    </div>
+                </a>
+                <a href="product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">رافعة شوكية ديزل</div>
+                        <div class="h-product-spec">حمولة 3 طن</div>
+                        <div class="h-product-badge">ارتفاع 4.5م</div>
+                    </div>
+                </a>
+                <a href="product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">مثقاب صناعي عمودي</div>
+                        <div class="h-product-spec">محرك 2500 واط</div>
+                        <div class="h-product-badge">دقة عالية</div>
+                    </div>
+                </a>
+                <a href="product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">مولد طوارئ</div>
+                        <div class="h-product-spec">جهد 400 فولت</div>
+                        <div class="h-product-badge">صناعي</div>
+                    </div>
+                </a>
+                <a href="product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">ونش مناولة</div>
+                        <div class="h-product-spec">إطارات هوائية</div>
+                        <div class="h-product-badge">عمل شاق</div>
+                    </div>
+                </a>
+                <a href="product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">دريل ثابت</div>
+                        <div class="h-product-spec">حفر 50 ملم</div>
+                        <div class="h-product-badge">ثلاثي الأطوار</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- استبدال قسم categories-bar1 بـ categories-bar2 -->
+    <section class="section-container" id="categories-bar2" style="min-height: 350px;">
+        <div class="categories-bar2">
+            <a href="#" class="cat-link2 active" data-category="products">منتجات</a>
+            <a href="#" class="cat-link2" data-category="spare-parts">قطع غيار</a>
+            <a href="#" class="cat-link2" data-category="accessories">مستلزمات التشغيل</a>
+        </div>
+
+        <div id="category-content2">
+            <section class="products-grid2 active-section2" data-content="products">
+                <a href="product-detail.html" class="product-card2">
+                    <div class="product-image-wrap2">
+                        <img src="Img/product1.jpg" alt="ماكينة">
+                        <div class="img-search-icon2"><i class="fas fa-search"></i></div>
+                    </div>
+                    <div class="product-info2">
+                        <h3 class="product-title2">خلاطة خرسانة مركزية عالية السعة موديل 2025 ذكية</h3>
+                        <div class="product-price2">$15,000.00 - $18,000</div>
+                        <span class="moq-label2">أقل طلب: 1 قطعة</span>
+                        <div class="years-badge2">1 yr · CN</div>
+                        <div class="product-tags2" style="margin-top:5px;">
+                            <span class="tag2 tag-red2">خصم 53%</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product-detail.html" class="product-card2">
+                    <div class="product-image-wrap2">
+                        <img src="Img/product2.jpg" alt="خط إنتاج">
+                        <div class="img-search-icon2"><i class="fas fa-search"></i></div>
+                    </div>
+                    <div class="product-info2">
+                        <h3 class="product-title2">خط إنتاج البلوك والإنترلوك الخرساني الآلي بالكامل</h3>
+                        <div class="product-price2">$45,000.00</div>
+                        <span class="moq-label2">أقل طلب: 1 مجموعة</span>
+                        <div class="years-badge2">5 yrs · TR</div>
+                        <div class="product-tags2" style="margin-top:5px;">
+                            <span class="tag2 tag-blue2">مورد موثوق</span>
+                        </div>
+                    </div>
+                </a>
+            </section>
+            
+            <section class="products-grid2" data-content="spare-parts">
+                <a href="product-detail.html" class="product-card2">
+                    <div class="product-image-wrap2">
+                        <img src="Img/product2.jpg" alt="قطع غيار">
+                        <div class="img-search-icon2"><i class="fas fa-search"></i></div>
+                    </div>
+                    <div class="product-info2">
+                        <h3 class="product-title2">قطع غيار أصلية للماكينات الصناعية</h3>
+                        <div class="product-price2">$50.00 - $200.00</div>
+                        <span class="moq-label2">أقل طلب: 10 قطع</span>
+                        <div class="years-badge2">2 yrs · CN</div>
+                        <div class="product-tags2" style="margin-top:5px;">
+                            <span class="tag2 tag-blue2">أصلي</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product-detail.html" class="product-card2">
+                    <div class="product-image-wrap2">
+                        <img src="Img/product1.jpg" alt="قطع">
+                        <div class="img-search-icon2"><i class="fas fa-search"></i></div>
+                    </div>
+                    <div class="product-info2">
+                        <h3 class="product-title2">محركات كهربائية للماكينات</h3>
+                        <div class="product-price2">$300.00 - $800.00</div>
+                        <span class="moq-label2">أقل طلب: 1 قطعة</span>
+                        <div class="years-badge2">3 yrs · TR</div>
+                    </div>
+                </a>
+            </section>
+            
+            <section class="products-grid2" data-content="accessories">
+                <a href="product-detail.html" class="product-card2">
+                    <div class="product-image-wrap2">
+                        <img src="Img/product1.jpg" alt="ملحقات">
+                        <div class="img-search-icon2"><i class="fas fa-search"></i></div>
+                    </div>
+                    <div class="product-info2">
+                        <h3 class="product-title2">ملحقات تشغيل الماكينات</h3>
+                        <div class="product-price2">$10.00 - $50.00</div>
+                        <span class="moq-label2">أقل طلب: 20 قطعة</span>
+                        <div class="years-badge2">1 yr · CN</div>
+                        <div class="product-tags2" style="margin-top:5px;">
+                            <span class="tag2 tag-red2">خصم 20%</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product-detail.html" class="product-card2">
+                    <div class="product-image-wrap2">
+                        <img src="Img/product2.jpg" alt="أدوات">
+                        <div class="img-search-icon2"><i class="fas fa-search"></i></div>
+                    </div>
+                    <div class="product-info2">
+                        <h3 class="product-title2">أدوات صيانة مستلزمات التشغيل</h3>
+                        <div class="product-price2">$5.00 - $30.00</div>
+                        <span class="moq-label2">أقل طلب: 50 قطعة</span>
+                        <div class="years-badge2">2 yrs · TR</div>
+                    </div>
+                </a>
+            </section>
+        </div>
+    </section>
+
+    
+
+    <div class="overlay" id="overlay" onclick="toggleCategories()"></div>
+    <div class="categories-modal" id="cats-modal">
+        <div class="modal-header">
+            <span>تصفح الأقسام</span>
+            <i class="fas fa-times" onclick="toggleCategories()" style="cursor: pointer;"></i>
+        </div>
+        <div class="cats-grid-menu">
+            <a href="machinery.html" class="cat-menu-item">
+                <div class="cat-menu-icon"><i class="fas fa-cogs"></i></div>
+                <span class="cat-menu-name">ماكينات</span>
+            </a>
+            <a href="production-lines.html" class="cat-menu-item">
+                <div class="cat-menu-icon"><i class="fas fa-industry"></i></div>
+                <span class="cat-menu-name">خطوط إنتاج</span>
+            </a>
+            <a href="precast.html" class="cat-menu-item">
+                <div class="cat-menu-icon"><i class="fas fa-cubes"></i></div>
+                <span class="cat-menu-name">بريكاست</span>
+            </a>
+            <a href="industrial.html" class="cat-menu-item">
+                <div class="cat-menu-icon"><i class="fas fa-truck-loading"></i></div>
+                <span class="cat-menu-name">معدات صناعية</span>
+            </a>
+            <a href="spare-parts.html" class="cat-menu-item">
+                <div class="cat-menu-icon"><i class="fas fa-tools"></i></div>
+                <span class="cat-menu-name">قطع غيار</span>
+            </a>
+            <a href="supplies.html" class="cat-menu-item">
+                <div class="cat-menu-icon"><i class="fas fa-hard-hat"></i></div>
+                <span class="cat-menu-name">مستلزمات</span>
+            </a>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item active">
+            <i class="fas fa-home"></i>
+            <span>الرئيسية</span>
+        </a>
+        <button class="nav-item" onclick="toggleCategories()">
+             <i class="fas fa-list-ul"></i>
+            <span>الأقسام</span>
+        </button>
+        <a href="team.html" class="nav-item">
+            <i class="fas fa-users-cog"></i>
+            <span>الفريق الفني</span>
+        </a>
+        <a href="cart.html" class="nav-item">
+            <i class="fas fa-shopping-basket"></i>
+            <span>السلة</span>
+        </a>
+        <a href="contact.html" class="nav-item">
+            <i class="fas fa-headset"></i>
+            <span>تواصل معنا</span>
+        </a>
+    </nav>
+
+     <!-- WhatsApp -->
+<div class="whats-float" id="whatsFloat">
+    <a href="https://wa.me/905528000065" target="_blank">
+        <img src="icons/whatsapp.gif" alt="Menu Icon" class="whats-float-gif">
+        <span>تواصل<br>مباشر</span>
+    </a>
+</div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const icon = document.getElementById('theme-icon');
+            if(document.body.classList.contains('dark-mode')){
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
+
+        function scrollSection(id) {
+            const container = document.getElementById(id);
+            container.scrollBy({ left: -150, behavior: 'smooth' });
+        }
+
+        function openTab(tabId, btn) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            btn.classList.add('active');
+        }
+
+        function toggleCategories() {
+            const modal = document.getElementById('cats-modal');
+            const overlay = document.getElementById('overlay');
+            modal.classList.toggle('show');
+            overlay.classList.toggle('show');
+        }
+
+        // JavaScript للتبويبات الجديدة
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.cat-link2');
+            const contentSections = document.querySelectorAll('.products-grid2');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    tabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+
+                    const targetCategory = this.getAttribute('data-category');
+
+                    contentSections.forEach(section => {
+                        if (section.getAttribute('data-content') === targetCategory) {
+                            section.style.display = 'grid';
+                            section.classList.add('active-section2');
+                        } else {
+                            section.style.display = 'none';
+                            section.classList.remove('active-section2');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    
+    <script src="js/slider.js"></script>
+</body>
+</html>
