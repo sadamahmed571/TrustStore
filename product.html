@@ -28,44 +28,126 @@
             color: var(--text-dark);
         }
 
+        /* --- Refactored Utility Classes --- */
+        .text-primary { color: var(--primary-orange); font-weight: bold; }
+        .text-note { font-size: 11px; color: #999; margin-top: 5px; }
+        .text-small-gray { margin-right: 5px; color: #999; font-size: 10px; }
+        .chevron-icon { color: #999; font-size: 12px; }
+        .flex-header-title { display: flex; justify-content: space-between; align-items: start; }
+        .pad-15 { padding: 15px; }
+        .mb-5 { margin-bottom: 5px; }
+
         /* --- Header & Search Bar --- */
-        header {
-            background: #fff;
-            padding: 10px 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .header2 {
+            background-color: var(--primary-orange);
+            padding: 10px 8px;
             position: sticky;
             top: 0;
-            z-index: 100;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .back-btn {
-            font-size: 20px;
-            color: #333;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-
-        .search-bar {
-            flex: 1;
-            background: #f5f5f5;
-            border-radius: 20px;
-            padding: 8px 15px;
+            z-index: 1000;
+            height: auto;
             display: flex;
             align-items: center;
-            gap: 8px;
-            font-size: 14px;
-            color: var(--text-gray);
+            justify-content: space-between;
         }
 
-        .header-icons {
+        .logo-section2 {
+            width: 20%;
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-img2 {
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 4px;
+        }
+
+        .logo-text2 {
+            color: white;
+            font-size: 12px;
+            font-weight: 800;
+            text-align: center;
+        }
+
+        .header-content2 {
+            width: 80%;
+            margin-left: 8px;
+        }
+
+        .top-tabs2 {
+            display: flex;
+            justify-content: flex-end;
             gap: 15px;
+            margin-bottom: 8px;
+            margin-left: 8px;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .top-tab2 {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+            text-decoration: none; /* For links */
+            color: white;
+        }
+
+        .tool-btn2 {
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 17px;
+        }
+
+        .search-container2 {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border-radius: 8px;
+            padding: 4px;
+            height: 32px;
+            margin-bottom: 8px;
+        }
+
+        .ai-icon2 {
+            color: var(--primary-orange);
             font-size: 20px;
-            color: #333;
+            padding: 0 8px;
+            border-left: 1px solid #eee;
+        }
+
+        .search-input2 {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 0 8px;
+            font-size: 14px;
+        }
+
+        .search-btn2 {
+            background-color: var(--primary-orange);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
         }
 
         /* --- Tabs Navigation --- */
@@ -74,6 +156,9 @@
             display: flex;
             justify-content: space-around;
             border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 100px; /* Adjust based on header height */
+            z-index: 900;
         }
 
         .nav-tab {
@@ -83,10 +168,14 @@
             color: var(--text-dark);
             position: relative;
             cursor: pointer;
+            flex: 1;
+            text-align: center;
+            transition: color 0.3s;
         }
 
         .nav-tab.active {
             font-weight: bold;
+            color: var(--primary-orange);
         }
 
         .nav-tab.active::after {
@@ -97,8 +186,23 @@
             transform: translateX(-50%);
             width: 30px;
             height: 3px;
-            background-color: var(--text-dark);
+            background-color: var(--primary-orange);
             border-radius: 2px;
+        }
+
+        /* --- Tab Content Containers --- */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         /* --- Main Product Section --- */
@@ -107,11 +211,10 @@
             margin-bottom: 10px;
         }
 
-        /* Image Gallery */
         .gallery-container {
             position: relative;
             width: 100%;
-            height: 350px; /* Fixed height for consistency */
+            height: 350px;
             background: #fff;
             display: flex;
             align-items: center;
@@ -128,16 +231,14 @@
         .img-counter {
             position: absolute;
             bottom: 40px;
-            left: 15px; /* RTL flip done by logic, visually needs right/left check */
+            left: 15px; 
             background: rgba(0,0,0,0.5);
             color: #fff;
             padding: 2px 8px;
             border-radius: 10px;
             font-size: 12px;
         }
-        /* RTL adjustments */
         [dir="rtl"] .img-counter { left: auto; right: 15px; }
-
 
         .gallery-overlay-bar {
             position: absolute;
@@ -158,7 +259,6 @@
         }
         .overlay-tab.active { border-bottom: 2px solid #fff; }
 
-        /* Product Info */
         .info-section {
             padding: 15px;
         }
@@ -191,12 +291,11 @@
         }
 
         .share-icon {
-            float: left; /* Opposite to RTL text */
+            float: left;
             color: var(--text-gray);
             font-size: 18px;
         }
 
-        /* Rankings Badge */
         .rank-badge {
             background: #fff8e1;
             padding: 8px 12px;
@@ -210,7 +309,7 @@
         }
         .rank-badge i { margin-left: 8px; }
 
-        /* --- Attributes Section (Gray Grid) --- */
+        /* --- Attributes Section --- */
         .attributes-section {
             background: #fff;
             padding: 15px;
@@ -231,7 +330,7 @@
             border-radius: 8px;
             padding: 10px;
             display: grid;
-            grid-template-columns: 1fr 1fr; /* 2 columns like screenshot */
+            grid-template-columns: 1fr 1fr;
             gap: 15px;
         }
 
@@ -262,7 +361,60 @@
         .service-row span { color: #333; }
         .service-row img { height: 16px; margin-left: 5px; vertical-align: middle;}
 
-        /* --- Fixed Footer Actions --- */
+        /* --- Details & Recommended Styles (New) --- */
+        .tech-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            margin-top: 10px;
+        }
+        .tech-table td {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .tech-table td:first-child {
+            color: #666;
+            width: 40%;
+            background: #fafafa;
+        }
+
+        .rec-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            padding: 10px;
+        }
+        .rec-card {
+            background: #fff;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .rec-img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            background: #eee;
+        }
+        .rec-info {
+            padding: 8px;
+        }
+        .rec-price {
+            font-weight: bold;
+            color: var(--primary-orange);
+            font-size: 14px;
+        }
+        .rec-title {
+            font-size: 11px;
+            color: #333;
+            margin-top: 4px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* --- Footer --- */
         .bottom-nav {
             position: fixed;
             bottom: 0;
@@ -319,7 +471,6 @@
             cursor: pointer;
         }
 
-        /* --- Helper for model selection similar to image --- */
         .model-select {
             background: #fff;
             padding: 12px 15px;
@@ -340,39 +491,161 @@
             margin-top: 5px;
             display: inline-block;
         }
+		
+/*** WhatsApp Button ***/
+.whats-float {
+  position: fixed;
+  transform: translate(70px, 0px);
+  bottom: 100px;
+  right: 0;
+  width: 130px;
+  overflow: hidden;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 28px 0 0 28px;
+  z-index: 10;
+  transition: all 0.8s ease-in-out;
+  direction: ltr;
+  vertical-align: middle;
+}
 
+.whats-float a span {
+  color: #fff;
+  font-size: 17px; /* تم التعديل من 15px */
+  padding-top: 8px;
+  padding-bottom: 10px;
+  position: absolute;
+  line-height: 1.5;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.whats-float-gif {
+  width: 65px;
+  height: 65px;
+  padding: 9px;
+  transform: rotate(0deg);
+  transition: all 0.8s ease-in-out;
+  text-align: center;
+}
+
+.whats-float.active,
+.whats-float:hover {
+  transform: translate(0px, 0px);
+}
+
+.whats-float-gif:hover {
+  transform: rotate(360deg);
+}
+
+@media (max-width: 768px) {
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Start WhatsApp Float Button */
+  .whats-float {
+    width: 95px;
+    transform: translate(57px, 0px);
+    border-radius: 15px 0 0 15px;
+    bottom: 80px;
+    right: 0;
+  }
+
+  .whats-float a span {
+    font-size: 14px; /* تم التعديل من 12px */
+    padding-top: 8px;
+    padding-bottom: 10px;
+  }
+
+  .whats-float-gif {
+    width: 43px;
+    height: 43px;
+    padding: 6px;
+  }
+  /* End WhatsApp Float Button */
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem; /* تم التعديل من 1.8rem (تقريباً +2px) */
+  }
+
+  .hero p {
+    font-size: 18px; /* تم التعديل من 16px (كانت 1rem) */
+  }
+
+  /* Start WhatsApp Float Button */
+  .whats-float {
+    width: 95px;
+    transform: translate(57px, 0px);
+    border-radius: 15px 0 0 15px;
+    bottom: 70px;
+    right: 0;
+  }
+
+  .whats-float a span {
+    font-size: 14px; /* تم التعديل من 12px */
+    padding-top: 8px;
+    padding-bottom: 10px;
+  }
+
+  .whats-float-gif {
+    width: 43px;
+    height: 43px;
+    padding: 6px;
+  }
+  /* End WhatsApp Float Button */
+}
     </style>
 </head>
 <body>
 
-    <header>
-        <button class="back-btn"><i class="fas fa-chevron-right"></i></button>
-        <div class="search-bar">
-            <i class="fas fa-search"></i>
-            <span>edm wire cutting machine</span>
+    <header class="header2">
+        <div class="logo-section2">
+            <div class="logo-img2">
+                <span class="text-primary">TC</span>
+            </div>
+            <div class="logo-text2">الثقة التجارية</div>
         </div>
-        <div class="header-icons">
-            <i class="fas fa-camera"></i>
-            <i class="fas fa-shopping-cart"></i>
-            <i class="fas fa-ellipsis-h"></i>
+        
+        <div class="header-content2">
+            <div class="top-tabs2">
+                <a href="index.html" class="top-tab2">
+                    <i class="fas fa-home"></i>
+                    <span></span>
+                </a>
+                <div class="top-tab2">
+                    <i class="fas fa-globe"></i>
+                    <span>EN</span>
+                </div>
+                <div class="top-tab2">
+                      <button class="tool-btn2" onclick="toggleTheme()"><i class="fas fa-moon" id="theme-icon"></i></button>
+                </div>
+            </div>
+            
+            <div class="search-container2">
+                <div class="ai-icon2">
+                    <i class="fas fa-sparkles"></i>
+                </div>
+                <input type="text" class="search-input2" placeholder="ما الذي تبحث عنه في مجموعة الثقة...">
+                <button class="search-btn2">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
         </div>
     </header>
 
-    <div class="nav-tabs">
-        <div class="nav-tab active">نظرة عامة</div>
-        <div class="nav-tab">التفاصيل</div>
-        <div class="nav-tab">الموصى به</div>
-    </div>
-
     <div class="product-card">
         <div class="gallery-container">
-            <img src="https://sc04.alicdn.com/kf/H8322668576444876b5d2430299615568M.jpg" alt="EDM Machine" class="main-img">
-            <div class="img-counter">Photos 1/6</div>
+            <img src="Img/product2.jpg" alt="EDM Machine" class="main-img">
+            <div class="img-counter"> الصور  1/6 </div>
             
             <div class="gallery-overlay-bar">
-                <div class="overlay-tab">Video</div>
-                <div class="overlay-tab active">Highlights</div>
-                <div class="overlay-tab">Service</div>
+                <div class="overlay-tab">فيديو المنتج</div>
+                <div class="overlay-tab active">نظرة سريعة</div>
+                <div class="overlay-tab">اطلب المنتج</div>
             </div>
         </div>
 
@@ -382,7 +655,7 @@
                 <div class="moq">Min. order: 1 set</div>
             </div>
 
-            <div style="display: flex; justify-content: space-between; align-items: start;">
+            <div class="flex-header-title">
                 <h1 class="product-title">
                     آلة الحفر بالشرارة ZNC Spark Erosion Die Sinking EDM Machine سعر منخفض CNC
                 </h1>
@@ -399,80 +672,166 @@
         </div>
     </div>
 
-    <div class="model-select">
-        <div>
-            <div>رقم الموديل (1)</div>
-            <span class="tag-gray">ZNC350</span>
-        </div>
-        <i class="fas fa-chevron-left" style="color: #999; font-size: 12px;"></i>
+    <div class="nav-tabs">
+        <div class="nav-tab active" onclick="openTab(event, 'tab-overview')">نظرة عامة</div>
+        <div class="nav-tab" onclick="openTab(event, 'tab-details')">التفاصيل</div>
+        <div class="nav-tab" onclick="openTab(event, 'tab-recommended')">منتجات مشابهة</div>
     </div>
 
-    <div class="product-card" style="padding: 15px;">
-        <div class="section-header">
-            <span>الحماية لهذا المنتج</span>
-            <i class="fas fa-chevron-left" style="color: #999; font-size: 12px;"></i>
+    <div id="tab-overview" class="tab-content active">
+        <div class="model-select">
+            <div>
+                <div>رقم الموديل (1)</div>
+                <span class="tag-gray">ZNC350</span>
+            </div>
+            <i class="fas fa-chevron-left chevron-icon"></i>
         </div>
-        <div class="service-row">
-            <i class="fas fa-check-circle"></i>
-            <span>دفع آمن</span>
-            <span style="margin-right: 5px; color: #999; font-size: 10px;">Visa, MasterCard, PayPal...</span>
+
+        <div class="product-card pad-15">
+            <div class="section-header">
+                <span>الحماية لهذا المنتج</span>
+                <i class="fas fa-chevron-left chevron-icon"></i>
+            </div>
+            <div class="service-row">
+                <i class="fas fa-check-circle"></i>
+                <span>دفع آمن</span>
+                <span class="text-small-gray">Visa, MasterCard, PayPal...</span>
+            </div>
+            <div class="service-row">
+                <i class="fas fa-undo"></i>
+                <span>سياسة استرجاع قياسية</span>
+            </div>
+            <p class="text-note">
+                Alibaba.com يحمي طلباتك...
+            </p>
         </div>
-        <div class="service-row">
-            <i class="fas fa-undo"></i>
-            <span>سياسة استرجاع قياسية</span>
+
+        <div class="attributes-section">
+            <div class="section-header">
+                <span>المواصفات الرئيسية</span>
+                <i class="fas fa-chevron-left chevron-icon"></i>
+            </div>
+
+            <div class="attr-grid">
+                <div class="attr-item">
+                    <h4>Sinker EDM</h4>
+                    <p>نوع الآلة</p>
+                </div>
+                <div class="attr-item">
+                    <h4>380 V, 220 V, 110 V</h4>
+                    <p>الجهد الكهربائي</p>
+                </div>
+                <div class="attr-item">
+                    <h4>CNC</h4>
+                    <p>CNC أم لا</p>
+                </div>
+                <div class="attr-item">
+                    <h4>متوفر</h4>
+                    <p>تقرير اختبار الآلات</p>
+                </div>
+                <div class="attr-item">
+                    <h4>سهلة التشغيل</h4>
+                    <p>نقاط البيع الرئيسية</p>
+                </div>
+                <div class="attr-item">
+                    <h4>متوفر</h4>
+                    <p>فحص الفيديو الصادر</p>
+                </div>
+            </div>
         </div>
-        <p style="font-size: 11px; color: #999; margin-top: 5px;">
-            Alibaba.com يحمي طلباتك...
-        </p>
+
+        <div class="product-card pad-15">
+            <div class="section-header">
+                <span>الخدمة</span>
+            </div>
+            <div class="service-row">
+                <i class="fas fa-tools"></i>
+                <span>قطع غيار مجانية & دعم فني عبر الإنترنت</span>
+            </div>
+        </div>
+
+        <div class="product-card pad-15">
+            <div class="section-header mb-5">
+                <span>الشحن إلى <strong>YE</strong></span>
+            </div>
+        </div>
     </div>
 
-    <div class="attributes-section">
-        <div class="section-header">
-            <span>المواصفات الرئيسية</span>
-            <i class="fas fa-chevron-left" style="color: #999; font-size: 12px;"></i>
-        </div>
-
-        <div class="attr-grid">
-            <div class="attr-item">
-                <h4>Sinker EDM</h4>
-                <p>نوع الآلة</p>
+    <div id="tab-details" class="tab-content">
+        <div class="product-card pad-15">
+            <div class="section-header">
+                <span>الوصف الفني التفصيلي</span>
             </div>
-            <div class="attr-item">
-                <h4>380 V, 220 V, 110 V</h4>
-                <p>الجهد الكهربائي</p>
+            <p style="font-size: 13px; line-height: 1.6; color: #555; margin-bottom: 15px;">
+                تتميز آلة ZNC EDM بدقة عالية وثبات ممتاز في الأداء. تم تصميمها خصيصًا لتصنيع القوالب المعقدة، وقطع الغيار الدقيقة. تعتمد وحدة التحكم على نظام ذكي لمعالجة الشرارة، مما يقلل من تآكل القطب ويزيد من سرعة التشطيب السطحي.
+            </p>
+            
+            <div class="section-header">
+                <span>جدول المواصفات التقنية</span>
             </div>
-            <div class="attr-item">
-                <h4>CNC</h4>
-                <p>CNC أم لا</p>
-            </div>
-            <div class="attr-item">
-                <h4>متوفر</h4>
-                <p>تقرير اختبار الآلات</p>
-            </div>
-            <div class="attr-item">
-                <h4>سهلة التشغيل</h4>
-                <p>نقاط البيع الرئيسية</p>
-            </div>
-            <div class="attr-item">
-                <h4>متوفر</h4>
-                <p>فحص الفيديو الصادر</p>
-            </div>
+            <table class="tech-table">
+                <tr>
+                    <td>طاولة العمل (X*Y)</td>
+                    <td>600 × 350 مم</td>
+                </tr>
+                <tr>
+                    <td>مسافة السفر (X/Y/Z)</td>
+                    <td>350 × 250 × 200 مم</td>
+                </tr>
+                <tr>
+                    <td>أقصى وزن للقطب</td>
+                    <td>50 كجم</td>
+                </tr>
+                <tr>
+                    <td>أقصى وزن للقطعة</td>
+                    <td>300 كجم</td>
+                </tr>
+                <tr>
+                    <td>خزان الزيت</td>
+                    <td>مدمج مع فلتر مزدوج</td>
+                </tr>
+                <tr>
+                    <td>التحكم</td>
+                    <td>ZNC (تحكم في المحور Z)</td>
+                </tr>
+                <tr>
+                    <td>الضمان</td>
+                    <td>سنتان للمكونات الرئيسية</td>
+                </tr>
+            </table>
         </div>
     </div>
 
-    <div class="product-card" style="padding: 15px;">
-        <div class="section-header">
-            <span>الخدمة</span>
-        </div>
-        <div class="service-row">
-            <i class="fas fa-tools"></i>
-            <span>قطع غيار مجانية & دعم فني عبر الإنترنت</span>
-        </div>
-    </div>
-
-    <div class="product-card" style="padding: 15px;">
-        <div class="section-header" style="margin-bottom: 5px;">
-            <span>الشحن إلى <strong>YE</strong></span>
+    <div id="tab-recommended" class="tab-content">
+        <div class="rec-grid">
+            <div class="rec-card">
+                <img src="https://sc04.alicdn.com/kf/H062017366d034293b70826955745780d6.jpg" class="rec-img" alt="Wire Cut EDM">
+                <div class="rec-info">
+                    <div class="rec-price">YER 2,100,000</div>
+                    <div class="rec-title">آلة قطع الأسلاك DK7735 عالية السرعة</div>
+                </div>
+            </div>
+            <div class="rec-card">
+                <img src="https://sc04.alicdn.com/kf/HTB1uR6zaL6H8KJjy0Fjq6yXepXaC.jpg" class="rec-img" alt="Milling Machine">
+                <div class="rec-info">
+                    <div class="rec-price">YER 950,000</div>
+                    <div class="rec-title">آلة تفريز عمودية CNC VMC850</div>
+                </div>
+            </div>
+            <div class="rec-card">
+                <img src="https://sc04.alicdn.com/kf/HTB15gq7QFXXXXXoXXXXq6xXFXXXA.jpg" class="rec-img" alt="Drilling EDM">
+                <div class="rec-info">
+                    <div class="rec-price">YER 800,000</div>
+                    <div class="rec-title">آلة ثقب صغيرة EDM للحفر الدقيق</div>
+                </div>
+            </div>
+            <div class="rec-card">
+                <img src="https://sc04.alicdn.com/kf/HTB1tJ.XMVXXXXaWXXXXq6xXFXXX5.jpg" class="rec-img" alt="Accessories">
+                <div class="rec-info">
+                    <div class="rec-price">YER 50,000</div>
+                    <div class="rec-title">مجموعة أقطاب نحاسية EDM</div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -482,10 +841,42 @@
             <span>المتجر</span>
         </button>
         <div class="action-btns">
-            <button class="btn-chat">Chat now</button>
-            <button class="btn-inquiry">Send inquiry</button>
+            <button class="btn-chat">دردش معنا</button>
+            <button class="btn-inquiry" onclick="window.location.href='index.html'">العودة الى الرئيسية</button>
         </div>
     </div>
+ <!-- WhatsApp -->
+<div class="whats-float" id="whatsFloat">
+    <a href="https://wa.me/905528000065" target="_blank">
+        <img src="icons/whatsapp.gif" alt="Menu Icon" class="whats-float-gif">
+        <span>تواصل<br>مباشر</span>
+    </a>
+</div>
+    <script>
+        function openTab(evt, tabName) {
+            // إخفاء جميع محتويات التبويبات
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+
+            // إزالة حالة التنشيط من جميع الأزرار
+            tablinks = document.getElementsByClassName("nav-tab");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+
+            // إظهار التبويب الحالي وتنشيط الزر الخاص به
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        // Theme Toggle Dummy Function
+        function toggleTheme() {
+            alert('تبديل الوضع الليلي (تجريبي)');
+        }
+    </script>
 
 </body>
 </html>
