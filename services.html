@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدماتنا | مجموعة الثقة التجارية</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+/* --------------------------------- */
+/* Global Variables & General Styles */
+/* --------------------------------- */
+:root {
+  --primary-orange: #ff6600;
+  --bg-gray: #f2f3f7;
+  --white: #ffffff;
+  --text-dark: #222222;
+  --text-gray: #666666;
+  --border-color: #e6e6e6;
+  --green-whatsapp: #25d366;
+}
+
+body.dark-mode {
+  --bg-gray: #1a1a1a;
+  --white: #2d2d2d;
+  --text-dark: #f0f0f0;
+  --text-gray: #b0b0b0;
+  --border-color: #404040;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-gray); color: var(--text-dark); padding-bottom: 80px; overflow-x: hidden; }
+a { text-decoration: none; color: inherit; display: block; }
+img { max-width: 100%; display: block; }
+
+/* --------------------------------- */
+/* Header Styles */
+/* --------------------------------- */
+.header2 { background-color: var(--primary-orange); padding: 10px 8px; position: sticky; top: 0; z-index: 1000; height: auto; display: flex; align-items: center; justify-content: space-between; }
+.logo-section2 { width: 20%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.logo-img2 { width: 50px; height: 50px; background-color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 4px; }
+.logo-text2 { color: white; font-size: 12px; font-weight: 800; text-align: center; }
+.header-content2 { width: 80%; margin-left: 8px; }
+.top-tabs2 { display: flex; justify-content: flex-end; gap: 15px; margin-bottom: 8px; margin-left: 8px; color: white; font-size: 16px; font-weight: 500; }
+.top-tab2 { display: flex; align-items: center; gap: 5px; cursor: pointer; }
+.tool-btn2 { background: none; border: none; color: #fff; cursor: pointer; display: flex; align-items: center; gap: 5px; font-size: 17px; }
+.search-container2 { display: flex; align-items: center; background: #fff; border-radius: 8px; padding: 4px; height: 32px; margin-bottom: 8px; }
+.ai-icon2 { color: var(--primary-orange); font-size: 20px; padding: 0 8px; border-left: 1px solid #eee; }
+.search-input2 { flex: 1; border: none; outline: none; padding: 0 8px; font-size: 14px; }
+.search-btn2 { background-color: var(--primary-orange); color: #fff; border: none; border-radius: 6px; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+
+/* --------------------------------- */
+/* Hero Section */
+/* --------------------------------- */
+.services-hero {
+    background: var(--white);
+    padding: 20px 15px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 15px;
+}
+.services-hero h1 { font-size: 20px; color: var(--primary-orange); margin-bottom: 8px; font-weight: 800; }
+.services-hero p { font-size: 13px; color: var(--text-gray); line-height: 1.5; max-width: 800px; margin: 0 auto; }
+
+/* --------------------------------- */
+/* Services Grid Section (2 COLUMNS & CENTERED) */
+/* --------------------------------- */
+.section-container { max-width: 1200px; margin: 0 auto 30px; padding: 0 10px; }
+.section-title { font-size: 18px; font-weight: 800; color: var(--text-dark); margin-bottom: 15px; position: relative; display: inline-block; }
+.section-title::after { content: ''; position: absolute; bottom: -6px; right: 0; width: 35px; height: 3px; background: var(--primary-orange); }
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 أعمدة */
+    gap: 10px;
+}
+
+.service-card {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 20px 10px 15px; /* زيادة الهامش العلوي قليلاً */
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    
+    /* التعديلات الجديدة للتوسط */
+    align-items: center; /* توسيط العناصر أفقياً داخل الفليكس */
+    text-align: center;  /* توسيط النصوص */
+}
+
+.service-card:hover { transform: translateY(-3px); box-shadow: 0 8px 15px rgba(0,0,0,0.08); border-color: var(--primary-orange); }
+
+.badge-free {
+    position: absolute;
+    top: 8px;
+    left: 8px; /* أو right حسب الرغبة، left أفضل للتصميم العربي المتماثل */
+    background: #28a745;
+    color: white;
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 15px;
+    font-weight: 700;
+    z-index: 2;
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 102, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-orange);
+    font-size: 35px;
+    margin-bottom: 12px;
+    align-self: center; /* تأكيد التوسط */
+}
+
+.service-name { 
+    font-size: 17px; 
+    font-weight: 900; 
+    margin-bottom: 6px; 
+    color: var(--text-dark); 
+    line-height: 1.3; 
+    min-height: 40px; /* لتوحيد ارتفاع العناوين */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+/* تنسيق الوصف المثري */
+.service-desc { 
+    font-size: 13px; /* تكبير الخط قليلاً للقراءة */
+    color: var(--text-gray); 
+    line-height: 1.5; 
+    margin-bottom: 12px; 
+    flex-grow: 1; 
+    display: -webkit-box; 
+    -webkit-line-clamp: 5; /* زيادة عدد الأسطر المسموح بها للنص المثري */
+    -webkit-box-orient: vertical; 
+    overflow: hidden; 
+} 
+
+.service-price { 
+    font-size: 13px; 
+    font-weight: 700; 
+    color: var(--primary-orange); 
+    margin-bottom: 12px; 
+    border-top: 1px dashed var(--border-color); 
+    padding-top: 10px; 
+    width: 100%; /* الخط الفاصل يمتد للعرض الكامل */
+}
+
+.service-actions { display: flex; flex-direction: column; gap: 8px; width: 100%; } 
+.btn-request { width: 100%; background: var(--text-dark); color: white; border: none; padding: 10px; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 12px; transition: 0.3s; }
+.btn-request:hover { background: var(--primary-orange); }
+.btn-details { width: 100%; background: transparent; color: var(--text-dark); border: 1px solid #ddd; padding: 10px; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 12px; transition: 0.3s; }
+.btn-details:hover { background: var(--bg-gray); border-color: var(--text-dark); }
+
+/* تحسينات للشاشات الأكبر */
+@media (min-width: 768px) {
+    .services-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .service-card { padding: 25px 20px; }
+    .service-name { font-size: 17px; }
+    .service-desc { font-size: 13px; -webkit-line-clamp: 6; }
+    .service-actions { flex-direction: row; } 
+}
+
+@media (min-width: 1024px) {
+    .services-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* --------------------------------- */
+/* Process Section */
+/* --------------------------------- */
+.process-steps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; text-align: center; } 
+.step-item { position: relative; padding: 15px 10px; background: var(--white); border-radius: 10px; border: 1px solid var(--border-color); }
+.step-number { width: 30px; height: 30px; background: var(--primary-orange); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin: 0 auto 10px; font-size: 14px; }
+.step-title { font-weight: 700; margin-bottom: 5px; color: var(--text-dark); font-size: 13px; }
+.step-desc { font-size: 11px; color: var(--text-gray); line-height: 1.4; }
+
+/* --------------------------------- */
+/* FAQ Section */
+/* --------------------------------- */
+.faq-container { display: flex; flex-direction: column; gap: 8px; }
+details { background: var(--white); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; transition: all 0.3s; }
+details[open] { border-color: var(--primary-orange); }
+summary { padding: 12px; font-weight: 600; font-size: 13px; cursor: pointer; position: relative; list-style: none; display: flex; align-items: center; justify-content: space-between; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: '\f107'; font-family: 'Font Awesome 6 Free'; font-weight: 900; transition: transform 0.3s; }
+details[open] summary::after { transform: rotate(180deg); }
+.faq-answer { padding: 0 12px 12px; font-size: 13px; color: var(--text-gray); line-height: 1.6; border-top: 1px solid var(--bg-gray); margin-top: 5px; padding-top: 10px; }
+
+/* --------------------------------- */
+/* CTA Section */
+/* --------------------------------- */
+.cta-section { background: linear-gradient(45deg, #1a1a1a, #333); color: white; text-align: center; padding: 30px 15px; border-radius: 12px; margin-top: 30px; }
+.cta-title { font-size: 20px; margin-bottom: 8px; color: var(--primary-orange); }
+.cta-desc { margin-bottom: 20px; opacity: 0.9; font-size: 13px; }
+.cta-buttons { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.btn-cta-primary { background: var(--primary-orange); color: white; padding: 10px 20px; border-radius: 30px; font-weight: 700; border: none; cursor: pointer; font-size: 13px; }
+.btn-cta-secondary { background: transparent; color: white; padding: 10px 20px; border-radius: 30px; font-weight: 700; border: 2px solid white; cursor: pointer; font-size: 13px; }
+
+/* --------------------------------- */
+/* Modal Form */
+/* --------------------------------- */
+.modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 3000; display: none; align-items: center; justify-content: center; backdrop-filter: blur(3px); }
+.modal-overlay.active { display: flex; }
+.modal-content { background: var(--white); width: 90%; max-width: 500px; border-radius: 12px; padding: 20px; position: relative; max-height: 90vh; overflow-y: auto; animation: slideUp 0.3s ease; }
+@keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+.close-modal { position: absolute; top: 15px; left: 15px; font-size: 20px; cursor: pointer; color: var(--text-gray); }
+.modal-title { font-size: 18px; font-weight: 800; margin-bottom: 15px; color: var(--primary-orange); text-align: center; }
+.form-group { margin-bottom: 12px; }
+.form-label { display: block; margin-bottom: 4px; font-weight: 600; font-size: 12px; }
+.form-input, .form-select, .form-textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; font-family: inherit; font-size: 13px; background: var(--bg-gray); color: var(--text-dark); }
+.form-textarea { height: 80px; resize: vertical; }
+.btn-submit { width: 100%; background: var(--text-dark); color: white; padding: 12px; border: none; border-radius: 6px; font-weight: 700; cursor: pointer; margin-top: 8px; font-size: 14px; }
+.btn-submit:hover { background: var(--primary-orange); }
+
+/* --------------------------------- */
+/* Bottom Nav & WhatsApp */
+/* --------------------------------- */
+.bottom-nav { position: fixed; bottom: 0; left: 0; width: 100%; background: var(--white); border-top: 1px solid #ddd; display: flex; justify-content: space-around; padding: 11px 0 9px; z-index: 2000; }
+.nav-item { display: flex; flex-direction: column; align-items: center; color: var(--text-dark); font-size: 10px; font-weight: 600; gap: 3px; background: none; border: none; cursor: pointer; }
+.nav-item.active { color: var(--primary-orange); }
+.nav-item i { font-size: 17px; }
+
+.whats-float { position: fixed; transform: translate(70px, 0px); bottom: 100px; right: 0; width: 130px; overflow: hidden; background-color: #25d366; color: #FFF; border-radius: 28px 0 0 28px; z-index: 10; transition: all 0.8s ease-in-out; direction: ltr; vertical-align: middle; }
+.whats-float a span { color: #fff; font-size: 17px; padding-top: 8px; padding-bottom: 10px; position: absolute; line-height: 1.5; text-align: center; font-weight: bolder; }
+.whats-float-gif { width: 65px; height: 65px; padding: 9px; transform: rotate(0deg); transition: all 0.8s ease-in-out; text-align: center; }
+.whats-float.active, .whats-float:hover { transform: translate(0px, 0px); }
+.whats-float-gif:hover { transform: rotate(360deg); }
+
+.categories-modal { position: fixed; bottom: -100%; left: 0; width: 100%; background: var(--white); border-radius: 20px 20px 0 0; padding: 20px; box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2); transition: bottom 0.3s ease-in-out; z-index: 2100; }
+.categories-modal.show { bottom: 60px; }
+.modal-header { display: flex; justify-content: space-between; margin-bottom: 15px; font-weight: 700; }
+.cats-grid-menu { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+.cat-menu-item { display: flex; flex-direction: column; align-items: center; gap: 5px; text-align: center; }
+.cat-menu-icon { width: 45px; height: 45px; background: #f0f0f0; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; color: var(--primary-orange); }
+.cat-menu-name { font-size: 13px; color: var(--text-dark); }
+.overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 2050; display: none; }
+.overlay.show { display: block; }
+    </style>
+</head>
+<body>
+
+    <header class="header2">
+        <div class="logo-section2">
+            <div class="logo-img2"><img src="img/logo.png" alt="logo"></div>
+            <div class="logo-text2">الثقة التجارية</div>
+        </div>
+        <div class="header-content2">
+            <div class="top-tabs2">
+                <div class="top-tab2"><i class="fas fa-home"></i><span></span></div>
+                <div class="top-tab2"><i class="fas fa-globe"></i><span>EN</span></div>
+                <div class="top-tab2"><button class="tool-btn2" onclick="toggleTheme()"><i class="fas fa-moon" id="theme-icon"></i></button></div>
+            </div>
+            <div class="search-container2">
+                <div class="ai-icon2"><i class="fas fa-sparkles"></i></div>
+                <input type="text" class="search-input2" placeholder="ابحث في خدماتنا...">
+                <button class="search-btn2"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <section class="services-hero">
+        <h1>خدماتنا المتكاملة</h1>
+        <p>نقدم مجموعة شاملة من الخدمات الاستشارية والتنفيذية لتلبية جميع احتياجات مشاريعكم الصناعية والتجارية.</p>
+    </section>
+
+    <section class="section-container">
+        <h2 class="section-title">قائمة الخدمات</h2>
+        <div class="services-grid">
+            
+            <div class="service-card">
+                <div class="badge-free">مجانية</div>
+                <div class="service-icon"><i class="fas fa-search"></i></div>
+                <h3 class="service-name">طلب بحث منتج</h3>
+                <p class="service-desc">خدمة شاملة للبحث عن أفضل المنتجات والماكينات في الأسواق العالمية بناءً على متطلباتك الفنية والميزانية المحددة، مع تقديم تقارير مقارنة للموردين.</p>
+                <div class="service-price">مجانية</div>
+                <div class="service-actions">
+                    <button class="btn-request" onclick="openRequestModal('طلب بحث منتج')">طلب الخدمة</button>
+                    <button class="btn-details" onclick="sendWhatsAppInquiry('طلب بحث منتج')">التفاصيل</button>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-chart-pie"></i></div>
+                <h3 class="service-name">دراسة جدوى</h3>
+                <p class="service-desc">إعداد دراسات جدوى اقتصادية وفنية دقيقة تشمل تحليل السوق، تقدير التكاليف، وحساب العائد على الاستثمار لضمان نجاح مشروعك من البداية.</p>
+                <div class="service-price">من $1,500</div>
+                <div class="service-actions">
+                    <button class="btn-request" onclick="openRequestModal('دراسة جدوى متكاملة')">طلب الخدمة</button>
+                    <button class="btn-details" onclick="sendWhatsAppInquiry('دراسة جدوى متكاملة')">التفاصيل</button>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="badge-free">مجانية</div>
+                <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
+                <h3 class="service-name">أفكار مشاريع</h3>
+                <p class="service-desc">نقدم لك أفكار مشاريع صناعية وتجارية مبتكرة ومدروسة بعناية لتناسب حجم رأس المال لديك، مع مراعاة احتياجات السوق والاتجاهات الحديثة.</p>
+                <div class="service-price">مجانية</div>
+                <div class="service-actions">
+                    <button class="btn-request" onclick="openRequestModal('تقديم أفكار مشاريع')">طلب الخدمة</button>
+                    <button class="btn-details" onclick="sendWhatsAppInquiry('تقديم أفكار مشاريع')">التفاصيل</button>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-shipping-fast"></i></div>
+                <h3 class="service-name">شراء وشحن</h3>
+                <p class="service-desc">حلول استيراد متكاملة تشمل التفاوض على الأسعار، فحص الجودة في بلد المنشأ، والتعامل مع كافة إجراءات الشحن والتخليص الجمركي حتى وصول البضاعة.</p>
+                <div class="service-price">من 5%</div>
+                <div class="service-actions">
+                    <button class="btn-request" onclick="openRequestModal('شراء وشحن أي منتجات')">طلب الخدمة</button>
+                    <button class="btn-details" onclick="sendWhatsAppInquiry('شراء وشحن أي منتجات')">التفاصيل</button>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-tools"></i></div>
+                <h3 class="service-name">تركيب خطوط</h3>
+                <p class="service-desc">فريق هندسي متخصص للإشراف على تركيب خطوط الإنتاج والمعدات بدقة عالية، مع إجراء اختبارات التشغيل الأولية لضمان الأداء المثالي.</p>
+                <div class="service-price">من $500</div>
+                <div class="service-actions">
+                    <button class="btn-request" onclick="openRequestModal('تركيب خطوط الإنتاج والمعدات')">طلب الخدمة</button>
+                    <button class="btn-details" onclick="sendWhatsAppInquiry('تركيب خطوط الإنتاج والمعدات')">التفاصيل</button>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                <h3 class="service-name">تدريب تشغيل</h3>
+                <p class="service-desc">تمكين طاقم العمل لديك من خلال دورات تدريبية عملية ونظرية مكثفة على تشغيل وصيانة الآلات، لضمان استمرارية الإنتاج بأعلى كفاءة.</p>
+                <div class="service-price">من $300</div>
+                <div class="service-actions">
+                    <button class="btn-request" onclick="openRequestModal('التدريب على تشغيل المعدات')">طلب الخدمة</button>
+                    <button class="btn-details" onclick="sendWhatsAppInquiry('التدريب على تشغيل المعدات')">التفاصيل</button>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-user-tie"></i></div>
+                <h3 class="service-name">استشارات فنية</h3>
+                <p class="service-desc">تقديم استشارات فنية وهندسية متخصصة لحل المشكلات المعقدة، تحسين عمليات الإنتاج الحالية، ورفع الكفاءة التشغيلية للمصنع.</p>
+                <div class="service-price">من $200/س</div>
+                <div class="service-actions">
+                    <button class="btn-request" onclick="openRequestModal('الاستشارات الفنية')">طلب الخدمة</button>
+                    <button class="btn-details" onclick="sendWhatsAppInquiry('الاستشارات الفنية')">التفاصيل</button>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-cogs"></i></div>
+                <h3 class="service-name">صيانة ودعم</h3>
+                <p class="service-desc">عقود صيانة دورية وخدمات دعم فني طارئة، مع تأمين قطع الغيار الأصلية بسرعة لتقليل فترات التوقف وضمان عمر أطول للمعدات.</p>
+                <div class="service-price">من $150</div>
+                <div class="service-actions">
+                    <button class="btn-request" onclick="openRequestModal('الصيانة والدعم الفني')">طلب الخدمة</button>
+                    <button class="btn-details" onclick="sendWhatsAppInquiry('الصيانة والدعم الفني')">التفاصيل</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section-container">
+        <h2 class="section-title">كيفية طلب الخدمات</h2>
+        <div class="process-steps">
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <h4 class="step-title">تقديم الطلب</h4>
+                <p class="step-desc">املأ نموذج طلب الخدمة مع التفاصيل</p>
+            </div>
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <h4 class="step-title">الدراسة والتقييم</h4>
+                <p class="step-desc">دراسة المتطلبات وتقديم عرض سعر</p>
+            </div>
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <h4 class="step-title">التنفيذ</h4>
+                <p class="step-desc">تنفيذ الخدمة بأعلى معايير الجودة</p>
+            </div>
+            <div class="step-item">
+                <div class="step-number">4</div>
+                <h4 class="step-title">التسليم</h4>
+                <p class="step-desc">تسليم المشروع مع دعم لاحق</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container">
+        <h2 class="section-title">الأسئلة الشائعة</h2>
+        <div class="faq-container">
+            <details>
+                <summary>كم تستغرق مدة تنفيذ الخدمات؟</summary>
+                <div class="faq-answer">تختلف مدة التنفيذ حسب نوع الخدمة وتعقيدها. خدمات البحث المجانية تستغرق من 3-5 أيام عمل، بينما دراسات الجدوى تحتاج من 2-4 أسابيع حسب حجم المشروع.</div>
+            </details>
+            <details>
+                <summary>هل تقدمون ضماناً على الخدمات؟</summary>
+                <div class="faq-answer">نعم، نقدم ضماناً على جميع خدماتنا. ضمان التركيب يشمل 12 شهراً، وخدمات الصيانة تشمل 6 أشهر، وخدمات التدريب تشمل استشارات مجانية لمدة 3 أشهر.</div>
+            </details>
+            <details>
+                <summary>كيف يمكنني متابعة طلبي؟</summary>
+                <div class="faq-answer">سيتم تخصيص مدير مشروع خاص بك سيكون نقطة الاتصال الوحيدة لمتابعة طلبك عبر الهاتف أو الواتساب.</div>
+            </details>
+            <details>
+                <summary>هل خدماتكم تغطي جميع الدول؟</summary>
+                <div class="faq-answer">نعم، نقدم خدمات البحث والاستشارات عن بعد لجميع الدول، بينما خدمات التركيب والتدريب تغطي حالياً الشرق الأوسط وشمال أفريقيا وأوروبا.</div>
+            </details>
+        </div>
+    </section>
+
+    <section class="section-container">
+        <div class="cta-section">
+            <h2 class="cta-title">مستعد لبدء مشروعك؟</h2>
+            <p class="cta-desc">تواصل معنا الآن للحصول على استشارة مجانية.</p>
+            <div class="cta-buttons">
+                <button class="btn-cta-primary" onclick="openRequestModal('عام')">قدم طلبك الآن</button>
+                <button class="btn-cta-secondary" onclick="window.open('tel:905528000065')">اتصل بنا</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal-overlay" id="requestModal">
+        <div class="modal-content">
+            <i class="fas fa-times close-modal" onclick="closeModal()"></i>
+            <h3 class="modal-title">طلب خدمة</h3>
+            <form id="serviceForm" onsubmit="submitForm(event)">
+                <div class="form-group">
+                    <label class="form-label">الاسم الكامل</label>
+                    <input type="text" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">رقم الهاتف</label>
+                    <input type="tel" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">الخدمة المطلوبة</label>
+                    <select class="form-select" id="modalServiceSelect">
+                        <option value="طلب بحث منتج">طلب بحث منتج</option>
+                        <option value="دراسة جدوى متكاملة">دراسة جدوى</option>
+                        <option value="تقديم أفكار مشاريع">أفكار مشاريع</option>
+                        <option value="شراء وشحن أي منتجات">شراء وشحن</option>
+                        <option value="تركيب خطوط الإنتاج والمعدات">تركيب خطوط</option>
+                        <option value="التدريب على تشغيل المعدات">تدريب</option>
+                        <option value="الاستشارات الفنية">استشارات فنية</option>
+                        <option value="الصيانة والدعم الفني">صيانة ودعم</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">تفاصيل الطلب</label>
+                    <textarea class="form-textarea" placeholder="اكتب تفاصيل طلبك هنا..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">إرسال الطلب</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay" onclick="toggleCategories()"></div>
+    <div class="categories-modal" id="cats-modal">
+        <div class="modal-header">
+            <span>تصفح الأقسام</span>
+            <i class="fas fa-times" onclick="toggleCategories()" style="cursor: pointer;"></i>
+        </div>
+        <div class="cats-grid-menu">
+            <a href="machinery.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-cogs"></i></div><span class="cat-menu-name">ماكينات</span></a>
+            <a href="production-lines.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-industry"></i></div><span class="cat-menu-name">خطوط إنتاج</span></a>
+            <a href="precast.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-cubes"></i></div><span class="cat-menu-name">بريكاست</span></a>
+            <a href="industrial.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-truck-loading"></i></div><span class="cat-menu-name">معدات صناعية</span></a>
+            <a href="spare-parts.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-tools"></i></div><span class="cat-menu-name">قطع غيار</span></a>
+            <a href="supplies.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-hard-hat"></i></div><span class="cat-menu-name">مستلزمات</span></a>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item"><i class="fas fa-home"></i><span>الرئيسية</span></a>
+        <button class="nav-item" onclick="toggleCategories()"><i class="fas fa-list-ul"></i><span>الأقسام</span></button>
+        <a href="team.html" class="nav-item"><i class="fas fa-users-cog"></i><span>الفريق الفني</span></a>
+        <a href="services.html" class="nav-item active"><i class="fas fa-project-diagram"></i><span>خدماتنا</span></a>
+        <a href="contact.html" class="nav-item"><i class="fas fa-headset"></i><span>تواصل معنا</span></a>
+    </nav>
+
+    <div class="whats-float" id="whatsFloat">
+        <a href="https://wa.me/905528000065" target="_blank">
+            <img src="icons/whatsapp.gif" alt="Whatsapp" class="whats-float-gif">
+            <span>تواصل<br>مباشر</span>
+        </a>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const icon = document.getElementById('theme-icon');
+            if(document.body.classList.contains('dark-mode')){
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
+
+        function toggleCategories() {
+            const modal = document.getElementById('cats-modal');
+            const overlay = document.getElementById('overlay');
+            modal.classList.toggle('show');
+            overlay.classList.toggle('show');
+        }
+
+        // WhatsApp Direct Message
+        function sendWhatsAppInquiry(serviceName) {
+            const phoneNumber = "905528000065";
+            const message = `مرحباً، أود معرفة تفاصيل أكثر عن خدمة: ${serviceName}`;
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+
+        // Modal Logic
+        function openRequestModal(serviceName) {
+            const modal = document.getElementById('requestModal');
+            const select = document.getElementById('modalServiceSelect');
+            modal.classList.add('active');
+            if (serviceName && serviceName !== 'عام') {
+                select.value = serviceName;
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('requestModal').classList.remove('active');
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('requestModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        function submitForm(e) {
+            e.preventDefault();
+            alert('تم استلام طلبك بنجاح! سيتم التواصل معك قريباً.');
+            closeModal();
+            document.getElementById('serviceForm').reset();
+        }
+    </script>
+</body>
+</html>
