@@ -62,10 +62,10 @@ img {
 }
 
 .logo-img2 {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -218,15 +218,15 @@ img {
 }
 
 .slide1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/slider1.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/slider1.jpg');
 }
 
 .slide2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/slider2.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/slider2.jpg');
 }
 
 .slide3 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/slider3.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/slider3.jpg');
 }
 
 .hero-content {
@@ -892,13 +892,23 @@ img {
 
 @media (max-width: 480px) {
   .hero h1 {
-    font-size: 2rem; /* تم التعديل من 1.8rem (تقريباً +2px) */
+    font-size: 21px; /* تم التعديل من 1.8rem (تقريباً +2px) */
   }
 
   .hero p {
-    font-size: 18px; /* تم التعديل من 16px (كانت 1rem) */
+    font-size: 15px; /* تم التعديل من 16px (كانت 1rem) */
   }
+  .slider-button1,
 
+.slider-button2 {
+  padding: 3px 10px;
+  font-size: 13px; 
+}
+  
+.slider-indicators {
+  bottom: 10px;
+  gap: 10px;
+}
   /* Start WhatsApp Float Button */
   .whats-float {
     width: 95px;
