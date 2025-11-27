@@ -7,244 +7,10 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+	 <link rel="stylesheet" href="css/services.css">
     
     <style>
-/* --------------------------------- */
-/* Global Variables & General Styles */
-/* --------------------------------- */
-:root {
-  --primary-orange: #ff6600;
-  --bg-gray: #f2f3f7;
-  --white: #ffffff;
-  --text-dark: #222222;
-  --text-gray: #666666;
-  --border-color: #e6e6e6;
-  --green-whatsapp: #25d366;
-}
 
-body.dark-mode {
-  --bg-gray: #1a1a1a;
-  --white: #2d2d2d;
-  --text-dark: #f0f0f0;
-  --text-gray: #b0b0b0;
-  --border-color: #404040;
-}
-
-* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-gray); color: var(--text-dark); padding-bottom: 80px; overflow-x: hidden; }
-a { text-decoration: none; color: inherit; display: block; }
-img { max-width: 100%; display: block; }
-
-/* --------------------------------- */
-/* Header Styles */
-/* --------------------------------- */
-.header2 { background-color: var(--primary-orange); padding: 10px 8px; position: sticky; top: 0; z-index: 1000; height: auto; display: flex; align-items: center; justify-content: space-between; }
-.logo-section2 { width: 20%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-.logo-img2 { width: 50px; height: 50px; background-color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 4px; }
-.logo-text2 { color: white; font-size: 12px; font-weight: 800; text-align: center; }
-.header-content2 { width: 80%; margin-left: 8px; }
-.top-tabs2 { display: flex; justify-content: flex-end; gap: 15px; margin-bottom: 8px; margin-left: 8px; color: white; font-size: 16px; font-weight: 500; }
-.top-tab2 { display: flex; align-items: center; gap: 5px; cursor: pointer; }
-.tool-btn2 { background: none; border: none; color: #fff; cursor: pointer; display: flex; align-items: center; gap: 5px; font-size: 17px; }
-.search-container2 { display: flex; align-items: center; background: #fff; border-radius: 8px; padding: 4px; height: 32px; margin-bottom: 8px; }
-.ai-icon2 { color: var(--primary-orange); font-size: 20px; padding: 0 8px; border-left: 1px solid #eee; }
-.search-input2 { flex: 1; border: none; outline: none; padding: 0 8px; font-size: 14px; }
-.search-btn2 { background-color: var(--primary-orange); color: #fff; border: none; border-radius: 6px; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; cursor: pointer; }
-
-/* --------------------------------- */
-/* Hero Section */
-/* --------------------------------- */
-.services-hero {
-    background: var(--white);
-    padding: 20px 15px;
-    text-align: center;
-    border-bottom: 1px solid var(--border-color);
-    margin-bottom: 15px;
-}
-.services-hero h1 { font-size: 20px; color: var(--primary-orange); margin-bottom: 8px; font-weight: 800; }
-.services-hero p { font-size: 13px; color: var(--text-gray); line-height: 1.5; max-width: 800px; margin: 0 auto; }
-
-/* --------------------------------- */
-/* Services Grid Section (2 COLUMNS & CENTERED) */
-/* --------------------------------- */
-.section-container { max-width: 1200px; margin: 0 auto 30px; padding: 0 10px; }
-.section-title { font-size: 18px; font-weight: 800; color: var(--text-dark); margin-bottom: 15px; position: relative; display: inline-block; }
-.section-title::after { content: ''; position: absolute; bottom: -6px; right: 0; width: 35px; height: 3px; background: var(--primary-orange); }
-
-.services-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 أعمدة */
-    gap: 10px;
-}
-
-.service-card {
-    background: var(--white);
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    padding: 20px 10px 15px; /* زيادة الهامش العلوي قليلاً */
-    position: relative;
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
-    flex-direction: column;
-    
-    /* التعديلات الجديدة للتوسط */
-    align-items: center; /* توسيط العناصر أفقياً داخل الفليكس */
-    text-align: center;  /* توسيط النصوص */
-}
-
-.service-card:hover { transform: translateY(-3px); box-shadow: 0 8px 15px rgba(0,0,0,0.08); border-color: var(--primary-orange); }
-
-.badge-free {
-    position: absolute;
-    top: 8px;
-    left: 8px; /* أو right حسب الرغبة، left أفضل للتصميم العربي المتماثل */
-    background: #28a745;
-    color: white;
-    font-size: 10px;
-    padding: 3px 8px;
-    border-radius: 15px;
-    font-weight: 700;
-    z-index: 2;
-}
-
-.service-icon {
-    width: 70px;
-    height: 70px;
-    background: rgba(255, 102, 0, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary-orange);
-    font-size: 35px;
-    margin-bottom: 12px;
-    align-self: center; /* تأكيد التوسط */
-}
-
-.service-name { 
-    font-size: 17px; 
-    font-weight: 900; 
-    margin-bottom: 6px; 
-    color: var(--text-dark); 
-    line-height: 1.3; 
-    min-height: 40px; /* لتوحيد ارتفاع العناوين */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} 
-
-/* تنسيق الوصف المثري */
-.service-desc { 
-    font-size: 13px; /* تكبير الخط قليلاً للقراءة */
-    color: var(--text-gray); 
-    line-height: 1.5; 
-    margin-bottom: 12px; 
-    flex-grow: 1; 
-    display: -webkit-box; 
-    -webkit-line-clamp: 5; /* زيادة عدد الأسطر المسموح بها للنص المثري */
-    -webkit-box-orient: vertical; 
-    overflow: hidden; 
-} 
-
-.service-price { 
-    font-size: 13px; 
-    font-weight: 700; 
-    color: var(--primary-orange); 
-    margin-bottom: 12px; 
-    border-top: 1px dashed var(--border-color); 
-    padding-top: 10px; 
-    width: 100%; /* الخط الفاصل يمتد للعرض الكامل */
-}
-
-.service-actions { display: flex; flex-direction: column; gap: 8px; width: 100%; } 
-.btn-request { width: 100%; background: var(--text-dark); color: white; border: none; padding: 10px; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 12px; transition: 0.3s; }
-.btn-request:hover { background: var(--primary-orange); }
-.btn-details { width: 100%; background: transparent; color: var(--text-dark); border: 1px solid #ddd; padding: 10px; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 12px; transition: 0.3s; }
-.btn-details:hover { background: var(--bg-gray); border-color: var(--text-dark); }
-
-/* تحسينات للشاشات الأكبر */
-@media (min-width: 768px) {
-    .services-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .service-card { padding: 25px 20px; }
-    .service-name { font-size: 17px; }
-    .service-desc { font-size: 13px; -webkit-line-clamp: 6; }
-    .service-actions { flex-direction: row; } 
-}
-
-@media (min-width: 1024px) {
-    .services-grid { grid-template-columns: repeat(4, 1fr); }
-}
-
-/* --------------------------------- */
-/* Process Section */
-/* --------------------------------- */
-.process-steps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; text-align: center; } 
-.step-item { position: relative; padding: 15px 10px; background: var(--white); border-radius: 10px; border: 1px solid var(--border-color); }
-.step-number { width: 30px; height: 30px; background: var(--primary-orange); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin: 0 auto 10px; font-size: 14px; }
-.step-title { font-weight: 700; margin-bottom: 5px; color: var(--text-dark); font-size: 13px; }
-.step-desc { font-size: 11px; color: var(--text-gray); line-height: 1.4; }
-
-/* --------------------------------- */
-/* FAQ Section */
-/* --------------------------------- */
-.faq-container { display: flex; flex-direction: column; gap: 8px; }
-details { background: var(--white); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; transition: all 0.3s; }
-details[open] { border-color: var(--primary-orange); }
-summary { padding: 12px; font-weight: 600; font-size: 13px; cursor: pointer; position: relative; list-style: none; display: flex; align-items: center; justify-content: space-between; }
-summary::-webkit-details-marker { display: none; }
-summary::after { content: '\f107'; font-family: 'Font Awesome 6 Free'; font-weight: 900; transition: transform 0.3s; }
-details[open] summary::after { transform: rotate(180deg); }
-.faq-answer { padding: 0 12px 12px; font-size: 13px; color: var(--text-gray); line-height: 1.6; border-top: 1px solid var(--bg-gray); margin-top: 5px; padding-top: 10px; }
-
-/* --------------------------------- */
-/* CTA Section */
-/* --------------------------------- */
-.cta-section { background: linear-gradient(45deg, #1a1a1a, #333); color: white; text-align: center; padding: 30px 15px; border-radius: 12px; margin-top: 30px; }
-.cta-title { font-size: 20px; margin-bottom: 8px; color: var(--primary-orange); }
-.cta-desc { margin-bottom: 20px; opacity: 0.9; font-size: 13px; }
-.cta-buttons { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
-.btn-cta-primary { background: var(--primary-orange); color: white; padding: 10px 20px; border-radius: 30px; font-weight: 700; border: none; cursor: pointer; font-size: 13px; }
-.btn-cta-secondary { background: transparent; color: white; padding: 10px 20px; border-radius: 30px; font-weight: 700; border: 2px solid white; cursor: pointer; font-size: 13px; }
-
-/* --------------------------------- */
-/* Modal Form */
-/* --------------------------------- */
-.modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 3000; display: none; align-items: center; justify-content: center; backdrop-filter: blur(3px); }
-.modal-overlay.active { display: flex; }
-.modal-content { background: var(--white); width: 90%; max-width: 500px; border-radius: 12px; padding: 20px; position: relative; max-height: 90vh; overflow-y: auto; animation: slideUp 0.3s ease; }
-@keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-.close-modal { position: absolute; top: 15px; left: 15px; font-size: 20px; cursor: pointer; color: var(--text-gray); }
-.modal-title { font-size: 18px; font-weight: 800; margin-bottom: 15px; color: var(--primary-orange); text-align: center; }
-.form-group { margin-bottom: 12px; }
-.form-label { display: block; margin-bottom: 4px; font-weight: 600; font-size: 12px; }
-.form-input, .form-select, .form-textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; font-family: inherit; font-size: 13px; background: var(--bg-gray); color: var(--text-dark); }
-.form-textarea { height: 80px; resize: vertical; }
-.btn-submit { width: 100%; background: var(--text-dark); color: white; padding: 12px; border: none; border-radius: 6px; font-weight: 700; cursor: pointer; margin-top: 8px; font-size: 14px; }
-.btn-submit:hover { background: var(--primary-orange); }
-
-/* --------------------------------- */
-/* Bottom Nav & WhatsApp */
-/* --------------------------------- */
-.bottom-nav { position: fixed; bottom: 0; left: 0; width: 100%; background: var(--white); border-top: 1px solid #ddd; display: flex; justify-content: space-around; padding: 11px 0 9px; z-index: 2000; }
-.nav-item { display: flex; flex-direction: column; align-items: center; color: var(--text-dark); font-size: 10px; font-weight: 600; gap: 3px; background: none; border: none; cursor: pointer; }
-.nav-item.active { color: var(--primary-orange); }
-.nav-item i { font-size: 17px; }
-
-.whats-float { position: fixed; transform: translate(70px, 0px); bottom: 100px; right: 0; width: 130px; overflow: hidden; background-color: #25d366; color: #FFF; border-radius: 28px 0 0 28px; z-index: 10; transition: all 0.8s ease-in-out; direction: ltr; vertical-align: middle; }
-.whats-float a span { color: #fff; font-size: 17px; padding-top: 8px; padding-bottom: 10px; position: absolute; line-height: 1.5; text-align: center; font-weight: bolder; }
-.whats-float-gif { width: 65px; height: 65px; padding: 9px; transform: rotate(0deg); transition: all 0.8s ease-in-out; text-align: center; }
-.whats-float.active, .whats-float:hover { transform: translate(0px, 0px); }
-.whats-float-gif:hover { transform: rotate(360deg); }
-
-.categories-modal { position: fixed; bottom: -100%; left: 0; width: 100%; background: var(--white); border-radius: 20px 20px 0 0; padding: 20px; box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2); transition: bottom 0.3s ease-in-out; z-index: 2100; }
-.categories-modal.show { bottom: 60px; }
-.modal-header { display: flex; justify-content: space-between; margin-bottom: 15px; font-weight: 700; }
-.cats-grid-menu { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
-.cat-menu-item { display: flex; flex-direction: column; align-items: center; gap: 5px; text-align: center; }
-.cat-menu-icon { width: 45px; height: 45px; background: #f0f0f0; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; color: var(--primary-orange); }
-.cat-menu-name { font-size: 13px; color: var(--text-dark); }
-.overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 2050; display: none; }
-.overlay.show { display: block; }
     </style>
 </head>
 <body>
@@ -473,7 +239,7 @@ details[open] summary::after { transform: rotate(180deg); }
         <div class="cats-grid-menu">
             <a href="machinery.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-cogs"></i></div><span class="cat-menu-name">ماكينات</span></a>
             <a href="production-lines.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-industry"></i></div><span class="cat-menu-name">خطوط إنتاج</span></a>
-            <a href="precast.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-cubes"></i></div><span class="cat-menu-name">بريكاست</span></a>
+            <a href="precast.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-cubes"></i></div><span class="cat-menu-name">البناء الحديث</span></a>
             <a href="industrial.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-truck-loading"></i></div><span class="cat-menu-name">معدات صناعية</span></a>
             <a href="spare-parts.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-tools"></i></div><span class="cat-menu-name">قطع غيار</span></a>
             <a href="supplies.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-hard-hat"></i></div><span class="cat-menu-name">مستلزمات</span></a>
@@ -481,11 +247,27 @@ details[open] summary::after { transform: rotate(180deg); }
     </div>
 
     <nav class="bottom-nav">
-        <a href="index.html" class="nav-item"><i class="fas fa-home"></i><span>الرئيسية</span></a>
-        <button class="nav-item" onclick="toggleCategories()"><i class="fas fa-list-ul"></i><span>الأقسام</span></button>
-        <a href="team.html" class="nav-item"><i class="fas fa-users-cog"></i><span>الفريق الفني</span></a>
+        <a href="index.html" class="nav-item ">
+            <i class="fas fa-home"></i>
+            <span>الرئيسية</span>
+        </a>
+		<a href="ideas.html" class="nav-item ">
+            <i class="fa-solid fa-business-time"></i>
+            <span>افكار مشاريع</span>
+        </a>
+        <button class="nav-item" onclick="toggleCategories()">
+             <i class="fas fa-list-ul"></i>
+            <span>الأقسام</span>
+        </button>
+        <a href="team.html" class="nav-item">
+            <i class="fas fa-users-cog"></i>
+            <span>الفريق الفني</span>
+        </a>
         <a href="services.html" class="nav-item active"><i class="fas fa-project-diagram"></i><span>خدماتنا</span></a>
-        <a href="contact.html" class="nav-item"><i class="fas fa-headset"></i><span>تواصل معنا</span></a>
+        <a href="contact.html" class="nav-item">
+            <i class="fas fa-headset"></i>
+            <span>تواصل معنا</span>
+        </a>
     </nav>
 
     <div class="whats-float" id="whatsFloat">

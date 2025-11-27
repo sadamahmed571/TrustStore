@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أفكار مشاريع — مجموعة الثقة التجارية</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/ideas.css">
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <header class="header2">
+        <div class="logo-section2">
+            <div class="logo-img2">
+                <img src="img/logo.png" alt="logo">
+            </div>
+            <div class="logo-text2">الثقة التجارية</div>
+        </div>
+        
+        <div class="header-content2">
+            <div class="top-tabs2">
+                <div class="top-tab2">
+                    <i class="fas fa-home"></i>
+                    <span></span>
+                </div>
+                <div class="top-tab2">
+                    <i class="fas fa-globe"></i>
+                    <span>EN</span>
+                </div>
+                <div class="top-tab2">
+                      <button class="tool-btn2" onclick="toggleTheme()"><i class="fas fa-moon" id="theme-icon"></i></button>
+                </div>
+            </div>
+            
+            <div class="search-container2">
+                <div class="ai-icon2">
+                    <i class="fas fa-sparkles"></i>
+                </div>
+                <input type="text" class="search-input2" placeholder="ما الذي تبحث عنه في مجموعة الثقة...">
+                <button class="search-btn2">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Ideas Hero Section -->
+    <section class="ideas-hero">
+        <div class="ideas-hero-content">
+            <h1>أفكار مشاريع عملية مبنية على منتجاتنا وخطوط الإنتاج 🚀</h1>
+            <p>تقدم هذه الصفحة أفكار مشاريع جاهزة وقابلة للتطبيق تعتمد على الآلات الصناعية المتوفرة في متجرنا. 💡</p>
+             
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters-section">
+         
+        <div class="filter-group">
+            <select class="filter-select" id="type-filter">
+                <option value="">حسب النوع</option>
+                <option value="production">إنتاجي</option>
+                <option value="small-industrial">صناعي صغير</option>
+                <option value="home">منزلي</option>
+                <option value="semi-auto">نصف آلي</option>
+                <option value="production-line">خط إنتاج</option>
+            </select>
+            <select class="filter-select" id="budget-filter">
+                <option value="">حسب الميزانية</option>
+                <option value="0-1000">0–1000$</option>
+                <option value="1000-5000">1000–5000$</option>
+                <option value="5000+">5000$+</option>
+            </select>
+            <select class="filter-select" id="machine-filter">
+                <option value="">حسب الآلة/المنتج</option>
+                <option value="plastic-granules">حبيبات بلاستيك</option>
+                <option value="packaging">تعبئة وتغليف</option>
+                <option value="presses">مكابس</option>
+                <option value="printing">ماكينات طباعة</option>
+            </select>
+            <div class="filter-search">
+                <input type="text" class="filter-input" id="search-input" placeholder="ابحث باسم المشروع أو نوع المنتج">
+                <button class="filter-search-btn" onclick="applyFilters()">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ideas Grid Section -->
+    <section class="ideas-grid-section" id="ideas-grid">
+        <div class="ideas-grid">
+            <!-- Idea Card 1 -->
+            <div class="idea-card" data-type="production" data-budget="5000+" data-machine="packaging">
+                <div class="title-desc-container">
+                    <h2 class="idea-card-title"><i class="fas fa-lightbulb"></i> مشروع تصنيع الأكواب الورقية</h2>
+                    <p class="idea-card-desc">مشروع إنتاج أكواب ورقية صديقة للبيئة للاستخدام اليومي. 🌿</p>
+                </div>
+                <div class="product-image-container">
+                    <img src="img/1.jpg" alt="ماكينة تشكيل أكواب ورقية" class="product-image">
+                    <span class="label-category">تعبئة وتغليف</span>
+                    <span class="label-serial">#001</span>
+					<a href="single-product.html?id=machine001" class="label-details"><i class="fas fa-exclamation-circle"></i>  تفاصيل</a>
+                </div>
+                <div class="budget-needs">
+                    <h3 class="budget-needs-title"><i class="fas fa-money-bill-wave"></i> ميزانية و احتياجات المشروع  </h3>
+                    <!-- Row 1: Needs Texts -->
+                    <div class="need-cost">5000$</div>
+                    <div class="need-cost">1000$</div>
+                    <div class="need-cost">1500$</div>
+                    <div class="need-cost">500$</div>
+                    <!-- Row 2: Icons -->
+                    <div class="timeline-icon">1</div>
+                    <div class="timeline-icon">2</div>
+                    <div class="timeline-icon">3</div>
+                    <div class="timeline-icon">4</div>
+                    <!-- Row 3: Costs -->
+                    <div class="need-text">ماكينة تشكيل أكواب ورقية</div>
+                    <div class="need-text">ورق خام</div>
+                    <div class="need-text">مساحة عمل 50 م²</div>
+                    <div class="need-text">كهرباء 220V</div>
+                </div>
+                <div class="machine-info">
+                    <span><i class="fas fa-cogs"></i> الآلة الرئيسية: ماكينة تشكيل (متوفرة في المتجر) - القدرة الإنتاجية: 5000 كوب/يوم ⚙️</span>
+                    
+                </div>
+                <div class="buttons-row">
+                    <a href="https://wa.me/905528000065?text=أريد أن أطلب فكرة مشروع تصنيع الأكواب الورقية + ماكينة تشكيل أكواب ورقية #001" class="action-btn"><i class="fas fa-shopping-cart"></i> اطلب</a>
+                    <a href="https://wa.me/905528000065?text=أريد أن أعرف أكثر عن فكرة مشروع تصنيع الأكواب الورقية + ماكينة تشكيل أكواب ورقية #001" class="action-btn"><i class="fas fa-question-circle"></i> استفسر</a>
+                </div>
+            </div>
+
+       <!-- Idea Card 1 -->
+            <div class="idea-card" data-type="production" data-budget="5000+" data-machine="packaging">
+                <div class="title-desc-container">
+                    <h2 class="idea-card-title"><i class="fas fa-lightbulb"></i> مشروع تصنيع الأكواب الورقية</h2>
+                    <p class="idea-card-desc">مشروع إنتاج أكواب ورقية صديقة للبيئة للاستخدام اليومي. 🌿</p>
+                </div>
+                <div class="product-image-container">
+                    <img src="img/1.jpg" alt="ماكينة تشكيل أكواب ورقية" class="product-image">
+                    <span class="label-category">تعبئة وتغليف</span>
+                    <span class="label-serial">#001</span>
+					<a href="single-product.html?id=machine001" class="label-details"><i class="fas fa-exclamation-circle"></i>  تفاصيل</a>
+                </div>
+                <div class="budget-needs">
+                    <h3 class="budget-needs-title"><i class="fas fa-money-bill-wave"></i> ميزانية و احتياجات المشروع  </h3>
+                    <!-- Row 1: Needs Texts -->
+                    <div class="need-cost">5000$</div>
+                    <div class="need-cost">1000$</div>
+                    <div class="need-cost">1500$</div>
+                    <div class="need-cost">500$</div>
+                    <!-- Row 2: Icons -->
+                    <div class="timeline-icon">1</div>
+                    <div class="timeline-icon">2</div>
+                    <div class="timeline-icon">3</div>
+                    <div class="timeline-icon">4</div>
+                    <!-- Row 3: Costs -->
+                    <div class="need-text">ماكينة تشكيل أكواب ورقية</div>
+                    <div class="need-text">ورق خام</div>
+                    <div class="need-text">مساحة عمل 50 م²</div>
+                    <div class="need-text">كهرباء 220V</div>
+                </div>
+                <div class="machine-info">
+                    <span><i class="fas fa-cogs"></i> الآلة الرئيسية: ماكينة تشكيل (متوفرة في المتجر) - القدرة الإنتاجية: 5000 كوب/يوم ⚙️</span>
+                    
+                </div>
+                <div class="buttons-row">
+                    <a href="https://wa.me/905528000065?text=أريد أن أطلب فكرة مشروع تصنيع الأكواب الورقية + ماكينة تشكيل أكواب ورقية #001" class="action-btn"><i class="fas fa-shopping-cart"></i> اطلب</a>
+                    <a href="https://wa.me/905528000065?text=أريد أن أعرف أكثر عن فكرة مشروع تصنيع الأكواب الورقية + ماكينة تشكيل أكواب ورقية #001" class="action-btn"><i class="fas fa-question-circle"></i> استفسر</a>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+ 
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>الرئيسية</span>
+        </a>
+        <a href="ideas.html" class="nav-item active">
+            <i class="fa-solid fa-business-time"></i>
+            <span>افكار مشاريع</span>
+        </a>
+        <button class="nav-item" onclick="toggleCategories()">
+             <i class="fas fa-list-ul"></i>
+            <span>الأقسام</span>
+        </button>
+        <a href="team.html" class="nav-item">
+            <i class="fas fa-users-cog"></i>
+            <span>الفريق الفني</span>
+        </a>
+        <a href="services.html" class="nav-item"><i class="fas fa-project-diagram"></i><span>خدماتنا</span></a>
+        <a href="contact.html" class="nav-item">
+            <i class="fas fa-headset"></i>
+            <span>تواصل معنا</span>
+        </a>
+    </nav>
+
+    <!-- WhatsApp -->
+    <div class="whats-float" id="whatsFloat">
+        <a href="https://wa.me/905528000065" target="_blank">
+            <img src="icons/whatsapp.gif" alt="Menu Icon" class="whats-float-gif">
+            <span>تواصل<br>مباشر</span>
+        </a>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const icon = document.getElementById('theme-icon');
+            if(document.body.classList.contains('dark-mode')){
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
+
+        function applyFilters() {
+            const type = document.getElementById('type-filter').value;
+            const budget = document.getElementById('budget-filter').value;
+            const machine = document.getElementById('machine-filter').value;
+            const search = document.getElementById('search-input').value.toLowerCase();
+
+            const cards = document.querySelectorAll('.idea-card');
+            cards.forEach(card => {
+                const cardType = card.dataset.type;
+                const cardBudget = card.dataset.budget;
+                const cardMachine = card.dataset.machine;
+                const cardTitle = card.querySelector('.idea-card-title').textContent.toLowerCase();
+
+                let show = true;
+                if (type && type !== cardType) show = false;
+                if (budget && budget !== cardBudget) show = false;
+                if (machine && machine !== cardMachine) show = false;
+                if (search && !cardTitle.includes(search)) show = false;
+
+                card.style.display = show ? 'block' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>
