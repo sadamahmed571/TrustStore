@@ -6,6 +6,8 @@
     <title>ماكينات الخرسانة | الثقة التجارية</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	
+	<link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/products-board.css">
     <style>
 
@@ -13,35 +15,45 @@
 </head>
 <body>
 
-    <header class="header2">
+     <header class="header2">
         <div class="logo-section2">
-            <a href="index.html">
-                <div class="logo-img2"><i class="fas fa-hammer" style="color:var(--primary-orange);"></i></div>
-                <div class="logo-text2">الثقة التجارية</div>
-            </a>
+            <div class="logo-img2">
+                <img src="img/logo1.png" alt="logo"  >
+            </div>
+            <div class="logo-text2">الثقة التجارية</div>
         </div>
+        
         <div class="header-content2">
             <div class="top-tabs2">
-                <div class="top-tab2"><i class="fas fa-home"></i><span></span></div>
-                <div class="top-tab2"><i class="fas fa-globe"></i><span>EN</span></div>
-                <div class="top-tab2"><button class="tool-btn2" onclick="toggleTheme()"><i class="fas fa-moon" id="theme-icon"></i></button></div>
+                <div class="top-tab2">
+                    <i class="fas fa-home"></i>
+                    <span></span>
+                </div>
+                <div class="top-tab2">
+                    <i class="fas fa-globe"></i>
+                    <span>EN</span>
+                </div>
+                <div class="top-tab2">
+                      <button   class="tool-btn2" onclick="toggleTheme()"><i class="fas fa-moon" id="theme-icon"></i></button>
+                </div>
             </div>
+            
             <div class="search-container2">
-                <div class="ai-icon2"><i class="fas fa-sparkles"></i></div>
-                <input type="text" class="search-input2" placeholder="ابحث عن ماكينة محددة...">
-                <button class="search-btn2"><i class="fas fa-search"></i></button>
+                <div class="ai-icon2">
+                    <i class="fas fa-sparkles"></i>
+                </div>
+                <input type="text" class="search-input2" placeholder="ما الذي تبحث عنه في مجموعة الثقة...">
+                <button class="search-btn2">
+                    <i class="fas fa-search"></i>
+                </button>
             </div>
         </div>
     </header>
 
     <div class="breadcrumb">
-        <a href="index.html"><i class="fas fa-arrow-right"></i> الرئيسية</a> / <a href="#" onclick="toggleCategories()">الأقسام</a> / <span>ماكينات الخرسانة</span>
+        <a href="index.html"><i class="fas fa-arrow-right"></i> الرئيسية</a> / <a href="#" onclick="toggleCategories()">المنتجات</a> / <span>ماكينات الخرسانة</span>
     </div>
-
-    <section class="section-container" style="padding-top: 20px;">
-        <h2 class="section-title">ماكينات الخرسانة الجاهزة</h2>
-    </section>
-
+   
     <section class="section-container" style="padding-top: 0;">
         <div class="filter-bar">
             <button class="filter-btn active">الكل</button>
@@ -57,11 +69,12 @@
         <div class="products-grid">
 
             <div class="product-card">
+			 <h3 class="product-name">خلاطة خرسانة مركزية 120م³/ساعة</h3>
                 <div class="product-image-container">
                     <div class="badge-status">متوفرة</div>
-                    <img src="img/placeholder-mixer.jpg" alt="ماكينة خلط مركزية" class="product-image">
+                    <img src="img/1.jpg" alt=" " class="product-image">
                 </div>
-                <h3 class="product-name">خلاطة خرسانة مركزية 120م³/ساعة</h3>
+               
                 <ul class="product-specs">
                     <li><i class="fas fa-check-circle"></i> سعة إنتاج 120 متر مكعب/ساعة</li>
                     <li><i class="fas fa-check-circle"></i> نظام تحكم أوتوماتيكي بالكامل</li>
@@ -75,11 +88,12 @@
             </div>
 
             <div class="product-card">
+			 <h3 class="product-name">مضخة خرسانة بوم 42 متر</h3>
                 <div class="product-image-container">
                     <div class="badge-status" style="background: var(--primary-orange);">عرض خاص</div>
-                    <img src="img/placeholder-pump.jpg" alt="مضخة خرسانة بوم" class="product-image">
+                    <img src="img/1.jpg" alt="مضخة خرسانة بوم" class="product-image">
                 </div>
-                <h3 class="product-name">مضخة خرسانة بوم 42 متر</h3>
+               
                 <ul class="product-specs">
                     <li><i class="fas fa-check-circle"></i> طول الذراع 42 متر</li>
                     <li><i class="fas fa-check-circle"></i> موديل حديث 2024</li>
@@ -92,99 +106,45 @@
                 </div>
             </div>
 
-            <div class="product-card">
-                <div class="product-image-container">
-                    <div class="badge-status" style="background: #e74c3c;">مستعمل</div>
-                    <img src="img/placeholder-truck.jpg" alt="شاحنة خلاطة" class="product-image">
-                </div>
-                <h3 class="product-name">شاحنة خلاطة 9 متر مكعب</h3>
-                <ul class="product-specs">
-                    <li><i class="fas fa-check-circle"></i> سعة الحوض 9 متر مكعب</li>
-                    <li><i class="fas fa-check-circle"></i> حالة ممتازة، موديل 2019</li>
-                    <li><i class="fas fa-check-circle"></i> فحص فني شامل</li>
-                </ul>
-                <div class="product-price">$45,000</div>
-                <div class="product-actions">
-                    <button class="btn-details">عرض التفاصيل</button>
-                    <button class="btn-whatsapp" onclick="sendWhatsAppInquiry('شاحنة خلاطة 9 متر مكعب (مستعملة)')"><i class="fab fa-whatsapp"></i> استفسار</button>
-                </div>
-            </div>
             
-             <div class="product-card">
-                <div class="product-image-container">
-                    <div class="badge-status">متوفرة</div>
-                    <img src="img/placeholder-block.jpg" alt="ماكينة مصنع بلوك" class="product-image">
-                </div>
-                <h3 class="product-name">مصنع بلوك هيدروليكي آلي (HB400)</h3>
-                <ul class="product-specs">
-                    <li><i class="fas fa-check-circle"></i> طاقة إنتاجية عالية (10000 بلوكة/يوم)</li>
-                    <li><i class="fas fa-check-circle"></i> قالب أساسي مع قوالب إضافية مجانية</li>
-                    <li><i class="fas fa-check-circle"></i> تدريب مجاني على التشغيل</li>
-                </ul>
-                <div class="product-price">$78,000</div>
-                <div class="product-actions">
-                    <button class="btn-details">عرض التفاصيل</button>
-                    <button class="btn-whatsapp" onclick="sendWhatsAppInquiry('مصنع بلوك هيدروليكي آلي (HB400)')"><i class="fab fa-whatsapp"></i> استفسار</button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image-container">
-                    <div class="badge-status">متوفرة</div>
-                    <img src="img/placeholder-silo.jpg" alt="سيلو إسمنت" class="product-image">
-                </div>
-                <h3 class="product-name">سيلو إسمنت عمودي 100 طن</h3>
-                <ul class="product-specs">
-                    <li><i class="fas fa-check-circle"></i> سعة تخزين 100 طن</li>
-                    <li><i class="fas fa-check-circle"></i> تصميم مقاوم للرطوبة</li>
-                    <li><i class="fas fa-check-circle"></i> جاهز للشحن الفوري</li>
-                </ul>
-                <div class="product-price">$12,500</div>
-                <div class="product-actions">
-                    <button class="btn-details">عرض التفاصيل</button>
-                    <button class="btn-whatsapp" onclick="sendWhatsAppInquiry('سيلو إسمنت عمودي 100 طن')"><i class="fab fa-whatsapp"></i> استفسار</button>
-                </div>
-            </div>
-
-             <div class="product-card">
-                <div class="product-image-container">
-                    <div class="badge-status">جديد</div>
-                    <img src="img/placeholder-static.jpg" alt="مضخة خرسانة ثابتة" class="product-image">
-                </div>
-                <h3 class="product-name">مضخة خرسانة ثابتة عالية الضغط</h3>
-                <ul class="product-specs">
-                    <li><i class="fas fa-check-circle"></i> مناسبة للمباني شاهقة الارتفاع</li>
-                    <li><i class="fas fa-check-circle"></i> كفاءة عالية في ضخ الإسمنت</li>
-                    <li><i class="fas fa-check-circle"></i> طراز 2024</li>
-                </ul>
-                <div class="product-price">$55,000</div>
-                <div class="product-actions">
-                    <button class="btn-details">عرض التفاصيل</button>
-                    <button class="btn-whatsapp" onclick="sendWhatsAppInquiry('مضخة خرسانة ثابتة عالية الضغط')"><i class="fab fa-whatsapp"></i> استفسار</button>
-                </div>
-            </div>
             
         </div>
     </section>
     
-    <nav class="bottom-nav">
-        <a href="index.html" class="nav-item active"><i class="fas fa-home"></i><span>الرئيسية</span></a>
-        <button class="nav-item" onclick="toggleCategories()"><i class="fas fa-list-ul"></i><span>الأقسام</span></button>
-        <a href="team.html" class="nav-item"><i class="fas fa-users-cog"></i><span>الفريق الفني</span></a>
+     <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>الرئيسية</span>
+        </a>
+        <a href="ideas.html" class="nav-item ">
+            <i class="fa-solid fa-business-time"></i>
+            <span>افكار مشاريع</span>
+        </a>
+        <button class="nav-item" onclick="toggleCategories()">
+             <i class="fas fa-list-ul"></i>
+            <span>المنتجات</span>
+        </button>
+       <a href="#" class="nav-item">
+            <i class="fa-solid fa-plus"></i>
+            <span>قدم طلبك</span>
+        </a>
         <a href="services.html" class="nav-item"><i class="fas fa-project-diagram"></i><span>خدماتنا</span></a>
-        <a href="contact.html" class="nav-item"><i class="fas fa-headset"></i><span>تواصل معنا</span></a>
+        <a href="contact.html" class="nav-item  ">
+            <i class="fas fa-headset"></i>
+            <span>تواصل معنا</span>
+        </a>
     </nav>
 
     <div class="overlay" id="overlay" onclick="toggleCategories()"></div>
     <div class="categories-modal" id="cats-modal">
         <div class="modal-header">
-            <span>تصفح الأقسام</span>
+            <span>تصفح المنتجات</span>
             <i class="fas fa-times" onclick="toggleCategories()" style="cursor: pointer;"></i>
         </div>
         <div class="cats-grid-menu">
             <a href="products-board.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-cogs"></i></div><span class="cat-menu-name">ماكينات</span></a>
             <a href="products-board.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-industry"></i></div><span class="cat-menu-name">خطوط إنتاج</span></a>
-            <a href="products-board.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-cubes"></i></div><span class="cat-menu-name">بريكاست</span></a>
+            <a href="products-board.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-cubes"></i></div><span class="cat-menu-name">البناء الحديث</span></a>
             <a href="products-board.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-truck-loading"></i></div><span class="cat-menu-name">معدات صناعية</span></a>
             <a href="products-board.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-tools"></i></div><span class="cat-menu-name">قطع غيار</span></a>
             <a href="products-board.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-hard-hat"></i></div><span class="cat-menu-name">مستلزمات</span></a>
