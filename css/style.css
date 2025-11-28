@@ -23,10 +23,9 @@ body.dark-mode {
 }
 
 body {
- 
   background-color: var(--bg-gray);
   color: var(--text-dark);
-  padding-bottom: 80px;
+  padding-bottom: 79px;
   overflow-x: hidden;
 }
 
@@ -43,7 +42,7 @@ img {
 
 .header2 {
   background-color: var(--primary-orange);
-  padding: 10px 8px;
+  padding: 9px 7px;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -62,54 +61,53 @@ img {
 }
 
 .logo-img2 {
-  width: 50px;
-  height: 50px;
-  background-color: white;
+  width: 49px;
+  height: 49px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 
 .logo-text2 {
   color: white;
-  font-size: 12px; /* تم التعديل من 10px */
-  font-weight: 800;
+  font-size: 13px;
+  font-weight: 900;
   text-align: center;
 }
 
 .header-content2 {
   width: 80%;
-  margin-left: 8px;
+  margin-left: 7px;
 }
 
 .top-tabs2 {
   display: flex;
   justify-content: flex-end;
-  gap: 15px;
-  margin-bottom: 8px;
-  margin-left: 8px;
+  gap: 14px;
+  margin-bottom: 7px;
+  margin-left: 7px;
   color: white;
-  font-size: 16px; /* تم التعديل من 14px */
+  font-size: 15px;
   font-weight: 500;
 }
 
 .top-tab2 {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
   cursor: pointer;
 }
 
 .tool-btn {
   display: flex;
   justify-content: flex-end;
-  gap: 15px;
-  margin-bottom: 8px;
-  margin-left: 8px;
+  gap: 14px;
+  margin-bottom: 7px;
+  margin-left: 7px;
   color: white;
-  font-size: 17px; /* تم التعديل من 15px */
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -120,24 +118,24 @@ img {
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 5px;
-  font-size: 17px; /* تم التعديل من 15px */
+  gap: 4px;
+  font-size: 16px;
 }
 
 .search-container2 {
   display: flex;
   align-items: center;
   background: #fff;
-  border-radius: 8px;
-  padding: 4px;
-  height: 32px;
-  margin-bottom: 8px;
+  border-radius: 7px;
+  padding: 3px;
+  height: 31px;
+  margin-bottom: 7px;
 }
 
 .ai-icon2 {
   color: var(--primary-orange);
-  font-size: 20px; /* تم التعديل من 18px */
-  padding: 0 8px;
+  font-size: 19px;
+  padding: 0 7px;
   border-left: 1px solid #eee;
 }
 
@@ -145,18 +143,17 @@ img {
   flex: 1;
   border: none;
   outline: none;
-  padding: 0 8px;
- 
-  font-size: 14px; /* تم التعديل من 12px */
+  padding: 0 7px;
+  font-size: 13px;
 }
 
 .search-btn2 {
   background-color: var(--primary-orange);
   color: #fff;
   border: none;
-  border-radius: 6px;
-  width: 25px;
-  height: 25px;
+  border-radius: 5px;
+  width: 24px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -165,20 +162,20 @@ img {
 
 .vision-banner {
   background: var(--white);
-  padding: 20px;
-  margin-bottom: 10px;
+  padding: 19px;
+  margin-bottom: 9px;
   border-bottom: 1px solid var(--border-color);
 }
 
 .vision-title {
-  font-size: 16px; /* تم التعديل من 14px */
+  font-size: 15px;
   font-weight: 800;
   color: var(--primary-orange);
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 .vision-text {
-  font-size: 15px; /* تم التعديل من 13px */
+  font-size: 14px;
   color: var(--text-gray);
   line-height: 1.7;
 }
@@ -186,11 +183,11 @@ img {
 /* Hero Section */
 .hero {
   position: relative;
-  height: 250px;
+  height: 249px;
   overflow: hidden;
   color: white;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin-bottom: 9px;
+  margin-top: 9px;
 }
 
 .hero-slider {
@@ -198,7 +195,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 250px;
+  height: 249px;
 }
 
 .slide {
@@ -206,7 +203,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 250px;
+  height: 249px;
   background-size: cover;
   background-position: center;
   opacity: 0;
@@ -232,36 +229,36 @@ img {
 .hero-content {
   position: relative;
   z-index: 2;
-  padding: 30px 0;
+  padding: 29px 0;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 25px; /* تم التعديل من 23px */
-  margin-bottom: 10px;
+  font-size: 24px;
+  margin-bottom: 9px;
 }
 
 .hero p {
-  font-size: 18px; /* تم التعديل من 16px */
-  padding-right: 40px;
-  padding-left: 40px;
-  margin-bottom: 20px;
+  font-size: 17px;
+  padding-right: 39px;
+  padding-left: 39px;
+  margin-bottom: 19px;
 }
 
 .hero-buttons {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 25px;
+  gap: 24px;
 }
 
 .slider-button1 {
   background-color: var(--primary-orange);
   color: #fff;
   border: none;
-  border-radius: 5px;
-  padding: 4px 12px;
-  font-size: 14px; /* تم التعديل من 12px */
+  border-radius: 4px;
+  padding: 3px 11px;
+  font-size: 13px;
   font-weight: 500;
 }
 
@@ -274,9 +271,9 @@ img {
   background-color: transparent;
   color: #fff;
   border: 1px solid #fff;
-  border-radius: 5px;
-  padding: 4px 12px;
-  font-size: 14px; /* تم التعديل من 12px */
+  border-radius: 4px;
+  padding: 3px 11px;
+  font-size: 13px;
   font-weight: 500;
 }
 
@@ -287,17 +284,17 @@ img {
 
 .slider-indicators {
   position: absolute;
-  bottom: 20px;
+  bottom: 19px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 10px;
+  gap: 9px;
   z-index: 3;
 }
 
 .indicator {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
@@ -309,9 +306,9 @@ img {
 }
 
 .main-cats-scroll {
-  padding: 15px 10px;
+  padding: 14px 9px;
   background: var(--white);
-  margin-bottom: 10px;
+  margin-bottom: 9px;
   overflow-x: auto;
   white-space: nowrap;
   -ms-overflow-style: none;
@@ -324,38 +321,38 @@ img {
 
 .cat-cards-container {
   display: flex;
-  gap: 5px;
+  gap: 4px;
   justify-content: space-between;
   min-width: 100%;
 }
 
 .main-cat-card {
   flex: 1;
-  min-width: 70px;
+  min-width: 69px;
   text-align: center;
 }
 
 .cat-icon-circle {
-  width: 85px;
-  height: 60px;
+  width: 84px;
+  height: 59px;
   background: none;
-  border-radius: 10px;
-  margin: 0 auto 8px;
+  border-radius: 9px;
+  margin: 0 auto 7px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 3px solid var(--border-color);
+  border: 2px solid var(--border-color);
 }
 
 .cat-icon-circle img {
-  width: 78px;
-  height: 54px;
-  border-radius: 8px;
+  width: 77px;
+  height: 53px;
+  border-radius: 7px;
   border: none;
 }
 
 .cat-title {
-  font-size: 13px; /* تم التعديل من 11px */
+  font-size: 12px;
   font-weight: 800;
   color: var(--text-dark);
   line-height: 1.3;
@@ -363,13 +360,13 @@ img {
 
 .section-container {
   background: var(--white);
-  margin-bottom: 10px;
-  padding-bottom: 15px;
+  margin-bottom: 9px;
+  padding-bottom: 14px;
   position: relative;
 }
 
 .section-header {
-  padding: 12px 15px;
+  padding: 11px 14px;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -377,17 +374,17 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 .sec-title {
-  font-size: 18px; /* تم التعديل من 16px */
+  font-size: 17px;
   font-weight: 800;
   color: var(--text-dark);
 }
 
 .sec-desc {
-  font-size: 13px; /* تم التعديل من 11px */
+  font-size: 12px;
   color: var(--text-gray);
   display: block;
   line-height: 1.4;
@@ -395,26 +392,26 @@ img {
 }
 
 .more-btn {
-  font-size: 14px; /* تم التعديل من 12px */
+  font-size: 13px;
   color: var(--text-gray);
   background: #f0f0f0;
-  padding: 4px 12px;
-  border-radius: 12px;
+  padding: 3px 11px;
+  border-radius: 11px;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
 }
 
 .horizontal-products-wrapper {
   position: relative;
-  padding: 10px 5px 0 5px;
+  padding: 9px 4px 0 4px;
 }
 
 .horizontal-products-list {
   display: flex;
   overflow-x: auto;
-  gap: 8px;
-  padding-bottom: 10px;
+  gap: 7px;
+  padding-bottom: 9px;
   scroll-behavior: smooth;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -426,53 +423,53 @@ img {
 
 .h-product-card {
   flex: 0 0 32%;
-  min-width: 115px;
-  max-width: 130px;
+  min-width: 114px;
+  max-width: 129px;
   background: var(--white);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: 7px;
   overflow: hidden;
   position: relative;
 }
 
 .h-product-img {
   width: 100%;
-  height: 100px;
+  height: 99px;
   object-fit: cover;
   background: #eee;
 }
 
 .h-product-info {
-  padding: 6px;
+  padding: 5px;
 }
 
 .h-product-name {
-  font-size: 13px; /* تم التعديل من 11px */
+  font-size: 12px;
   color: var(--text-dark);
-  height: 28px;
+  height: 27px;
   overflow: hidden;
   line-height: 1.3;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
   font-weight: 600;
 }
 
 .h-product-spec {
-  font-size: 12px; /* تم التعديل من 10px */
+  font-size: 11px;
   color: #888;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .h-product-badge {
-  font-size: 12px; /* تم التعديل من 10px */
+  font-size: 11px;
   font-weight: 700;
   color: var(--primary-orange);
   display: inline-block;
   background: rgba(255, 102, 0, 0.1);
-  padding: 2px 4px;
-  border-radius: 3px;
+  padding: 1px 3px;
+  border-radius: 2px;
 }
 
 .scroll-arrow-left {
@@ -482,8 +479,8 @@ img {
   transform: translateY(-50%);
   background: rgba(0, 0, 0, 0.6);
   color: #fff;
-  width: 25px;
-  height: 25px;
+  width: 24px;
+  height: 24px;
   border-radius: 0 50% 50% 0;
   display: flex;
   align-items: center;
@@ -500,8 +497,8 @@ img {
 }
 
 .tab-btn {
-  padding: 12px 15px;
-  font-size: 15px; /* تم التعديل من 13px */
+  padding: 11px 14px;
+  font-size: 14px;
   color: var(--text-gray);
   cursor: pointer;
   white-space: nowrap;
@@ -522,13 +519,13 @@ img {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 3px;
+  height: 2px;
   background: var(--primary-orange);
 }
 
 .tab-content {
   display: none;
-  padding: 15px;
+  padding: 14px;
   background: var(--white);
 }
 
@@ -539,29 +536,29 @@ img {
 .parts-alert {
   background: #fff8e1;
   border: 1px solid #ffe082;
-  padding: 10px;
-  border-radius: 6px;
-  font-size: 13px; /* تم التعديل من 11px */
+  padding: 9px;
+  border-radius: 5px;
+  font-size: 12px;
   color: #856404;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
   line-height: 1.5;
 }
 
 .tab-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 9px;
 }
 
 .btn-outline {
   display: inline-block;
-  padding: 8px 30px;
+  padding: 7px 29px;
   border: 1px solid var(--primary-orange);
   color: var(--primary-orange);
-  border-radius: 20px;
-  font-size: 14px; /* تم التعديل من 12px */
+  border-radius: 19px;
+  font-size: 13px;
   font-weight: 600;
-  margin-top: 15px;
+  margin-top: 14px;
 }
 
 .bottom-nav {
@@ -573,8 +570,8 @@ img {
   border-top: 1px solid #ddd;
   display: flex;
   justify-content: space-around;
-  padding-top: 11px;
-  padding-bottom: 9px;
+  padding-top: 10px;
+  padding-bottom: 8px;
   z-index: 2000;
 }
 
@@ -583,13 +580,12 @@ img {
   flex-direction: column;
   align-items: center;
   color: var(--text-dark);
-  font-size: 10px; /* تم التعديل من 8px */
+  font-size: 9px;
   font-weight: 600;
-  gap: 3px;
+  gap: 2px;
   background: none;
   border: none;
   cursor: pointer;
- 
 }
 
 .nav-item.active {
@@ -597,7 +593,7 @@ img {
 }
 
 .nav-item i {
-  font-size: 17px; /* تم التعديل من 15px */
+  font-size: 16px;
 }
 
 .categories-modal {
@@ -606,52 +602,52 @@ img {
   left: 0;
   width: 100%;
   background: var(--white);
-  border-radius: 20px 20px 0 0;
-  padding: 20px;
-  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 19px 19px 0 0;
+  padding: 19px;
+  box-shadow: 0 -4px 19px rgba(0, 0, 0, 0.2);
   transition: bottom 0.3s ease-in-out;
   z-index: 2100;
 }
 
 .categories-modal.show {
-  bottom: 60px;
+  bottom: 59px;
 }
 
 .modal-header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
   font-weight: 700;
 }
 
 .cats-grid-menu {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  gap: 14px;
 }
 
 .cat-menu-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
   text-align: center;
 }
 
 .cat-menu-icon {
-  width: 45px;
-  height: 45px;
+  width: 44px;
+  height: 44px;
   background: #f0f0f0;
-  border-radius: 12px;
+  border-radius: 11px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px; /* تم التعديل من 18px */
+  font-size: 19px;
   color: var(--primary-orange);
 }
 
 .cat-menu-name {
-  font-size: 13px; /* تم التعديل من 11px */
+  font-size: 12px;
   color: var(--text-dark);
 }
 
@@ -672,17 +668,17 @@ img {
 
 .categories-bar2 {
   background: var(--white, #fff);
-  padding: 8px 12px;
+  padding: 7px 11px;
   border-bottom: 1px solid #eee;
   display: flex;
-  gap: 15px;
+  gap: 14px;
   overflow-x: auto;
   white-space: nowrap;
 }
 
 .cat-link2 {
   color: var(--text-dark);
-  font-size: 16px; /* تم التعديل من 14px */
+  font-size: 15px;
   font-weight: 500;
   text-decoration: none;
   cursor: pointer;
@@ -697,20 +693,20 @@ img {
 .cat-link2.active::after {
   content: '';
   position: absolute;
-  bottom: -8px;
+  bottom: -7px;
   left: 50%;
   transform: translateX(-50%);
-  width: 16px;
-  height: 3px;
+  width: 15px;
+  height: 2px;
   background: var(--primary-orange, #ff6600);
-  border-radius: 2px;
+  border-radius: 1px;
 }
 
 .products-grid2 {
   display: none;
   grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  padding: 8px;
+  gap: 7px;
+  padding: 7px;
 }
 
 .products-grid2.active-section2 {
@@ -719,7 +715,7 @@ img {
 
 .product-card2 {
   background: var(--white);
-  border-radius: 8px;
+  border-radius: 7px;
   overflow: hidden;
   position: relative;
 }
@@ -740,13 +736,13 @@ img {
 }
 
 .product-info2 {
-  padding: 8px;
+  padding: 7px;
 }
 
 .product-title2 {
-  font-size: 15px; /* تم التعديل من 13px */
+  font-size: 14px;
   color: var(--text-gray);
-  margin-bottom: 6px;
+  margin-bottom: 5px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -756,29 +752,29 @@ img {
 }
 
 .product-price2 {
-  font-size: 16px; /* تم التعديل من 14px */
+  font-size: 15px;
   font-weight: 700;
   color: #333;
-  margin-bottom: 2px;
+  margin-bottom: 1px;
 }
 
 .moq-label2 {
-  font-size: 12px; /* تم التعديل من 10px */
+  font-size: 11px;
   color: #999;
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 
 .product-tags2 {
   display: flex;
   flex-wrap: wrap;
-  gap: 3px;
+  gap: 2px;
 }
 
 .tag2 {
-  font-size: 11px; /* تم التعديل من 9px */
-  padding: 2px 4px;
-  border-radius: 2px;
+  font-size: 10px;
+  padding: 1px 3px;
+  border-radius: 1px;
 }
 
 .tag-red2 {
@@ -792,61 +788,63 @@ img {
 }
 
 .years-badge2 {
-  font-size: 12px; /* تم التعديل من 10px */
+  font-size: 11px;
   color: #999;
-  margin-top: 4px;
+  margin-top: 3px;
   display: flex;
   align-items: center;
-  gap: 3px;
+  gap: 2px;
 }
 
 .img-search-icon2 {
   position: absolute;
-  bottom: 6px;
-  right: 6px;
+  bottom: 5px;
+  right: 5px;
   background: rgba(255, 255, 255, 0.8);
-  width: 22px;
-  height: 22px;
+  width: 21px;
+  height: 21px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 13px; /* تم التعديل من 11px */
+  font-size: 12px;
   color: #333;
 }
 
 /*** WhatsApp Button ***/
 .whats-float {
   position: fixed;
-  transform: translate(70px, 0px);
-  bottom: 100px;
-  right: 0;
-  width: 130px;
+  transform: translate(-69px, 0px);
+  bottom: 99px;
+  left: 0;
+  width: 129px;
   overflow: hidden;
   background-color: #25d366;
   color: #FFF;
-  border-radius: 28px 0 0 28px;
+  border-radius: 0 27px 27px 0;
   z-index: 10;
   transition: all 0.8s ease-in-out;
-  direction: ltr;
+  direction: rtl;
   vertical-align: middle;
 }
 
 .whats-float a span {
   color: #fff;
-  font-size: 17px; /* تم التعديل من 15px */
-  padding-top: 8px;
-  padding-bottom: 10px;
+  font-size: 16px;
+  padding-top: 7px;
+  padding-bottom: 9px;
   position: absolute;
   line-height: 1.5;
   text-align: center;
   font-weight: bolder;
+  right: 59px;
+  top: 4px;
 }
 
 .whats-float-gif {
-  width: 65px;
-  height: 65px;
-  padding: 9px;
+  width: 64px;
+  height: 64px;
+  padding: 8px;
   transform: rotate(0deg);
   transition: all 0.8s ease-in-out;
   text-align: center;
@@ -861,73 +859,79 @@ img {
   transform: rotate(360deg);
 }
 
-@media (max-width: 768px) {
-  .hero-buttons .btn {
-    width: 100%;
-    max-width: 300px;
-  }
-
+@media (max-width: 767px) {
   /* Start WhatsApp Float Button */
   .whats-float {
-    width: 95px;
-    transform: translate(57px, 0px);
-    border-radius: 15px 0 0 15px;
-    bottom: 80px;
-    right: 0;
+    width: 94px;
+    transform: translate(-56px, 0px);
+    border-radius: 0 14px 14px 0;
+    bottom: 79px;
+    left: 0;
   }
 
   .whats-float a span {
-    font-size: 14px; /* تم التعديل من 12px */
-    padding-top: 8px;
-    padding-bottom: 10px;
+    font-size: 13px;
+    padding-top: 7px;
+    padding-bottom: 9px;
+    right: 44px;
   }
 
   .whats-float-gif {
-    width: 43px;
-    height: 43px;
-    padding: 6px;
+    width: 42px;
+    height: 42px;
+    padding: 5px;
   }
   /* End WhatsApp Float Button */
 }
 
-@media (max-width: 480px) {
+@media (max-width: 479px) {
+  /* Start WhatsApp Float Button */
+  .whats-float {
+    width: 94px;
+    transform: translate(-56px, 0px);
+    border-radius: 0 14px 14px 0;
+    bottom: 69px;
+    left: 0;
+  }
+
+  .whats-float a span {
+    font-size: 13px;
+    padding-top: 7px;
+    padding-bottom: 9px;
+  }
+
+  .whats-float-gif {
+    width: 42px;
+    height: 42px;
+    padding: 5px;
+  }
+  /* End WhatsApp Float Button */
+}
+
+@media (max-width: 767px) {
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 299px;
+  }
+}
+
+@media (max-width: 479px) {
   .hero h1 {
-    font-size: 21px; /* تم التعديل من 1.8rem (تقريباً +2px) */
+    font-size: 20px;
   }
 
   .hero p {
-    font-size: 15px; /* تم التعديل من 16px (كانت 1rem) */
+    font-size: 14px;
   }
+
   .slider-button1,
-
-.slider-button2 {
-  padding: 3px 10px;
-  font-size: 13px; 
-}
-  
-.slider-indicators {
-  bottom: 10px;
-  gap: 10px;
-}
-  /* Start WhatsApp Float Button */
-  .whats-float {
-    width: 95px;
-    transform: translate(57px, 0px);
-    border-radius: 15px 0 0 15px;
-    bottom: 70px;
-    right: 0;
+  .slider-button2 {
+    padding: 2px 9px;
+    font-size: 12px;
   }
 
-  .whats-float a span {
-    font-size: 14px; /* تم التعديل من 12px */
-    padding-top: 8px;
-    padding-bottom: 10px;
+  .slider-indicators {
+    bottom: 9px;
+    gap: 9px;
   }
-
-  .whats-float-gif {
-    width: 43px;
-    height: 43px;
-    padding: 6px;
-  }
-  /* End WhatsApp Float Button */
 }
