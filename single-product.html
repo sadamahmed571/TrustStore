@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>آلة الحفر بالشرارة ZNC Spark Erosion EDM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/single-product.css">
+</head>
+        
+<style>
+
+</style>
+<body>
+
+    <!-- قسم المنتج الرئيسي -->
+    <section class="product-card">
+
+        <!-- حاوية المعرض (الصور والفيديو) -->
+        <div class="gallery-container">
+            <!-- شريط الميتا أعلى الصورة -->
+            <div class="meta-bar">
+                <span class="meta-badge"><i class="fa-solid fa-barcode"></i> ZNC-00123</span>
+                <span class="meta-badge"><i class="fa-solid fa-layer-group"></i> آلات صناعية</span>
+                <span class="meta-badge" ><i class="fa-solid fa-tag"></i> آلات EDM</span>
+            </div>
+
+            <!-- الصورة الرئيسية للسلايدر -->
+            <img src="Img/product2.jpg" alt="آلة EDM" class="main-img active" id="main-image">
+
+            <!-- ثمبنيلز الصور الصغيرة -->
+            <div class="thumbnails-container">
+                <img src="Img/3.jpg" alt="صورة 1" class="thumbnail" onclick="changeImage(this.src)">
+                <img src="Img/2.jpg" alt="صورة 2" class="thumbnail" onclick="changeImage(this.src)">
+                <img src="Img/3.jpg" alt="صورة 3" class="thumbnail" onclick="changeImage(this.src)">
+            </div>
+
+            <!-- أسهم السلايدر -->
+            <button class="slider-arrow left" onclick="prevImage()"><i class="fas fa-chevron-right"></i></button>
+            <button class="slider-arrow right" onclick="nextImage()"><i class="fas fa-chevron-left"></i></button>
+
+            <!-- عداد الصور -->
+            <div class="img-counter">الصور 1/6</div>
+
+            <!-- حاوية الفيديو (مخفية افتراضياً) -->
+            <div id="video-container">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/watch?v=SiILrKSR-FA" title="فيديو المنتج" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <!-- شريط التراكب السفلي -->
+            <div class="gallery-overlay-bar">
+                <div class="overlay-tab" onclick="showVideo()">فيديو المنتج</div>
+                <div class="overlay-tab active" onclick="showQuickView()">نظرة سريعة</div>
+                <div class="overlay-tab" onclick="sendInquiry()">اطلب المنتج</div>
+            </div>
+        </div>
+
+        <!-- قسم معلومات المنتج -->
+        <div class="info-section pad-15">
+            <div class="price-row">
+                <div class="price text-primary">YER 1,550,282</div>
+                <div class="moq">الحد الأدنى للطلب: 1 مجموعة</div>
+            </div>
+
+            <div class="flex-header-title">
+                <h1 class="product-title">
+                    آلة الحفر بالشرارة ZNC Spark Erosion Die Sinking EDM Machine سعر منخفض CNC
+                </h1>
+                <!--<i class="fas fa-share share-icon"></i>-->
+            </div>
+
+            <div class="rank-badge">
+                <div>
+                    <i class="fas fa-trophy"></i>
+                    <span>#2 الأكثر رواجاً في آلات Sinker EDM</span>
+                </div>
+                <i class="fas fa-chevron-left"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم التنقل بين التبويبات -->
+    <nav class="nav-tabs">
+        <div class="nav-tab active" onclick="openTab(event, 'tab-overview')">نظرة عامة</div>
+        <div class="nav-tab" onclick="openTab(event, 'tab-details')">التفاصيل</div>
+        <div class="nav-tab" onclick="openTab(event, 'tab-recommended')">منتجات مشابهة</div>
+    </nav>
+
+    <!-- محتوى التبويبات -->
+    <div id="tab-overview" class="tab-content ">
+       
+
+        <!-- قسم المواصفات الرئيسية -->
+        <section class="attributes-section">
+             
+
+            <div class="attr-grid">
+                <div class="attr-item">
+                    <h4>Sinker EDM</h4>
+                    <p>نوع الآلة</p>
+                </div>
+                <div class="attr-item">
+                    <h4>380 V, 220 V, 110 V</h4>
+                    <p>الجهد الكهربائي</p>
+                </div>
+                <div class="attr-item">
+                    <h4>CNC</h4>
+                    <p>CNC أم لا</p>
+                </div>
+                <div class="attr-item">
+                    <h4>متوفر</h4>
+                    <p>تقرير اختبار الآلات</p>
+                </div>
+                <div class="attr-item">
+                    <h4>سهلة التشغيل</h4>
+                    <p>نقاط البيع الرئيسية</p>
+                </div>
+                <div class="attr-item">
+                    <h4>متوفر</h4>
+                    <p>فحص الفيديو الصادر</p>
+                </div>
+                <!-- إضافات جديدة دون تكرار -->
+                <div class="attr-item">
+                    <h4>العلامة التجارية</h4>
+                    <p>ماركة ZNC</p>
+                </div>
+                <div class="attr-item">
+                    <h4>الموديل</h4>
+                    <p>ZNC350</p>
+                </div>
+                <div class="attr-item">
+                    <h4>الوزن (كجم)</h4>
+                    <p>300 كجم</p>
+                </div>
+                <div class="attr-item">
+                    <h4>الأبعاد (سم)</h4>
+                    <p>600 × 350 × 200</p>
+                </div>
+                <div class="attr-item">
+                    <h4>الألوان</h4>
+                    <p>رمادي، أسود</p>
+                </div>
+                <div class="attr-item">
+                    <h4>مواد التصنيع</h4>
+                    <p>فولاذ مقاوم للصدأ</p>
+                </div>
+                <div class="attr-item">
+                    <h4>بلد المنشأ</h4>
+                    <p>الصين</p>
+                </div>
+                <div class="attr-item">
+                    <h4>الميزات الإضافية</h4>
+                    <p>تحكم ذكي، فلتر مزدوج</p>
+                </div>
+            </div>
+        </section>
+         
+
+        <!-- قسم الحماية -->
+        <div class="product-card pad-15">
+            <div class="section-header">
+                <span>الحماية لهذا المنتج</span>
+                <i class="fas fa-chevron-left chevron-icon"></i>
+            </div>
+            <div class="service-row">
+                <i class="fas fa-check-circle"></i>
+                <span>دفع آمن</span>
+                <span class="text-small-gray">Visa, MasterCard, PayPal...</span>
+            </div>
+            <div class="service-row">
+                <i class="fas fa-undo"></i>
+                <span>سياسة استرجاع قياسية</span>
+            </div>
+            <p class="text-note">
+                الثقة التجارية تحمي طلباتك...
+            </p>
+        </div>
+        <!-- قسم الخدمة -->
+        <div class="product-card pad-15">
+            <div class="section-header">
+                <span>الخدمة</span>
+            </div>
+            <div class="service-row">
+                <i class="fas fa-tools"></i>
+                <span>قطع غيار مجانية & دعم فني عبر الإنترنت</span>
+            </div>
+        </div>
+
+        <!-- قسم الشحن -->
+        <div class="product-card pad-15">
+            <div class="section-header mb-5">
+                <span>الشحن إلى <strong>YE</strong></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="tab-details" class="tab-content active">
+        <div class="product-card pad-15">
+           
+            <p class="product-description">
+                تتميز آلة ZNC EDM بدقة عالية وثبات ممتاز في الأداء. تم تصميمها خصيصًا لتصنيع القوالب المعقدة، وقطع الغيار الدقيقة. تعتمد وحدة التحكم على نظام ذكي لمعالجة الشرارة، مما يقلل من تآكل القطب ويزيد من سرعة التشطيب السطحي.
+            </p>
+            <!-- وصف المنتج الإضافي -->
+            <div class="attr-item">
+                <h4>وصف المنتج</h4>
+                <p>آلة حفر بالشرارة عالية الدقة للاستخدامات الصناعية.</p>
+            </div>
+            <!-- قائمة استخدامات المنتج -->
+            <div class="attr-item">
+                <h4>استخدامات المنتج</h4>
+                <ul>
+                    <li>تصنيع القوالب</li>
+                    <li>قطع غيار دقيقة</li>
+                    <li>صناعات معدنية</li>
+                </ul>
+            </div>
+            
+          <div class="section-header">
+                <span>المواصفات التقنية</span>
+            </div>
+
+         <table class="tech-table">
+                <tr>
+                    <td>طاولة العمل (X*Y)</td>
+                    <td>600 × 350 مم</td>
+                </tr>
+                <tr>
+                    <td>مسافة السفر (X/Y/Z)</td>
+                    <td>350 × 250 × 200 مم</td>
+                </tr>
+                <tr>
+                    <td>أقصى وزن للقطب</td>
+                    <td>50 كجم</td>
+                </tr>
+                <tr>
+                    <td>أقصى وزن للقطعة</td>
+                    <td>300 كجم</td>
+                </tr>
+                <tr>
+                    <td>خزان الزيت</td>
+                    <td>مدمج مع فلتر مزدوج</td>
+                </tr>
+                <tr>
+                    <td>التحكم</td>
+                    <td>ZNC (تحكم في المحور Z)</td>
+                </tr>
+                <tr>
+                    <td>الضمان</td>
+                    <td>سنتان للمكونات الرئيسية</td>
+                </tr>
+            </table>
+            
+             <div class="section-header">
+               <span>معلومات إضافية عن المنتج</span>
+            </div>
+             <table class="tech-table">
+                <tr>
+                    <td>العلامة التجارية</td>
+                    <td>ZNC</td>
+                </tr>
+                <tr>
+                    <td>الموديل</td>
+                    <td>ZNC350</td>
+                </tr>
+                <tr>
+                    <td>وصف المنتج</td>
+                    <td>آلة الحفر بالشرارة الكهربائية للقوالب والمعادن</td>
+                </tr>
+                <tr>
+                    <td>استخدامات المنتج</td>
+                    <td>تصنيع القوالب، تشكيل المعادن، الأعمال الدقيقة</td>
+                </tr>
+                <tr>
+                    <td>الوزن (كجم)</td>
+                    <td>1200 كجم</td>
+                </tr>
+                <tr>
+                    <td>الأبعاد (سم)</td>
+                    <td>150 × 120 × 180 سم</td>
+                </tr>
+                <tr>
+                    <td>الألوان</td>
+                    <td>أزرق صناعي</td>
+                </tr>
+                <tr>
+                    <td>مواد التصنيع</td>
+                    <td>فولاذ، نحاس، بلاستيك صناعي</td>
+                </tr>
+                <tr>
+                    <td>بلد المنشأ</td>
+                    <td>الصين</td>
+                </tr>
+                <tr>
+                    <td>الميزات الإضافية</td>
+                    <td>نظام تبريد، شاشة تحكم رقمية، نظام أمان</td>
+                </tr>
+            </table>    
+         
+         
+        </div>
+    </div>
+
+    <div id="tab-recommended" class="tab-content">
+        <div class="rec-grid">
+            <div class="rec-card">
+                <img src="Img/2.jpg" class="rec-img" alt="آلة قطع الأسلاك">
+                <div class="rec-info">
+                    <div class="rec-price">YER 2,100,000</div>
+                    <div class="rec-title">آلة قطع الأسلاك DK7735 عالية السرعة</div>
+                </div>
+            </div>
+            <div class="rec-card">
+                <img src="Img/2.jpg" class="rec-img" alt="آلة تفريز">
+                <div class="rec-info">
+                    <div class="rec-price">YER 950,000</div>
+                    <div class="rec-title">آلة تفريز عمودية CNC VMC850</div>
+                </div>
+            </div>
+            <div class="rec-card">
+                <img src="Img/2.jpg" class="rec-img" alt="آلة ثقب EDM">
+                <div class="rec-info">
+                    <div class="rec-price">YER 800,000</div>
+                    <div class="rec-title">آلة ثقب صغيرة EDM للحفر الدقيق</div>
+                </div>
+            </div>
+            <div class="rec-card">
+                <img src="Img/2.jpg" class="rec-img" alt="إكسسوارات">
+                <div class="rec-info">
+                    <div class="rec-price">YER 50,000</div>
+                    <div class="rec-title">مجموعة أقطاب نحاسية EDM</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- قسم التنقل السفلي -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>الرئيسية</span>
+        </a>
+        <a href="ideas.html" class="nav-item">
+            <i class="fa-solid fa-business-time"></i>
+            <span>أفكار مشاريع</span>
+        </a>
+        <button class="nav-item" onclick="toggleCategories()">
+            <i class="fas fa-list-ul"></i>
+            <span>المنتجات</span>
+        </button>
+        <a href="#" class="nav-item">
+            <i class="fa-solid fa-plus"></i>
+            <span>قدم طلبك</span>
+        </a>
+        <a href="services.html" class="nav-item">
+            <i class="fas fa-project-diagram"></i>
+            <span>خدماتنا</span>
+        </a>
+        <a href="contact.html" class="nav-item ">
+            <i class="fas fa-headset"></i>
+            <span>تواصل معنا</span>
+        </a>
+    </nav>
+
+    <!-- نموذج الفئات -->
+    <div class="overlay" id="overlay" onclick="toggleCategories()"></div>
+    <div class="categories-modal" id="cats-modal">
+        <div class="modal-header">
+            <span>تصفح المنتجات</span>
+            <i class="fas fa-times" onclick="toggleCategories()" style="cursor: pointer;"></i>
+        </div>
+        <div class="cats-grid-menu">
+            <a href="products-board.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-cogs"></i></div><span class="cat-menu-name">ماكينات</span></a>
+            <a href="products-board.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-industry"></i></div><span class="cat-menu-name">خطوط إنتاج</span></a>
+            <a href="products-board.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-cubes"></i></div><span class="cat-menu-name">البناء الحديث</span></a>
+            <a href="products-board.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-truck-loading"></i></div><span class="cat-menu-name">معدات صناعية</span></a>
+            <a href="products-board.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-tools"></i></div><span class="cat-menu-name">قطع غيار</span></a>
+            <a href="products-board.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-hard-hat"></i></div><span class="cat-menu-name">مستلزمات</span></a>
+        </div>
+    </div>
+
+    <!-- سكريبتات الجافا سكريبت -->
+    <script>
+        // دالة تبديل التبويبات
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("nav-tab");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        // عرض الفيديو
+        function showVideo() {
+            document.getElementById('video-container').style.display = 'block';
+            document.getElementById('main-image').style.display = 'none';
+            document.querySelector('.thumbnails-container').style.display = 'none';
+        }
+
+        // عرض النظرة السريعة (السلايدر)
+        function showQuickView() {
+            document.getElementById('video-container').style.display = 'none';
+            document.getElementById('main-image').style.display = 'block';
+            document.querySelector('.thumbnails-container').style.display = 'flex';
+        }
+
+        // إرسال استفسار عبر واتساب
+        function sendInquiry() {
+            const productName = "آلة الحفر بالشرارة ZNC Spark Erosion Die Sinking EDM Machine";
+            const productLink = window.location.href;
+            const serialNumber = "ZNC-00123";
+            const mainCategory = "آلات صناعية";
+            const price = "YER 1,550,282";
+            const message = `مرحباً .. أريد طلب هذا المنتج @${productName} @${productLink} @${serialNumber} @${mainCategory} @${price}`;
+            const phone = "1234567890"; // رقم المتجر الافتراضي
+            window.location.href = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+        }
+
+        // تغيير الصورة الرئيسية
+        function changeImage(src) {
+            document.getElementById('main-image').src = src;
+        }
+
+        // أسهم السلايدر
+        const images = [
+            "Img/product2.jpg",
+            "Img/2.jpg",
+            "Img/3.jpg"
+        ];
+        let currentIndex = 0;
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            document.getElementById('main-image').src = images[currentIndex];
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            document.getElementById('main-image').src = images[currentIndex];
+        }
+
+        // تبديل الفئات
+        function toggleCategories() {
+            document.getElementById('overlay').classList.toggle('active');
+            document.getElementById('cats-modal').classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
