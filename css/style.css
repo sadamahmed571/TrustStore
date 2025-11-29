@@ -1375,7 +1375,7 @@ img {
     width: 94px;
     transform: translate(-56px, 0px);
     border-radius: 0 14px 14px 0;
-    bottom: 69px;
+    bottom: 85px;
     left: 0;
   }
 
@@ -1419,4 +1419,5 @@ img {
     gap: 9px;
   }
 }
+
 ```
