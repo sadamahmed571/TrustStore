@@ -150,7 +150,7 @@ img {
 }
 
 .search-btn2 {
-  background-color: var(--primary-orange);
+  background-color: var(--text-dark);
   color: var(--white);
   border: none;
   border-radius: 5px;
@@ -1421,3 +1421,4 @@ img {
 }
 
 ```
+
