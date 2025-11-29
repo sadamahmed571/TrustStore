@@ -241,7 +241,7 @@ img {
   align-items: center;
   justify-content: space-around;
   height: 53px;
-  max-width: 140px;
+  max-width: 135px;
   position: relative;
   overflow: hidden;
 }
@@ -256,7 +256,7 @@ img {
 }
 
 .store-service-text-1 {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--text-dark);
   z-index: 2;
@@ -1421,5 +1421,6 @@ img {
 }
 
 ```
+
 
 
