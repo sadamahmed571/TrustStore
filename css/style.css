@@ -1873,11 +1873,7 @@ img {
       overflow: hidden;
     }
 
-    @media (max-width: 768px) {
-      .videos-detail-card {
-        min-width: calc(60% - 10px);
-      }
-    }
+  
 
     .videos-detail-media-wrap {
       width: 100%;
@@ -1973,8 +1969,8 @@ img {
     }
 
     .videos-modal-player {
-      width: 420px;
-      max-width: 62%;
+      width: 320px;
+      max-width: 100%;
       aspect-ratio: 9/16;
       background: #000;
       border-radius: 14px;
