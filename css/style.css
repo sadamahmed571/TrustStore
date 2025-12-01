@@ -1982,17 +1982,7 @@ img {
       position: relative;
     }
 
-    @media (max-width: 700px) {
-      .videos-modal-player {
-        width: 88%;
-        aspect-ratio: 9 / 16;
-      }
-      .videos-modal-content {
-        flex-direction: column;
-        gap: 12px;
-      }
-    }
-
+   
     .videos-modal-close {
       position: absolute;
      top:37px;
