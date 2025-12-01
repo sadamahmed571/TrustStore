@@ -7,6 +7,10 @@
   --text-dark: #222222;
   --text-gray: #666666;
   --border-color: #e6e6e6;
+   --black-overlay: rgba(0, 0, 0, 0.4);
+      --glass-bg: rgba(255, 255, 255, 0.95);
+      --radius-main: 12px;
+      --radius-small: 8px;
 }
 
 body.dark-mode {
@@ -1420,7 +1424,724 @@ img {
   }
 }
 
-```
 
+
+/* --------------------------------- */
+/* Modal Form */
+/* --------------------------------- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 3000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(3px);
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--white);
+    width: 90%;
+    max-width: 500px;
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--text-gray);
+}
+
+.modal-title {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: var(--primary-orange);
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 13px;
+    background: var(--bg-gray);
+    color: var(--text-dark);
+}
+
+.form-textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+.btn-submit {
+    width: 100%;
+    background: var(--text-dark);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.btn-submit:hover {
+    background: var(--primary-orange);
+}
+ 
+.categories-modal {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    border-radius: 20px 20px 0 0;
+    padding: 20px;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+    transition: bottom 0.3s ease-in-out;
+    z-index: 2100;
+}
+
+.categories-modal.show {
+    bottom: 60px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.cats-grid-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.cat-menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+}
+
+.cat-menu-icon {
+    width: 45px;
+    height: 45px;
+    background: #f0f0f0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: var(--primary-orange);
+}
+
+.cat-menu-name {
+    font-size: 13px;
+    color: var(--text-dark);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2050;
+    display: none;
+}
+
+.overlay.show {
+    display: block;
+}
+
+
+
+
+
+    .videos-trust-video-hub {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 5px;
+      background: var(--bg-gray);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .videos-tvh-section-title {
+      font-size: 20px;
+      margin: 24px 0 12px;
+      color: var(--text-dark);
+      font-weight: 800;
+    }
+
+    /* أيقونة التشغيل العامة */
+    .videos-play-icon-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 35px;
+      height: 35px;
+      background: var(--black-overlay);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      pointer-events: none;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .videos-play-icon-overlay svg {
+      fill: var(--white);
+      width: 20px;
+      height: 20px;
+    }
+
+    /* كلاس بديل للستايل الداخلي للأيقونات الصغيرة */
+    .videos-icon-sm {
+      width: 30px;
+      height: 30px;
+    }
+
+    /* ==================================== */
+    /* 2. شريط الحالات (Stories) - تم التعديل */
+    /* ==================================== */
+    .videos-stories-bar {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 90px; 
+      gap: 10px;
+      overflow-x: auto;
+      padding: 8px 2px 12px;
+      scroll-snap-type: x mandatory;
+    }
+
+    .videos-story-card {
+      position: relative;
+      aspect-ratio: 9 / 16;
+      border-radius: var(--radius-main);
+      overflow: hidden;
+      scroll-snap-align: start;
+      background: #000;
+      border: 1px solid var(--border-color);
+      cursor: pointer;
+    }
+
+    .videos-bg-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.8;
+      z-index: 0;
+    }
+
+    .videos-story-thumb {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .videos-story-info {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+      color: var(--white);
+      padding: 8px 4px;
+      text-align: center;
+      z-index: 2;
+    }
+
+    /* تصغير النصوص */
+    .videos-story-title {
+      font-size: 10px;
+      margin-bottom: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .videos-story-price {
+      font-size: 11px;
+      font-weight: 700;
+      color: #ffca9e;
+    }
+
+    /* ==================================== */
+    /* 3. شبكة المعرض (Masonry) */
+    /* ==================================== */
+    .videos-masonry-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    @media (min-width: 768px) {
+      .videos-masonry-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .videos-masonry-card {
+      position: relative;
+      border-radius: var(--radius-small);
+      overflow: hidden;
+      background: var(--white);
+      border: 1px solid var(--border-color);
+      aspect-ratio: 16/10;
+    }
+
+    .videos-masonry-meta {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+      backdrop-filter: blur(4px);
+      padding: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 3;
+    }
+
+    .videos-masonry-info h3 {
+      margin: 0;
+      font-size: 13px;
+      color: var(--white);
+    }
+
+    .videos-masonry-info span {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary-orange);
+    }
+
+    .videos-btn-watch {
+      background: var(--text-dark);
+      color: var(--white);
+      border: none;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 11px;
+      cursor: pointer;
+    }
+    
+    /* تغطية الصورة داخل البطاقة */
+    .videos-z-index-1 {
+      z-index: 1;
+    }
+
+    /* ==================================== */
+    /* 4. الحاوية المميزة (Hero) */
+    /* ==================================== */
+    .videos-hero-spotlight {
+      position: relative;
+      margin: 24px 0;
+      border-radius: var(--radius-main);
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      background: #000;
+      height: clamp(250px, 40vw, 450px);
+    }
+
+    .videos-hero-media {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .videos-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, transparent 50%);
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    /* كلاسات بديلة للستايل الداخلي في Hero */
+    .videos-hero-text-content {
+      color: var(--white);
+    }
+
+    .videos-hero-title {
+      margin: 0;
+    }
+
+    .videos-hero-subtitle {
+      margin: 4px 0 0;
+      opacity: 0.8;
+    }
+
+    .videos-hero-btn {
+      background: var(--primary-orange);
+      color: var(--white);
+      border: none;
+      padding: 10px 20px;
+      border-radius: var(--radius-small);
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* ==================================== */
+    /* 5. سلايدر الأكثر طلباً (Auto Slider) */
+    /* ==================================== */
+    .videos-slider-wrapper {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .videos-slider-track {
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding-bottom: 10px;
+      scrollbar-width: none; 
+    }
+    
+    .videos-slider-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .videos-detail-card {
+      min-width: calc(33.333% - 10px);
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      background: var(--white);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    @media (max-width: 768px) {
+      .videos-detail-card {
+        min-width: calc(60% - 10px);
+      }
+    }
+
+    .videos-detail-media-wrap {
+      width: 100%;
+      height: 140px;
+      position: relative;
+      background: #000;
+    }
+
+    .videos-detail-media {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .videos-detail-info {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+    }
+
+    .videos-d-title {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: var(--text-dark);
+    }
+
+    .videos-d-price {
+      color: var(--primary-orange);
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .videos-d-actions {
+      display: flex;
+      gap: 6px;
+      margin-top: auto;
+    }
+
+    .videos-d-btn {
+      flex: 1;
+      padding: 6px;
+      font-size: 12px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .videos-btn-view {
+      background: #eee;
+      color: #333;
+    }
+
+    .videos-btn-details {
+      background: var(--primary-orange);
+      color: var(--white);
+      text-align: center;
+      text-decoration: none;
+      line-height: 2;
+    }
+
+    /* ==================================== */
+    /* 6. النافذة المنبثقة (Modal) */
+    /* ==================================== */
+    .videos-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 10, 12, 0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      padding: 20px;
+    }
+
+    .videos-modal.open {
+      display: flex;
+    }
+
+    .videos-modal-content {
+      width: min(920px, 98%);
+      max-width: 980px;
+      background: transparent;
+      position: relative;
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .videos-modal-player {
+      width: 420px;
+      max-width: 62%;
+      aspect-ratio: 9/16;
+      background: #000;
+      border-radius: 14px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    @media (max-width: 700px) {
+      .videos-modal-player {
+        width: 88%;
+        aspect-ratio: 9 / 16;
+      }
+      .videos-modal-content {
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+
+    .videos-modal-close {
+      position: absolute;
+     top:37px;
+      left: 5px;
+     background: none;
+	 color: var(--white);
+      border-radius: 8px;
+      padding: 6px 8px;
+      cursor: pointer;
+	  font-size: 18px;
+	   text-shadow: 1px 1px #000;
+      font-weight: 400;
+      z-index: 5;
+      border: none;
+    }
+
+    /* Navigation */
+    .videos-modal-nav {
+      position: absolute;
+      top: 60%;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 10px;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+    
+    .videos-modal-nav .videos-nav-btn {
+      pointer-events: auto;
+    }
+
+    .videos-nav-btn {
+      width: 30px;
+      height: 34px;
+      border-radius: 10px;
+      background:  none; 
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+	  font-size: 14px;
+      font-weight: 400;
+      color: var(--white);
+	   text-shadow: 1px 1px #000;
+    }
+     .videos-nav-btn :hover{ 
+	 color: var(--primary-orange);
+    }
+    /* Shop Overlay */
+    .videos-shop-overlay {
+	  position: absolute;
+      top:0;
+      left: 0;
+      right: 0;
+      background:var(--black-overlay);
+      
+      border-radius:10px 10px 0 0 ;
+      padding: 10px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      color: var(--white);
+      border: none;
+    }
+    
+    .videos-modal-thumb-bg {
+      width: 1px;
+      height: 1px;
+      border-radius: 8px;
+      background: none;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .videos-shop-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    
+    .videos-modal-text-title {
+      font-weight: 500;
+	  font-size: 12px;
+    }
+
+    .videos-modal-btn-group {
+      margin-inline-start: auto;
+      display: flex;
+      gap: 8px;
+    }
+
+    .videos-shop-buy {
+      background: var(--primary-orange);
+      color: var(--white);
+      padding: 3px 12px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-weight: 400;
+	   font-size: 10px;
+    }
+
+    .videos-product-details-btn {
+      background: transparent;
+      color: var(--white);
+      padding: 3px 12px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 400;
+      text-decoration: none;
+      font-size: 10px;
+    }
+    
+    .videos-modal-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Utilities */
+    .videos-muted {
+      color: var(--white);
+      font-size: 15px;
+	   z-index: 5;
+	    position: absolute;
+		top:48px;
+      right: 15px;
+	    text-shadow: 1px 1px #000;
+    }
+
+    .videos-small {
+      font-size: 12px;
+      color: var(--text-gray);
+    }
+
+    /* Scrollbars */
+    .videos-stories-bar::-webkit-scrollbar,
+    .videos-slider-track::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .videos-stories-bar::-webkit-scrollbar-thumb,
+    .videos-slider-track::-webkit-scrollbar-thumb {
+      background: var(--border-color);
+      border-radius: 6px;
+    }
 
 
