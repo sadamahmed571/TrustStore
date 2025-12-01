@@ -123,47 +123,262 @@
             
         </div>
     </section>
-    
-     <nav class="bottom-nav">
-        <a href="index.html" class="nav-item">
-            <i class="fas fa-home"></i>
-            <span>الرئيسية</span>
-        </a>
-        <a href="ideas.html" class="nav-item ">
-            <i class="fa-solid fa-business-time"></i>
-            <span>افكار مشاريع</span>
-        </a>
-        <button class="nav-item" onclick="toggleCategories()">
-             <i class="fas fa-list-ul"></i>
-            <span>المنتجات</span>
-        </button>
-       <a href="#" class="nav-item">
-            <i class="fa-solid fa-plus"></i>
-            <span>قدم طلبك</span>
-        </a>
-        <a href="services.html" class="nav-item"><i class="fas fa-project-diagram"></i><span>خدماتنا</span></a>
-        <a href="contact.html" class="nav-item  ">
-            <i class="fas fa-headset"></i>
-            <span>تواصل معنا</span>
-        </a>
-    </nav>
-
-    <div class="overlay" id="overlay" onclick="toggleCategories()"></div>
-    <div class="categories-modal" id="cats-modal">
-        <div class="modal-header">
-            <span>تصفح المنتجات</span>
-            <i class="fas fa-times" onclick="toggleCategories()" style="cursor: pointer;"></i>
+    <section class="section-container">
+        <div class="section-header">
+            <div class="header-top-row">
+                <span class="sec-title">الماكينات (Machinery)</span>
+                <a href="products-board.html" class="more-btn">المزيد <i class="fas fa-chevron-left"></i></a>
+            </div>
+            <span class="sec-desc">أداء قوي ودقة هندسية للتحمل والعمل الشاق.</span>
         </div>
-        <div class="cats-grid-menu">
-            <a href="products-board.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-cogs"></i></div><span class="cat-menu-name">ماكينات</span></a>
-            <a href="products-board.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-industry"></i></div><span class="cat-menu-name">خطوط إنتاج</span></a>
-            <a href="products-board.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-cubes"></i></div><span class="cat-menu-name">البناء الحديث</span></a>
-            <a href="products-board.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-truck-loading"></i></div><span class="cat-menu-name">معدات صناعية</span></a>
-            <a href="products-board.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-tools"></i></div><span class="cat-menu-name">قطع غيار</span></a>
-            <a href="products-board.html" class="cat-menu-item"><div class="cat-menu-icon"><i class="fas fa-hard-hat"></i></div><span class="cat-menu-name">مستلزمات</span></a>
-        </div>
-    </div>
 
+        <div class="horizontal-products-wrapper">
+            <div class="scroll-arrow-left" onclick="scrollSection('machinery-list')"><i class="fas fa-chevron-left"></i></div>
+            <div class="horizontal-products-list" id="machinery-list">
+                <a href="single-product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">خلاطة خرسانة مركزية</div>
+                        <div class="h-product-spec">سعة 1.5 م³/دورة</div>
+                        <div class="h-product-badge">45 kW</div>
+                    </div>
+                </a>
+                <a href="single-product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">ماكينة لحام إنفرتر</div>
+                        <div class="h-product-spec">تيار 400 أمبير</div>
+                        <div class="h-product-badge">Heavy-Duty</div>
+                    </div>
+                </a>
+                <a href="single-product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">ضاغط هواء حلزوني</div>
+                        <div class="h-product-spec">القدرة 50 حصان</div>
+                        <div class="h-product-badge">صامت</div>
+                    </div>
+                </a>
+                 <a href="single-product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">خلاطة خرسانة أوتوماتيك</div>
+                        <div class="h-product-spec">نظام تشغيل آلي</div>
+                        <div class="h-product-badge">عالية السعة</div>
+                    </div>
+                </a>
+                 <a href="single-product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">لحام أنابيب ثقيلة</div>
+                        <div class="h-product-spec">دورة عمل 60%</div>
+                        <div class="h-product-badge">380 فولت</div>
+                    </div>
+                </a>
+                 <a href="single-product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">كمبروسر هواء جاف</div>
+                        <div class="h-product-spec">7.5 م³/دقيقة</div>
+                        <div class="h-product-badge">صناعي</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container">
+        <div class="section-header">
+            <div class="header-top-row">
+                <span class="sec-title">خطوط الإنتاج</span>
+                <a href="products-board.html" class="more-btn">المزيد <i class="fas fa-chevron-left"></i></a>
+            </div>
+            <span class="sec-desc">حلول "تسليم مفتاح" لتبدأ مشروعك الإنتاجي فوراً.</span>
+        </div>
+
+        <div class="horizontal-products-wrapper">
+            <div class="scroll-arrow-left" onclick="scrollSection('lines-list')"><i class="fas fa-chevron-left"></i></div>
+            <div class="horizontal-products-list" id="lines-list">
+                <a href="single-product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">خط إنتاج بلوك آلي</div>
+                        <div class="h-product-spec">15,000 قطعة/وردية</div>
+                        <div class="h-product-badge">كبس 120 طن</div>
+                    </div>
+                </a>
+                <a href="single-product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">خط تعبئة مواد غذائية</div>
+                        <div class="h-product-spec">60 عبوة/دقيقة</div>
+                        <div class="h-product-badge">ستانلس 304</div>
+                    </div>
+                </a>
+                <a href="single-product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">خط خلط مواد لاصقة</div>
+                        <div class="h-product-spec">10 طن/ساعة</div>
+                        <div class="h-product-badge">خلاط أفقي</div>
+                    </div>
+                </a>
+                <a href="single-product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">ماكينة إنترلوك</div>
+                        <div class="h-product-spec">تحكم PLC</div>
+                        <div class="h-product-badge">عالي الجودة</div>
+                    </div>
+                </a>
+                <a href="single-product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">نظام تعبئة بودرة</div>
+                        <div class="h-product-spec">وزن دقيق</div>
+                        <div class="h-product-badge">Load Cell</div>
+                    </div>
+                </a>
+                <a href="single-product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">مصنع مونة جافة</div>
+                        <div class="h-product-spec">صمامات هوائية</div>
+                        <div class="h-product-badge">كامل</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container">
+        <div class="section-header">
+            <div class="header-top-row">
+                <span class="sec-title">البناء الحديث</span>
+                <a href="products-board.html" class="more-btn">المزيد <i class="fas fa-chevron-left"></i></a>
+            </div>
+            <span class="sec-desc">وحدات خرسانية لتقليل زمن الإنشاء وزيادة الدقة.</span>
+        </div>
+
+        <div class="horizontal-products-wrapper">
+            <div class="scroll-arrow-left" onclick="scrollSection('precast-list')"><i class="fas fa-chevron-left"></i></div>
+            <div class="horizontal-products-list" id="precast-list">
+                <a href="single-product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">بلاطات هولوكور</div>
+                        <div class="h-product-spec">سماكة 15-26 سم</div>
+                        <div class="h-product-badge">عزل حراري</div>
+                    </div>
+                </a>
+                <a href="single-product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">حواجز نيوجيرسي</div>
+                        <div class="h-product-spec">ارتفاع 100 سم</div>
+                        <div class="h-product-badge">تسليح داخلي</div>
+                    </div>
+                </a>
+                <a href="single-product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">غرف تفتيش (منهول)</div>
+                        <div class="h-product-spec">قطر 120 سم</div>
+                        <div class="h-product-badge">مقاوم للتآكل</div>
+                    </div>
+                </a>
+                 <a href="single-product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">أسقف مسبقة الصب</div>
+                        <div class="h-product-spec">عرض 120 سم</div>
+                        <div class="h-product-badge">C40/50</div>
+                    </div>
+                </a>
+                <a href="single-product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">فواصل طرق خرسانية</div>
+                        <div class="h-product-spec">طول 4 متر</div>
+                        <div class="h-product-badge">سلامة مرورية</div>
+                    </div>
+                </a>
+                <a href="single-product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">وحدات صرف صحي</div>
+                        <div class="h-product-spec">مقاومة كيميائية</div>
+                        <div class="h-product-badge">بنية تحتية</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container">
+        <div class="section-header">
+            <div class="header-top-row">
+                <span class="sec-title">معدات صناعية</span>
+                <a href="products-board.html" class="more-btn">المزيد <i class="fas fa-chevron-left"></i></a>
+            </div>
+            <span class="sec-desc">معدات دعم أساسية لضمان سلامة وكفاءة سير العمل.</span>
+        </div>
+
+        <div class="horizontal-products-wrapper">
+            <div class="scroll-arrow-left" onclick="scrollSection('industrial-list')"><i class="fas fa-chevron-left"></i></div>
+            <div class="horizontal-products-list" id="industrial-list">
+                <a href="single-product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">مولد كهرباء كاتم</div>
+                        <div class="h-product-spec">200 KVA</div>
+                        <div class="h-product-badge">موفر للوقود</div>
+                    </div>
+                </a>
+                <a href="single-product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">رافعة شوكية ديزل</div>
+                        <div class="h-product-spec">حمولة 3 طن</div>
+                        <div class="h-product-badge">ارتفاع 4.5م</div>
+                    </div>
+                </a>
+                <a href="single-product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">مثقاب صناعي عمودي</div>
+                        <div class="h-product-spec">محرك 2500 واط</div>
+                        <div class="h-product-badge">دقة عالية</div>
+                    </div>
+                </a>
+                <a href="single-product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">مولد طوارئ</div>
+                        <div class="h-product-spec">جهد 400 فولت</div>
+                        <div class="h-product-badge">صناعي</div>
+                    </div>
+                </a>
+                <a href="single-product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">ونش مناولة</div>
+                        <div class="h-product-spec">إطارات هوائية</div>
+                        <div class="h-product-badge">عمل شاق</div>
+                    </div>
+                </a>
+                <a href="single-product.html" class="h-product-card">
+                    <img src="img/spare-parts.jpg" class="h-product-img">
+                    <div class="h-product-info">
+                        <div class="h-product-name">دريل ثابت</div>
+                        <div class="h-product-spec">حفر 50 ملم</div>
+                        <div class="h-product-badge">ثلاثي الأطوار</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+     
     <div class="whats-float" id="whatsFloat">
         <a href="https://wa.me/905528000065" target="_blank">
             <img src="icons/whatsapp.gif" alt="Whatsapp" class="whats-float-gif">
