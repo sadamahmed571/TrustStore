@@ -24,40 +24,7 @@
 </head>
 <body>
 
-    <header class="header2">
-        <div class="logo-section2">
-            <div class="logo-img2">
-                <img src="img/logo1.png" alt="logo">
-            </div>
-            <div class="logo-text2">الثقة التجارية</div>
-        </div>
-        
-        <div class="header-content2">
-            <div class="top-tabs2">
-                <div class="top-tab2">
-                    <i class="fas fa-home"></i>
-                    <span></span>
-                </div>
-                <div class="top-tab2">
-                    <i class="fas fa-globe"></i>
-                    <span>EN</span>
-                </div>
-                <div class="top-tab2">
-                      <button class="tool-btn2" onclick="toggleTheme()"><i class="fas fa-moon" id="theme-icon"></i></button>
-                </div>
-            </div>
-            
-            <div class="search-container2">
-                <div class="ai-icon2">
-                    <i class="fas fa-sparkles"></i>
-                </div>
-                <input type="text" class="search-input2" placeholder="ما الذي تبحث عنه في مجموعة الثقة...">
-                <button class="search-btn2">
-                    <i class="fas fa-search"></i>
-                </button>
-            </div>
-        </div>
-    </header>
+    
 
     <section class="vision-banner">
         <h2 class="vision-title">شريككم الاستراتيجي للمشاريع الصناعية</h2>
@@ -114,70 +81,38 @@
         </div>
     </div>
 
-    <nav class="bottom-nav">
-        <a href="index.html" class="nav-item">
-            <i class="fas fa-home"></i>
-            <span>الرئيسية</span>
-        </a>
-        <a href="ideas.html" class="nav-item ">
-            <i class="fa-solid fa-business-time"></i>
-            <span>افكار مشاريع</span>
-        </a>
-        <button class="nav-item" onclick="toggleCategories()">
-             <i class="fas fa-list-ul"></i>
-            <span>المنتجات</span>
-        </button>
-       <a href="#" class="nav-item">
-            <i class="fa-solid fa-plus"></i>
-            <span>قدم طلبك</span>
-        </a>
-        <a href="services.html" class="nav-item"><i class="fas fa-project-diagram"></i><span>خدماتنا</span></a>
-        <a href="contact.html" class="nav-item active ">
-            <i class="fas fa-headset"></i>
-            <span>تواصل معنا</span>
-        </a>
-    </nav>
-
-    <!-- WhatsApp Float -->
-    <div class="whats-float" id="whatsFloat">
-        <a href="https://wa.me/905528000065" target="_blank">
-            <img src="icons/whatsapp.gif" alt="Menu Icon" class="whats-float-gif">
-            <span>واتس اب</span>
-        </a>
-    </div>
-
-    <!-- Categories Modal (Kept for consistency) -->
-    <div class="overlay" id="overlay" onclick="toggleCategories()"></div>
-    <div class="categories-modal" id="cats-modal">
-        <div class="modal-header">
-            <span>تصفح المنتجات</span>
-            <i class="fas fa-times" onclick="toggleCategories()" style="cursor: pointer;"></i>
-        </div>
-        <div class="cats-grid-menu">
-            <a href="machinery.html" class="cat-menu-item">
-                <div class="cat-menu-icon"><i class="fas fa-cogs"></i></div>
-                <span class="cat-menu-name">ماكينات</span>
-            </a>
-            <a href="production-lines.html" class="cat-menu-item">
-                <div class="cat-menu-icon"><i class="fas fa-industry"></i></div>
-                <span class="cat-menu-name">خطوط إنتاج</span>
-            </a>
-            <a href="precast.html" class="cat-menu-item">
-                <div class="cat-menu-icon"><i class="fas fa-cubes"></i></div>
-                <span class="cat-menu-name">البناء الحديث</span>
-            </a>
-            <a href="industrial.html" class="cat-menu-item">
-                <div class="cat-menu-icon"><i class="fas fa-truck-loading"></i></div>
-                <span class="cat-menu-name">معدات صناعية</span>
-            </a>
-            <a href="spare-parts.html" class="cat-menu-item">
-                <div class="cat-menu-icon"><i class="fas fa-tools"></i></div>
-                <span class="cat-menu-name">قطع غيار</span>
-            </a>
-            <a href="supplies.html" class="cat-menu-item">
-                <div class="cat-menu-icon"><i class="fas fa-hard-hat"></i></div>
-                <span class="cat-menu-name">مستلزمات</span>
-            </a>
+    <div class="modal-overlay" id="requestModal">
+        <div class="modal-content">
+            <i class="fas fa-times close-modal" onclick="closeModal()"></i>
+            <h3 class="modal-title">طلب خدمة</h3>
+            <form id="serviceForm" onsubmit="submitForm(event)">
+                <div class="form-group">
+                    <label class="form-label">الاسم الكامل</label>
+                    <input type="text" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">رقم الهاتف</label>
+                    <input type="tel" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">الخدمة المطلوبة</label>
+                    <select class="form-select" id="modalServiceSelect">
+                        <option value="طلب بحث منتج">طلب بحث منتج</option>
+                        <option value="دراسة جدوى متكاملة">دراسة جدوى</option>
+                        <option value="تقديم أفكار مشاريع">أفكار مشاريع</option>
+                        <option value="شراء وشحن أي منتجات">شراء وشحن</option>
+                        <option value="تركيب خطوط الإنتاج والمعدات">تركيب خطوط</option>
+                        <option value="التدريب على تشغيل المعدات">تدريب</option>
+                        <option value="الاستشارات الفنية">استشارات فنية</option>
+                        <option value="الصيانة والدعم الفني">صيانة ودعم</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">تفاصيل الطلب</label>
+                    <textarea class="form-textarea" placeholder="اكتب تفاصيل طلبك هنا..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">إرسال الطلب</button>
+            </form>
         </div>
     </div>
 
