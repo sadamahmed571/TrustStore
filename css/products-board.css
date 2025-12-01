@@ -197,6 +197,12 @@
 	 background:#ad0317; 
 }	
 
+.badge-status.new-price {
+	 background: var(--primary-orange); 
+}	
+.badge-status.new-product {
+	 background-image: var(--bg-2); 
+}	
 .product-specs {
     list-style: none;
     padding: 0;
@@ -285,128 +291,4 @@
 
 .overlay.show {
     display: block;
-}
-
-
-.section-header {
-  padding: 11px 14px;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.header-top-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 4px;
-}
-
-.sec-title {
-  font-size: 16px;
-  font-weight: 800;
-  color: var(--text-dark);
-}
-
-.sec-desc {
-  font-size: 13px;
-  color: var(--text-gray);
-  display: block;
-  line-height: 1.4;
-  max-width: 90%;
-}
-
-.more-btn {
-  font-size: 13px;
-  color: var(--text-gray);
-  background: #f0f0f0;
-  padding: 3px 11px;
-  border-radius: 11px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.horizontal-products-wrapper {
-  position: relative;
-  padding: 9px 4px 0 4px;
-}
-
-.horizontal-products-list {
-  display: flex;
-  overflow-x: auto;
-  gap: 7px;
-  padding-bottom: 9px;
-  scroll-behavior: smooth;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.horizontal-products-list::-webkit-scrollbar {
-  display: none;
-}
-
-.h-product-card {
-  flex: 0 0 32%;
-  min-width: 114px;
-  max-width: 129px;
-  background: var(--white);
-  border: 1px solid var(--border-color);
-  border-radius: 7px;
-  overflow: hidden;
-  position: relative;
-}
-
-.h-product-img {
-  width: 100%;
-  height: 80px;
-  object-fit: cover;
-  background: var(--border-color);
-}
-
-.h-product-info {
-  padding: 5px;
-}
-
-.h-product-name {
-  font-size: 13px;
-  color: var(--text-dark);
-  overflow: hidden;
-  margin-top: 3px;
-  font-weight: 600;
-}
-
-.h-product-spec {
-  font-size: 11px;
-  color: var(--text-gray);
-  margin-bottom: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.h-product-badge {
-  font-size: 11px;
-  font-weight: 400;
-  color: var(--primary-orange);
-  display: inline-block;
-  background: rgba(255, 102, 0, 0.1);
-  padding: 1px 3px;
-  border-radius: 2px;
-    margin-bottom: 7px;
-}
-
-.scroll-arrow-left {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.6);
-  color: var(--white);
-  width: 24px;
-  height: 24px;
-  border-radius: 0 50% 50% 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 10;
 }
