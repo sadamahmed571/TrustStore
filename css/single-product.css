@@ -127,17 +127,17 @@ font-size: 12px;
 
 .gallery-overlay-bar {
 position: absolute;
-bottom:5px;
+bottom:0;
 width: 100%;
 background: rgba(0,0,0,0.6);
 display: flex;
 justify-content: center;
-padding: 10px 0;
+padding: 7px 0;
 }
 
 .overlay-tab {
 color: #fff;
-font-size: 13px;
+font-size: 12px;
 font-weight: 600;
 margin: 0 15px;
 padding-bottom: 3px;
@@ -492,6 +492,7 @@ color: #333;
 margin-top: 5px;
 display: inline-block;
 }
+
 
 
 
