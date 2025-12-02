@@ -66,7 +66,7 @@ z-index: 10;
 .main-img {
 max-width: 100%;
 max-height: 100%;
-object-fit: contain;
+object-fit: cover;
 }
 
 
@@ -491,6 +491,7 @@ color: #333;
 margin-top: 5px;
 display: inline-block;
 }
+
 
 
 
