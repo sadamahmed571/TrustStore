@@ -87,21 +87,21 @@
 }
 
 .tiktok-btn {
-  color: #000000;
-  border: 1px solid #000000;
+  color: var(--text-dark);
+  border: 1px solid var(--text-dark);
 }
 
 .tiktok-btn:hover {
-  background: #000000;
+  background: var(--text-dark);
 }
 
 .x-btn {
-  color: #000000;
-  border: 1px solid #000000;
+  color: var(--text-dark);
+  border: 1px solid var(--text-dark);
 }
 
 .x-btn:hover {
-  background: #000000;
+  background: var(--text-dark);
 }
 
 .wechat-btn {
