@@ -47,7 +47,7 @@
 
             <!-- حاوية الفيديو (مخفية افتراضياً) -->
             <div id="video-container">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/watch?v=SiILrKSR-FA" title="فيديو المنتج" frameborder="0" allowfullscreen></iframe>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/TNnteNhJ-KU?si=d_1t8y2NRU3ztMe_" title="فيديو المنتج" frameborder="0" allowfullscreen></iframe>
             </div>
 
             <!-- شريط التراكب السفلي -->
@@ -61,24 +61,25 @@
         <!-- قسم معلومات المنتج -->
         <div class="info-section pad-15">
             <div class="price-row">
+			 <i class="fas fa-share share-icon"></i>
                 <div class="price text-primary">YER 1,550,282</div>
                 <div class="moq">الحد الأدنى للطلب: 1 مجموعة</div>
+				
             </div>
 
             <div class="flex-header-title">
                 <h1 class="product-title">
                     آلة الحفر بالشرارة ZNC Spark Erosion Die Sinking EDM Machine سعر منخفض CNC
                 </h1>
-                <!--<i class="fas fa-share share-icon"></i>-->
             </div>
 
-            <div class="rank-badge">
+            <!-- <div class="rank-badge">
                 <div>
                     <i class="fas fa-trophy"></i>
                     <span>#2 الأكثر رواجاً في آلات Sinker EDM</span>
                 </div>
                 <i class="fas fa-chevron-left"></i>
-            </div>
+            </div>-->
         </div>
     </section>
 
@@ -86,7 +87,8 @@
     <nav class="nav-tabs">
         <div class="nav-tab active" onclick="openTab(event, 'tab-overview')">نظرة عامة</div>
         <div class="nav-tab" onclick="openTab(event, 'tab-details')">التفاصيل</div>
-        <div class="nav-tab" onclick="openTab(event, 'tab-recommended')">منتجات مشابهة</div>
+		<div class="nav-tab" onclick="openTab(event, 'tab-operational-accessories')">الملحقات</div>
+		<div class="nav-tab" onclick="openTab(event, 'tab-spare-parts')">قطع الغيار</div>
     </nav>
 
     <!-- محتوى التبويبات -->
@@ -99,61 +101,75 @@
 
             <div class="attr-grid">
                 <div class="attr-item">
+				 <p>نوع الآلة</p>
                     <h4>Sinker EDM</h4>
-                    <p>نوع الآلة</p>
+                   
                 </div>
                 <div class="attr-item">
+				 <p>الجهد الكهربائي</p>
                     <h4>380 V, 220 V, 110 V</h4>
-                    <p>الجهد الكهربائي</p>
+                   
                 </div>
                 <div class="attr-item">
+				 <p>CNC أم لا</p>
                     <h4>CNC</h4>
-                    <p>CNC أم لا</p>
+                   
                 </div>
                 <div class="attr-item">
+				 <p>تقرير اختبار الآلات</p>
                     <h4>متوفر</h4>
-                    <p>تقرير اختبار الآلات</p>
+                   
                 </div>
                 <div class="attr-item">
+				 <p>نقاط البيع الرئيسية</p>
                     <h4>سهلة التشغيل</h4>
-                    <p>نقاط البيع الرئيسية</p>
+                   
                 </div>
                 <div class="attr-item">
+				 <p>فحص الفيديو الصادر</p>
                     <h4>متوفر</h4>
-                    <p>فحص الفيديو الصادر</p>
+                   
                 </div>
                 <!-- إضافات جديدة دون تكرار -->
                 <div class="attr-item">
+				 <p>ماركة ZNC</p>
                     <h4>العلامة التجارية</h4>
-                    <p>ماركة ZNC</p>
+                   
                 </div>
                 <div class="attr-item">
+				 <p>ZNC350</p>
                     <h4>الموديل</h4>
-                    <p>ZNC350</p>
+                   
                 </div>
                 <div class="attr-item">
+				 <p>300 كجم</p>
                     <h4>الوزن (كجم)</h4>
-                    <p>300 كجم</p>
+                   
                 </div>
                 <div class="attr-item">
+				  <p>600 × 350 × 200</p>
                     <h4>الأبعاد (سم)</h4>
-                    <p>600 × 350 × 200</p>
+                  
                 </div>
                 <div class="attr-item">
+				 <p>رمادي، أسود</p>
                     <h4>الألوان</h4>
-                    <p>رمادي، أسود</p>
+                   
                 </div>
                 <div class="attr-item">
+				 <p>فولاذ مقاوم للصدأ</p>
                     <h4>مواد التصنيع</h4>
-                    <p>فولاذ مقاوم للصدأ</p>
+                   
                 </div>
                 <div class="attr-item">
+				  <p>الصين</p>
                     <h4>بلد المنشأ</h4>
-                    <p>الصين</p>
+                  
                 </div>
                 <div class="attr-item">
+				<p>تحكم ذكي، فلتر مزدوج</p>
                     <h4>الميزات الإضافية</h4>
-                    <p>تحكم ذكي، فلتر مزدوج</p>
+                    
                 </div>
             </div>
         </section>
@@ -199,17 +215,16 @@
 
     <div id="tab-details" class="tab-content ">
         <div class="product-card pad-15">
-           
+           <div class="attr-description">
+                <h4>وصف المنتج</h4>
             <p class="product-description">
                 تتميز آلة ZNC EDM بدقة عالية وثبات ممتاز في الأداء. تم تصميمها خصيصًا لتصنيع القوالب المعقدة، وقطع الغيار الدقيقة. تعتمد وحدة التحكم على نظام ذكي لمعالجة الشرارة، مما يقلل من تآكل القطب ويزيد من سرعة التشطيب السطحي.
-            </p>
-            <!-- وصف المنتج الإضافي -->
-            <div class="attr-item">
-                <h4>وصف المنتج</h4>
-                <p>آلة حفر بالشرارة عالية الدقة للاستخدامات الصناعية.</p>
+            </p>             
             </div>
+			
+			
             <!-- قائمة استخدامات المنتج -->
-            <div class="attr-item">
+          <div class="attr-description">
                 <h4>استخدامات المنتج</h4>
                 <ul>
                     <li>تصنيع القوالب</li>
@@ -218,11 +233,12 @@
                 </ul>
             </div>
             
-          <div class="section-header">
-                <span>المواصفات التقنية</span>
-            </div>
+         
 
          <table class="tech-table">
+		  <div class="tech-header">
+                <span>المواصفات التقنية</span>
+            </div>
                 <tr>
                     <td>طاولة العمل (X*Y)</td>
                     <td>600 × 350 مم</td>
@@ -253,7 +269,8 @@
                 </tr>
             </table>
             
-             <div class="section-header">
+             <table class="tech-table">
+		  <div class="tech-header">
                <span>معلومات إضافية عن المنتج</span>
             </div>
              <table class="tech-table">
@@ -303,36 +320,58 @@
         </div>
     </div>
 
-    <div id="tab-recommended" class="tab-content">
+    <div id="tab-spare-parts" class="tab-content">
         <div class="rec-grid">
-            <div class="rec-card">
-                <img src="Img/2.jpg" class="rec-img" alt="آلة قطع الأسلاك">
-                <div class="rec-info">
-                    <div class="rec-price">YER 2,100,000</div>
-                    <div class="rec-title">آلة قطع الأسلاك DK7735 عالية السرعة</div>
-                </div>
-            </div>
-            <div class="rec-card">
-                <img src="Img/2.jpg" class="rec-img" alt="آلة تفريز">
-                <div class="rec-info">
-                    <div class="rec-price">YER 950,000</div>
-                    <div class="rec-title">آلة تفريز عمودية CNC VMC850</div>
-                </div>
-            </div>
-            <div class="rec-card">
-                <img src="Img/2.jpg" class="rec-img" alt="آلة ثقب EDM">
-                <div class="rec-info">
-                    <div class="rec-price">YER 800,000</div>
-                    <div class="rec-title">آلة ثقب صغيرة EDM للحفر الدقيق</div>
-                </div>
-            </div>
-            <div class="rec-card">
-                <img src="Img/2.jpg" class="rec-img" alt="إكسسوارات">
-                <div class="rec-info">
-                    <div class="rec-price">YER 50,000</div>
-                    <div class="rec-title">مجموعة أقطاب نحاسية EDM</div>
-                </div>
-            </div>
+            <a class="product-card-9" href="single-product.html" aria-label="آلة قطع كهربائية CNC Edm">
+                    <div class="product-image-9">
+                        <img src="img/1.jpg" alt="آلة قطع كهربائية CNC Edm">
+                    </div>
+                    <div class="product-info-9">
+                        <h3 class="product-title-9">آلة قطع كهربائية CNC Edm</h3>
+                        <p class="product-price-9">$2,150</p>
+                        <p class="product-moq-9">الحد الأدنى: 1</p>
+                    </div>
+                </a>
+                <a class="product-card-9" href="single-product.html" aria-label="هاتف ذكي Samsung Galaxy S23 Ultra 5G">
+                    <div class="product-image-9">
+                        <img src="img/2.jpg" alt="Samsung Galaxy S23 Ultra 5G">
+                    </div>
+                    <div class="product-info-9">
+                        <h3 class="product-title-9">هاتف ذكي Samsung Galaxy S23 Ultra 5G</h3>
+                        <p class="product-price-9">$1,150</p>
+                        <p class="product-moq-9">الحد الأدنى: 1</p>
+                    </div>
+                </a>
+                <a class="product-card-9" href="single-product.html" aria-label="آلة قطع كهربائية CNC Edm">
+                    <div class="product-image-9">
+                        <img src="img/3.jpg" alt="آلة قطع كهربائية CNC Edm">
+                    </div>
+                    <div class="product-info-9">
+                        <h3 class="product-title-9">آلة قطع كهربائية CNC Edm</h3>
+                        <p class="product-price-9">$2,150</p>
+                        <p class="product-moq-9">الحد الأدنى: 1</p>
+                    </div>
+                </a>
+                <a class="product-card-9" href="single-product.html" aria-label="Samsung Galaxy S23 Ultra 5G">
+                    <div class="product-image-9">
+                        <img src="img/1.jpg" alt="Samsung Galaxy S23 Ultra 5G">
+                    </div>
+                    <div class="product-info-9">
+                        <h3 class="product-title-9">هاتف ذكي Samsung Galaxy S23 Ultra 5G</h3>
+                        <p class="product-price-9">$1,150</p>
+                        <p class="product-moq-9">الحد الأدنى: 1</p>
+                    </div>
+                </a>
+                <a class="product-card-9" href="single-product.html" aria-label="آلة قطع كهربائية CNC Edm">
+                    <div class="product-image-9">
+                        <img src="img/2.jpg" alt="آلة قطع كهربائية CNC Edm">
+                    </div>
+                    <div class="product-info-9">
+                        <h3 class="product-title-9">آلة قطع كهربائية CNC Edm</h3>
+                        <p class="product-price-9">$2,150</p>
+                        <p class="product-moq-9">الحد الأدنى: 1</p>
+                    </div>
+                </a>
         </div>
     </div>
  <div class="modal-overlay" id="requestModal">
