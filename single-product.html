@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>آلة الحفر بالشرارة ZNC Spark Erosion EDM</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-	
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/single-product.css">
-</head>
-        
-<style>
+    
+    <!-- قسم الـ CSS الرئيسي: جميع الستايلات هنا لتسهيل التعديل -->
+    <style>
 
-</style>
+    </style>
+</head>
 <body>
 
     <!-- قسم المنتج الرئيسي -->
@@ -25,7 +25,7 @@
             <div class="meta-bar">
                 <span class="meta-badge"><i class="fa-solid fa-barcode"></i> ZNC-00123</span>
                 <span class="meta-badge"><i class="fa-solid fa-layer-group"></i> آلات صناعية</span>
-                <span class="meta-badge" ><i class="fa-solid fa-tag"></i> آلات EDM</span>
+                <span class="meta-badge"><i class="fa-solid fa-tag"></i> آلات EDM</span>
             </div>
 
             <!-- الصورة الرئيسية للسلايدر -->
@@ -52,8 +52,8 @@
 
             <!-- شريط التراكب السفلي -->
             <div class="gallery-overlay-bar">
-                <div class="overlay-tab" onclick="showVideo()">فيديو المنتج</div>
-                <div class="overlay-tab active" onclick="showQuickView()">نظرة سريعة</div>
+                <div class="overlay-tab" id="video-tab" onclick="showVideo()">فيديو المنتج</div>
+                <div class="overlay-tab active" id="quick-view-tab" onclick="showQuickView()">نظرة سريعة</div>
                 <div class="overlay-tab" onclick="sendInquiry()">اطلب المنتج</div>
             </div>
         </div>
@@ -61,10 +61,9 @@
         <!-- قسم معلومات المنتج -->
         <div class="info-section pad-15">
             <div class="price-row">
-			 <i class="fas fa-share share-icon"></i>
+                <i class="fas fa-share share-icon"></i>
                 <div class="price text-primary">YER 1,550,282</div>
                 <div class="moq">الحد الأدنى للطلب: 1 مجموعة</div>
-				
             </div>
 
             <div class="flex-header-title">
@@ -72,14 +71,6 @@
                     آلة الحفر بالشرارة ZNC Spark Erosion Die Sinking EDM Machine سعر منخفض CNC
                 </h1>
             </div>
-
-            <!-- <div class="rank-badge">
-                <div>
-                    <i class="fas fa-trophy"></i>
-                    <span>#2 الأكثر رواجاً في آلات Sinker EDM</span>
-                </div>
-                <i class="fas fa-chevron-left"></i>
-            </div>-->
         </div>
     </section>
 
@@ -87,93 +78,50 @@
     <nav class="nav-tabs">
         <div class="nav-tab active" onclick="openTab(event, 'tab-overview')">نظرة عامة</div>
         <div class="nav-tab" onclick="openTab(event, 'tab-details')">التفاصيل</div>
-		<div class="nav-tab" onclick="openTab(event, 'tab-operational-accessories')">الملحقات</div>
-		<div class="nav-tab" onclick="openTab(event, 'tab-spare-parts')">قطع الغيار</div>
+        <div class="nav-tab" onclick="openTab(event, 'tab-operational-accessories')">الملحقات</div>
+        <div class="nav-tab" onclick="openTab(event, 'tab-spare-parts')">قطع الغيار</div>
     </nav>
 
     <!-- محتوى التبويبات -->
+    <!-- تبويب: نظرة عامة -->
     <div id="tab-overview" class="tab-content active">
-       
-
         <!-- قسم المواصفات الرئيسية -->
         <section class="attributes-section">
-             
-
             <div class="attr-grid">
                 <div class="attr-item">
-				 <p>نوع الآلة</p>
+                    <p>نوع الآلة</p>
                     <h4>Sinker EDM</h4>
-                   
                 </div>
                 <div class="attr-item">
-				 <p>الجهد الكهربائي</p>
+                    <p>الجهد الكهربائي</p>
                     <h4>380 V, 220 V, 110 V</h4>
-                   
                 </div>
                 <div class="attr-item">
-				 <p>CNC أم لا</p>
-                    <h4>CNC</h4>
-                   
+                    <p>العلامة التجارية</p>
+                    <h4>ماركة ZNC</h4>
                 </div>
                 <div class="attr-item">
-				 <p>تقرير اختبار الآلات</p>
-                    <h4>متوفر</h4>
-                   
+                    <p>الموديل</p>
+                    <h4>ZNC350</h4>
                 </div>
                 <div class="attr-item">
-				 <p>نقاط البيع الرئيسية</p>
-                    <h4>سهلة التشغيل</h4>
-                   
+                    <p>الوزن (كجم)</p>
+                    <h4>300 كجم</h4>
                 </div>
                 <div class="attr-item">
-				 <p>فحص الفيديو الصادر</p>
-                    <h4>متوفر</h4>
-                   
-                </div>
-                <!-- إضافات جديدة دون تكرار -->
-                <div class="attr-item">
-				 <p>ماركة ZNC</p>
-                    <h4>العلامة التجارية</h4>
-                   
+                    <p>الأبعاد (سم)</p>
+                    <h4>600 × 350 × 200</h4>
                 </div>
                 <div class="attr-item">
-				 <p>ZNC350</p>
-                    <h4>الموديل</h4>
-                   
+                    <p>الألوان</p>
+                    <h4>رمادي، أسود</h4>
                 </div>
                 <div class="attr-item">
-				 <p>300 كجم</p>
-                    <h4>الوزن (كجم)</h4>
-                   
-                </div>
-                <div class="attr-item">
-				  <p>600 × 350 × 200</p>
-                    <h4>الأبعاد (سم)</h4>
-                  
-                </div>
-                <div class="attr-item">
-				 <p>رمادي، أسود</p>
-                    <h4>الألوان</h4>
-                   
-                </div>
-                <div class="attr-item">
-				 <p>فولاذ مقاوم للصدأ</p>
-                    <h4>مواد التصنيع</h4>
-                   
-                </div>
-                <div class="attr-item">
-				  <p>الصين</p>
-                    <h4>بلد المنشأ</h4>
-                  
-                </div>
-                <div class="attr-item">
-				<p>تحكم ذكي، فلتر مزدوج</p>
-                    <h4>الميزات الإضافية</h4>
-                    
+                    <p>بلد المنشأ</p>
+                    <h4>الصين</h4>
                 </div>
             </div>
         </section>
-         
 
         <!-- قسم الحماية -->
         <div class="product-card pad-15">
@@ -194,6 +142,7 @@
                 الثقة التجارية تحمي طلباتك...
             </p>
         </div>
+
         <!-- قسم الخدمة -->
         <div class="product-card pad-15">
             <div class="section-header">
@@ -213,18 +162,18 @@
         </div>
     </div>
 
-    <div id="tab-details" class="tab-content ">
+    <!-- تبويب: التفاصيل -->
+    <div id="tab-details" class="tab-content">
         <div class="product-card pad-15">
-           <div class="attr-description">
+            <div class="attr-description">
                 <h4>وصف المنتج</h4>
-            <p class="product-description">
-                تتميز آلة ZNC EDM بدقة عالية وثبات ممتاز في الأداء. تم تصميمها خصيصًا لتصنيع القوالب المعقدة، وقطع الغيار الدقيقة. تعتمد وحدة التحكم على نظام ذكي لمعالجة الشرارة، مما يقلل من تآكل القطب ويزيد من سرعة التشطيب السطحي.
-            </p>             
+                <p class="product-description">
+                    تتميز آلة ZNC EDM بدقة عالية وثبات ممتاز في الأداء. تم تصميمها خصيصًا لتصنيع القوالب المعقدة، وقطع الغيار الدقيقة. تعتمد وحدة التحكم على نظام ذكي لمعالجة الشرارة، مما يقلل من تآكل القطب ويزيد من سرعة التشطيب السطحي.
+                </p>             
             </div>
-			
-			
+
             <!-- قائمة استخدامات المنتج -->
-          <div class="attr-description">
+            <div class="attr-description">
                 <h4>استخدامات المنتج</h4>
                 <ul>
                     <li>تصنيع القوالب</li>
@@ -232,48 +181,12 @@
                     <li>صناعات معدنية</li>
                 </ul>
             </div>
-            
-         
 
-         <table class="tech-table">
-		  <div class="tech-header">
+            <!-- جدول المواصفات التقنية -->
+            <div class="tech-header">
                 <span>المواصفات التقنية</span>
             </div>
-                <tr>
-                    <td>طاولة العمل (X*Y)</td>
-                    <td>600 × 350 مم</td>
-                </tr>
-                <tr>
-                    <td>مسافة السفر (X/Y/Z)</td>
-                    <td>350 × 250 × 200 مم</td>
-                </tr>
-                <tr>
-                    <td>أقصى وزن للقطب</td>
-                    <td>50 كجم</td>
-                </tr>
-                <tr>
-                    <td>أقصى وزن للقطعة</td>
-                    <td>300 كجم</td>
-                </tr>
-                <tr>
-                    <td>خزان الزيت</td>
-                    <td>مدمج مع فلتر مزدوج</td>
-                </tr>
-                <tr>
-                    <td>التحكم</td>
-                    <td>ZNC (تحكم في المحور Z)</td>
-                </tr>
-                <tr>
-                    <td>الضمان</td>
-                    <td>سنتان للمكونات الرئيسية</td>
-                </tr>
-            </table>
-            
-             <table class="tech-table">
-		  <div class="tech-header">
-               <span>معلومات إضافية عن المنتج</span>
-            </div>
-             <table class="tech-table">
+            <table class="tech-table">
                 <tr>
                     <td>العلامة التجارية</td>
                     <td>ZNC</td>
@@ -282,14 +195,7 @@
                     <td>الموديل</td>
                     <td>ZNC350</td>
                 </tr>
-                <tr>
-                    <td>وصف المنتج</td>
-                    <td>آلة الحفر بالشرارة الكهربائية للقوالب والمعادن</td>
-                </tr>
-                <tr>
-                    <td>استخدامات المنتج</td>
-                    <td>تصنيع القوالب، تشكيل المعادن، الأعمال الدقيقة</td>
-                </tr>
+                
                 <tr>
                     <td>الوزن (كجم)</td>
                     <td>1200 كجم</td>
@@ -311,104 +217,90 @@
                     <td>الصين</td>
                 </tr>
                 <tr>
+                    <td>الضمان</td>
+                    <td>سنتان للمكونات الرئيسية</td>
+                </tr>
+                <tr>
                     <td>الميزات الإضافية</td>
                     <td>نظام تبريد، شاشة تحكم رقمية، نظام أمان</td>
                 </tr>
-            </table>    
-         
-         
+            </table>
+
+            <!-- جدول القدرة الإنتاجية (فارغ سابقاً، تم إضافة المحتوى) -->
+            <div class="tech-header">
+                <span>القدرة الإنتاجية</span>
+			 </div>	
+			 <table class="tech-table">	
+				 <tr>
+                    <td>القدرة الإنتاجية:</td>
+                    <td>15,000 قطعة بلوك / يومن</td>
+                </tr>
+				 <tr>
+                    <td>معدل الاستهلاك</td>
+                    <td>  25 كيلو واط/ساعة / لكل طن مُنتج</td>
+                </tr>
+				</table>
+            </div>
+			
+             <div class="attr-description">
+                <h4>ملاحظات الأداء:</h4>
+                <ul>
+                    <li> عرض أي ملاحظات فنية إضافية مهمة تتعلق بأداء الماكينة وكفاءتها التشغيلية</li>
+                    <li> عرض أي ملاحظات فنية إضافية مهمة تتعلق بأداء الماكينة وكفاءتها التشغيلية</li>
+                    <li> عرض أي ملاحظات فنية إضافية مهمة تتعلق بأداء الماكينة وكفاءتها التشغيلية</li>
+                </ul>
+            </div>           
         </div>
     </div>
 
+    <!-- تبويب: الملحقات -->
+    <div id="tab-operational-accessories" class="tab-content">
+        <!-- شبكة الملحقات (تنسيق column مع كروت أفقية) -->
+        <div class="accessories-grid">
+            <!-- مثال على كرت ملحق (يمكن إضافة المزيد) -->
+            <a href="#" class="accessory-card">
+                <img src="Img/accessory1.jpg" alt="ملحق 1" class="accessory-img">
+                <div class="accessory-info">
+                    <div class="accessory-name">اسم الملحق</div>
+                    <div class="accessory-function">وظيفة الملحق: وصف مختصر لوظيفته</div>
+                </div>
+            </a>
+            <a href="#" class="accessory-card">
+                <img src="Img/accessory2.jpg" alt="ملحق 2" class="accessory-img">
+                <div class="accessory-info">
+                    <div class="accessory-name">اسم الملحق الثاني</div>
+                    <div class="accessory-function">وظيفة الملحق: وصف مختصر لوظيفته</div>
+                </div>
+            </a>
+            <!-- أضف المزيد حسب الحاجة -->
+        </div>
+    </div>
+
+    <!-- تبويب: قطع الغيار -->
     <div id="tab-spare-parts" class="tab-content">
-        <div class="rec-grid">
-            <a class="product-card-9" href="single-product.html" aria-label="آلة قطع كهربائية CNC Edm">
-                    <div class="product-image-9">
-                        <img src="img/1.jpg" alt="آلة قطع كهربائية CNC Edm">
-                    </div>
-                    <div class="product-info-9">
-                        <h3 class="product-title-9">آلة قطع كهربائية CNC Edm</h3>
-                        <p class="product-price-9">$2,150</p>
-                        <p class="product-moq-9">الحد الأدنى: 1</p>
-                    </div>
-                </a>
-                <a class="product-card-9" href="single-product.html" aria-label="هاتف ذكي Samsung Galaxy S23 Ultra 5G">
-                    <div class="product-image-9">
-                        <img src="img/2.jpg" alt="Samsung Galaxy S23 Ultra 5G">
-                    </div>
-                    <div class="product-info-9">
-                        <h3 class="product-title-9">هاتف ذكي Samsung Galaxy S23 Ultra 5G</h3>
-                        <p class="product-price-9">$1,150</p>
-                        <p class="product-moq-9">الحد الأدنى: 1</p>
-                    </div>
-                </a>
-                <a class="product-card-9" href="single-product.html" aria-label="آلة قطع كهربائية CNC Edm">
-                    <div class="product-image-9">
-                        <img src="img/3.jpg" alt="آلة قطع كهربائية CNC Edm">
-                    </div>
-                    <div class="product-info-9">
-                        <h3 class="product-title-9">آلة قطع كهربائية CNC Edm</h3>
-                        <p class="product-price-9">$2,150</p>
-                        <p class="product-moq-9">الحد الأدنى: 1</p>
-                    </div>
-                </a>
-                <a class="product-card-9" href="single-product.html" aria-label="Samsung Galaxy S23 Ultra 5G">
-                    <div class="product-image-9">
-                        <img src="img/1.jpg" alt="Samsung Galaxy S23 Ultra 5G">
-                    </div>
-                    <div class="product-info-9">
-                        <h3 class="product-title-9">هاتف ذكي Samsung Galaxy S23 Ultra 5G</h3>
-                        <p class="product-price-9">$1,150</p>
-                        <p class="product-moq-9">الحد الأدنى: 1</p>
-                    </div>
-                </a>
-                <a class="product-card-9" href="single-product.html" aria-label="آلة قطع كهربائية CNC Edm">
-                    <div class="product-image-9">
-                        <img src="img/2.jpg" alt="آلة قطع كهربائية CNC Edm">
-                    </div>
-                    <div class="product-info-9">
-                        <h3 class="product-title-9">آلة قطع كهربائية CNC Edm</h3>
-                        <p class="product-price-9">$2,150</p>
-                        <p class="product-moq-9">الحد الأدنى: 1</p>
-                    </div>
-                </a>
+        <!-- شبكة قطع الغيار (تنسيق column مع كروت أفقية وسعر) -->
+        <div class="spare-parts-grid">
+            <!-- مثال على كرت قطعة غيار (يمكن إضافة المزيد) -->
+            <a href="#" class="spare-part-card">
+                <img src="Img/spare1.jpg" alt="قطعة 1" class="spare-part-img">
+                <div class="spare-part-info">
+                    <div class="spare-part-name">اسم القطعة</div>
+                    <div class="spare-part-function">وظيفة القطعة: وصف مختصر لوظيفتها</div>
+                    <div class="spare-part-price">YER 50,000</div>
+                </div>
+            </a>
+            <a href="#" class="spare-part-card">
+                <img src="Img/spare2.jpg" alt="قطعة 2" class="spare-part-img">
+                <div class="spare-part-info">
+                    <div class="spare-part-name">اسم القطعة الثانية</div>
+                    <div class="spare-part-function">وظيفة القطعة: وصف مختصر لوظيفتها</div>
+                    <div class="spare-part-price">YER 75,000</div>
+                </div>
+            </a>
+            <!-- أضف المزيد حسب الحاجة -->
         </div>
     </div>
- <div class="modal-overlay" id="requestModal">
-        <div class="modal-content">
-            <i class="fas fa-times close-modal" onclick="closeModal()"></i>
-            <h3 class="modal-title">طلب خدمة</h3>
-            <form id="serviceForm" onsubmit="submitForm(event)">
-                <div class="form-group">
-                    <label class="form-label">الاسم الكامل</label>
-                    <input type="text" class="form-input" required>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">رقم الهاتف</label>
-                    <input type="tel" class="form-input" required>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">الخدمة المطلوبة</label>
-                    <select class="form-select" id="modalServiceSelect">
-                        <option value="طلب بحث منتج">طلب بحث منتج</option>
-                        <option value="دراسة جدوى متكاملة">دراسة جدوى</option>
-                        <option value="تقديم أفكار مشاريع">أفكار مشاريع</option>
-                        <option value="شراء وشحن أي منتجات">شراء وشحن</option>
-                        <option value="تركيب خطوط الإنتاج والمعدات">تركيب خطوط</option>
-                        <option value="التدريب على تشغيل المعدات">تدريب</option>
-                        <option value="الاستشارات الفنية">استشارات فنية</option>
-                        <option value="الصيانة والدعم الفني">صيانة ودعم</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">تفاصيل الطلب</label>
-                    <textarea class="form-textarea" placeholder="اكتب تفاصيل طلبك هنا..."></textarea>
-                </div>
-                <button type="submit" class="btn-submit">إرسال الطلب</button>
-            </form>
-        </div>
-    </div>
-    
+
     <!-- سكريبتات الجافا سكريبت -->
     <script>
         // دالة تبديل التبويبات
@@ -426,18 +318,24 @@
             evt.currentTarget.classList.add("active");
         }
 
-        // عرض الفيديو
+        // عرض الفيديو مع تفعيل الزر وإخفاء عداد الصور
         function showVideo() {
             document.getElementById('video-container').style.display = 'block';
             document.getElementById('main-image').style.display = 'none';
             document.querySelector('.thumbnails-container').style.display = 'none';
+            document.querySelector('.img-counter').style.display = 'none';
+            document.getElementById('video-tab').classList.add('active');
+            document.getElementById('quick-view-tab').classList.remove('active');
         }
 
-        // عرض النظرة السريعة (السلايدر)
+        // عرض النظرة السريعة (السلايدر) مع تفعيل الزر وإظهار عداد الصور
         function showQuickView() {
             document.getElementById('video-container').style.display = 'none';
             document.getElementById('main-image').style.display = 'block';
             document.querySelector('.thumbnails-container').style.display = 'flex';
+            document.querySelector('.img-counter').style.display = 'block';
+            document.getElementById('quick-view-tab').classList.add('active');
+            document.getElementById('video-tab').classList.remove('active');
         }
 
         // إرسال استفسار عبر واتساب
@@ -475,7 +373,7 @@
             document.getElementById('main-image').src = images[currentIndex];
         }
 
-        // تبديل الفئات
+        // تبديل الفئات (إذا كان موجوداً)
         function toggleCategories() {
             document.getElementById('overlay').classList.toggle('active');
             document.getElementById('cats-modal').classList.toggle('active');
