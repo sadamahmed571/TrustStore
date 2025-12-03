@@ -325,7 +325,7 @@ details[open] summary::after {
 
 .cta-buttons {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -333,22 +333,21 @@ details[open] summary::after {
 .btn-cta-primary {
     background: var(--white);
     color: var(--primary-orange);
-    padding: 6px 20px;
+    padding: 5px 20px;
 	 border: 1px solid var(--primary-orange);
     border-radius: 20px;
     font-weight: 700;
-    border: none;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .btn-cta-secondary {
-    background: transparent;
-    color: white;
-    padding: 10px 20px;
+    background: var(--white);
+    color: var(--text-dark);
+    padding: 5px 20px;
     border-radius: 30px;
     font-weight: 700;
-    border: 2px solid white;
+    border: 1px solid var(--text-dark);
     cursor: pointer;
-    font-size: 13px;
+    font-size: 14px;
 }
