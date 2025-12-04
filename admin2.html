@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم - متجر الثقة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ======== CSS Variables ======== */
+        :root {
+            /* Light Mode Colors */
+            --primary-color: #ff6a00;
+            --secondary-color: #f5f5f5;
+            --text-dark: #333;
+            --text-light: #666;
+            --text-gray: #666666;
+            --border-color: #e6e7eb;
+            --white: #ffffff;
+            --bg-gray: #f2f3f7;
+            --orange-light: #ff8534;
+            --dark-bg: #333;
+            --light-orange: #ffeadd;
+            --white-orange: #fff5eb;
+            --dark-gray: #777;
+            --black-overlay: rgba(0, 0, 0, 0.6);
+            --white-opacity: rgba(255, 255, 255, 0.5);
+            --black-semi: rgba(0, 0, 0, 0.5);
+            --black-dark: rgba(0, 0, 0, 0.8);
+            --shadow-light: rgba(0,0,0,0.05);
+            --shadow-medium: rgba(0,0,0,0.1);
+            --shadow-dark: rgba(0,0,0,0.3);
+            --shadow-box: rgba(0, 0, 0, 0.08);
+            --shadow-modal: rgba(0,0,0,0.3);
+            --shadow-hover: rgba(0,0,0,0.1);
+            --success-color: #28a745;
+            --info-color: #17a2b8;
+            --warning-color: #ffc107;
+            --danger-color: #dc3545;
+        }
+
+        /* Dark Mode Colors */
+        body.dark-mode {
+            --primary-color: #df7833;
+            --secondary-color: #2a2a2a;
+            --text-dark: #e0e0e0;
+            --text-light: #b0b0b0;
+            --text-gray: #a0a0a0;
+            --border-color: #444;
+            --white: #1a1a1a;
+            --bg-gray: #121212;
+            --orange-light: #ff9e5c;
+            --dark-bg: #000;
+            --light-orange: #332a23;
+            --white-orange: #2b231d;
+            --dark-gray: #999;
+            --black-overlay: rgba(255, 255, 255, 0.1);
+            --white-opacity: rgba(255, 255, 255, 0.1);
+            --black-semi: rgba(255, 255, 255, 0.2);
+            --black-dark: rgba(255, 255, 255, 0.05);
+            --shadow-light: rgba(255,255,255,0.05);
+            --shadow-medium: rgba(255,255,255,0.1);
+            --shadow-dark: rgba(255,255,255,0.2);
+            --shadow-box: rgba(255,255,255,0.05);
+            --shadow-modal: rgba(0,0,0,0.7);
+            --shadow-hover: rgba(255,255,255,0.15);
+        }
+
+        /* ======== Base Styles ======== */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: var(--bg-gray);
+            color: var(--text-dark);
+            direction: rtl;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        a { 
+            text-decoration: none; 
+            color: inherit; 
+        }
+        
+        ul { 
+            list-style: none; 
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* ======== إضافات لوحة التحكم ======== */
+        .dashboard-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--orange-light) 100%);
+            color: var(--white);
+            padding: 20px 0;
+            margin-bottom: 30px;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 12px var(--shadow-medium);
+        }
+
+        .dashboard-header h1 {
+            font-size: 28px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .dashboard-header h1 i {
+            font-size: 32px;
+        }
+
+        .admin-container {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 992px) {
+            .admin-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* القائمة الجانبية */
+        .admin-sidebar {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px var(--shadow-light);
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+        }
+
+        .admin-sidebar h3 {
+            padding: 0 20px 15px;
+            color: var(--primary-color);
+            font-size: 18px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 15px;
+        }
+
+        .sidebar-menu {
+            padding: 0 10px;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 15px;
+            color: var(--text-dark);
+            border-radius: 8px;
+            margin-bottom: 5px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .menu-item:hover, .menu-item.active {
+            background: var(--light-orange);
+            color: var(--primary-color);
+        }
+
+        .menu-item i {
+            width: 20px;
+            text-align: center;
+        }
+
+        /* محتوى لوحة التحكم */
+        .admin-content {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 2px 10px var(--shadow-light);
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-size: 22px;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            font-size: 24px;
+        }
+
+        /* إدارة المنتجات */
+        .product-management {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 1200px) {
+            .product-management {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .product-panel {
+            background: var(--secondary-color);
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .panel-header h3 {
+            color: var(--text-dark);
+            font-size: 18px;
+        }
+
+        .product-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-height: 500px;
+            overflow-y: auto;
+            padding-right: 5px;
+        }
+
+        .product-item {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 5px var(--shadow-light);
+            transition: transform 0.2s;
+        }
+
+        .product-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px var(--shadow-hover);
+        }
+
+        .product-info {
+            margin-bottom: 15px;
+        }
+
+        .product-info h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: var(--text-dark);
+        }
+
+        .product-info p {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin-bottom: 5px;
+        }
+
+        .product-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .btn {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .btn-sm {
+            padding: 5px 10px;
+            font-size: 13px;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--orange-light);
+        }
+
+        .btn-success {
+            background: var(--success-color);
+            color: var(--white);
+        }
+
+        .btn-success:hover {
+            opacity: 0.9;
+        }
+
+        .btn-warning {
+            background: var(--warning-color);
+            color: var(--text-dark);
+        }
+
+        .btn-warning:hover {
+            opacity: 0.9;
+        }
+
+        .btn-danger {
+            background: var(--danger-color);
+            color: var(--white);
+        }
+
+        .btn-danger:hover {
+            opacity: 0.9;
+        }
+
+        .btn-info {
+            background: var(--info-color);
+            color: var(--white);
+        }
+
+        .btn-info:hover {
+            opacity: 0.9;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-dark);
+        }
+
+        .btn-outline:hover {
+            background: var(--light-orange);
+            border-color: var(--primary-color);
+        }
+
+        /* إدارة الطلبات */
+        .order-management {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 1200px) {
+            .order-management {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .order-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        .order-card {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 5px var(--shadow-light);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .order-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .order-status {
+            font-size: 12px;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-weight: 600;
+        }
+
+        .status-sold {
+            background: var(--success-color);
+            color: white;
+        }
+
+        .status-pending {
+            background: var(--warning-color);
+            color: var(--text-dark);
+        }
+
+        .status-replied {
+            background: var(--info-color);
+            color: white;
+        }
+
+        .order-info {
+            margin-bottom: 15px;
+        }
+
+        .order-info p {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: var(--text-gray);
+        }
+
+        .order-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        /* إدارة أفكار المشاريع */
+        .project-ideas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-idea-card {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px var(--shadow-light);
+            border-top: 4px solid var(--primary-color);
+            transition: transform 0.3s;
+        }
+
+        .project-idea-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px var(--shadow-medium);
+        }
+
+        .project-idea-card h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .project-idea-card p {
+            color: var(--text-gray);
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .project-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* النوافذ المنبثقة */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--black-semi);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 700px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 5px 20px var(--shadow-modal);
+            position: relative;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--text-light);
+            background: none;
+            border: none;
+        }
+
+        .close-modal:hover {
+            color: var(--primary-color);
+        }
+
+        .modal-title {
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            font-size: 22px;
+        }
+
+        .modal-body {
+            margin-bottom: 25px;
+        }
+
+        .order-details-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .order-details-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .detail-value {
+            color: var(--text-gray);
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: flex-end;
+        }
+
+        /* حقل إدخال رابط الفيديو */
+        .video-input-container {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background: var(--light-orange);
+            border-radius: 5px;
+        }
+
+        .video-input-container.show {
+            display: block;
+        }
+
+        .video-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            margin-bottom: 10px;
+            background: var(--white);
+            color: var(--text-dark);
+        }
+
+        /* الأدوات العلوية */
+        .admin-tools {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .tools-left {
+            display: flex;
+            gap: 15px;
+        }
+
+        .dark-mode-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            padding: 8px 15px;
+            background: var(--secondary-color);
+            border-radius: 20px;
+            color: var(--text-dark);
+            transition: all 0.3s;
+        }
+
+        .dark-mode-toggle:hover {
+            background: var(--light-orange);
+            color: var(--primary-color);
+        }
+
+        .stats-summary {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .stat-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 20px;
+            flex: 1;
+            min-width: 200px;
+            box-shadow: 0 2px 5px var(--shadow-light);
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .stat-value {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-gray);
+        }
+
+        /* تحسينات للشريط العلوي من CSS المقدم */
+        .main-header {
+            background: var(--white);
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px var(--shadow-light);
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .main-header.visible {
+            transform: translateY(0);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            background-color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 4px;
+        }
+
+        /* ======== Responsive Design ======== */
+        @media (max-width: 992px) {
+            .admin-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .product-management, .order-management {
+                grid-template-columns: 1fr;
+            }
+            
+            .order-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .admin-content {
+                padding: 15px;
+            }
+            
+            .stats-summary {
+                flex-direction: column;
+            }
+            
+            .stat-card {
+                min-width: 100%;
+            }
+            
+            .product-actions, .order-actions, .modal-actions {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .admin-tools {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+            
+            .tools-left {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- شريط التنقل العلوي -->
+    <header class="main-header visible">
+        <div class="container header-content">
+            <div class="logo">
+                <img src="https://via.placeholder.com/50x50/ff6a00/ffffff?text=TC" alt="متجر الثقة">
+                <span>متجر الثقة | لوحة التحكم</span>
+            </div>
+            <div class="header-actions">
+                <div class="action-item">
+                    <i class="fas fa-bell"></i>
+                    <span>التنبيهات</span>
+                </div>
+                <div class="action-item">
+                    <i class="fas fa-user"></i>
+                    <span>مدير النظام</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="container" style="margin-top: 90px;">
+        <!-- عنوان لوحة التحكم -->
+        <div class="dashboard-header">
+            <div class="container">
+                <h1><i class="fas fa-tachometer-alt"></i> لوحة تحكم متجر الثقة</h1>
+            </div>
+        </div>
+
+        <!-- إحصائيات سريعة -->
+        <div class="stats-summary">
+            <div class="stat-card">
+                <div class="stat-value">154</div>
+                <div class="stat-label">المنتجات في المتجر</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">42</div>
+                <div class="stat-label">طلبات جديدة</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">18</div>
+                <div class="stat-label">طلبات عروض الأسعار</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">7</div>
+                <div class="stat-label">أفكار مشاريع</div>
+            </div>
+        </div>
+
+        <!-- هيكل لوحة التحكم -->
+        <div class="admin-container">
+            <!-- القائمة الجانبية -->
+            <aside class="admin-sidebar">
+                <h3>القائمة الرئيسية</h3>
+                <nav class="sidebar-menu">
+                    <div class="menu-item active">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>لوحة التحكم</span>
+                    </div>
+                    <div class="menu-item">
+                        <i class="fas fa-box"></i>
+                        <span>إدارة المنتجات</span>
+                    </div>
+                    <div class="menu-item">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>إدارة الطلبات</span>
+                    </div>
+                    <div class="menu-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>أفكار المشاريع</span>
+                    </div>
+                    <div class="menu-item">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>التقارير والإحصائيات</span>
+                    </div>
+                    <div class="menu-item">
+                        <i class="fas fa-cog"></i>
+                        <span>الإعدادات</span>
+                    </div>
+                    <div class="menu-item">
+                        <i class="fas fa-users"></i>
+                        <span>إدارة المستخدمين</span>
+                    </div>
+                </nav>
+            </aside>
+
+            <!-- المحتوى الرئيسي -->
+            <div class="admin-content">
+                <!-- أدوات التحكم -->
+                <div class="admin-tools">
+                    <div class="tools-left">
+                        <div class="dark-mode-toggle" id="darkModeToggle">
+                            <i class="fas fa-moon"></i>
+                            <span>الوضع الداكن</span>
+                        </div>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-plus"></i>
+                            <span>إضافة جديد</span>
+                        </button>
+                    </div>
+                    <div class="tools-right">
+                        <div class="search-bar-container">
+                            <form class="search-form">
+                                <input type="text" class="search-input" placeholder="ابحث في اللوحة...">
+                                <button class="search-btn">
+                                    <i class="fas fa-search"></i>
+                                    بحث
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- القسم الأول: إدارة المنتجات -->
+                <section class="product-management">
+                    <!-- لوحة منتجات الأرشيف -->
+                    <div class="product-panel">
+                        <div class="panel-header">
+                            <h3><i class="fas fa-archive"></i> منتجات الأرشيف</h3>
+                            <span class="badge-status7 new-product7">12 منتج</span>
+                        </div>
+                        <div class="product-list" id="archiveProducts">
+                            <!-- سيتم ملؤها بواسطة JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- لوحة منتجات المتجر -->
+                    <div class="product-panel">
+                        <div class="panel-header">
+                            <h3><i class="fas fa-store"></i> منتجات المتجر</h3>
+                            <span class="badge-status7 discount7">8 منتج</span>
+                        </div>
+                        <div class="product-list" id="storeProducts">
+                            <!-- سيتم ملؤها بواسطة JavaScript -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- القسم الثاني: إدارة الطلبات -->
+                <section class="order-management">
+                    <!-- لوحة طلبات الشراء -->
+                    <div class="product-panel">
+                        <div class="panel-header">
+                            <h3><i class="fas fa-shopping-bag"></i> طلبات الشراء</h3>
+                            <span class="badge-status7 new-price7">5 طلبات جديدة</span>
+                        </div>
+                        <div class="order-list" id="purchaseOrders">
+                            <!-- سيتم ملؤها بواسطة JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- لوحة طلبات عروض السعر -->
+                    <div class="product-panel">
+                        <div class="panel-header">
+                            <h3><i class="fas fa-file-invoice-dollar"></i> عروض السعر والاستشارات</h3>
+                            <span class="badge-status7 offer7">3 طلبات جديدة</span>
+                        </div>
+                        <div class="order-list" id="quoteOrders">
+                            <!-- سيتم ملؤها بواسطة JavaScript -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- القسم الثالث: إدارة أفكار المشاريع -->
+                <section>
+                    <h3 class="section-title"><i class="fas fa-lightbulb"></i> إدارة أفكار المشاريع</h3>
+                    <div class="project-ideas-grid" id="projectIdeas">
+                        <!-- سيتم ملؤها بواسطة JavaScript -->
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- نافذة تفاصيل الطلب -->
+    <div class="modal" id="orderDetailsModal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('orderDetailsModal')">&times;</button>
+            <h3 class="modal-title">تفاصيل الطلب</h3>
+            <div class="modal-body">
+                <div class="order-details-grid" id="orderDetailsContent">
+                    <!-- سيتم ملؤها بواسطة JavaScript -->
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-success" onclick="confirmOrder()">
+                    <i class="fas fa-check"></i> تأكيد الصفقة
+                </button>
+                <button class="btn btn-info" onclick="replyToOrder()">
+                    <i class="fas fa-reply"></i> الرد على الطلب
+                </button>
+                <button class="btn btn-danger" onclick="deleteOrder()">
+                    <i class="fas fa-trash"></i> حذف الطلب
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- نافذة معاينة طلب عرض السعر -->
+    <div class="modal" id="quotePreviewModal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('quotePreviewModal')">&times;</button>
+            <h3 class="modal-title">معاينة طلب عرض السعر</h3>
+            <div class="modal-body">
+                <div class="order-details-grid" id="quotePreviewContent">
+                    <!-- سيتم ملؤها بواسطة JavaScript -->
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-info" onclick="replyToQuote()">
+                    <i class="fas fa-reply"></i> الرد على الطلب
+                </button>
+                <button class="btn btn-danger" onclick="deleteQuote()">
+                    <i class="fas fa-trash"></i> حذف الطلب
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // بيانات وهمية للمنتجات في الأرشيف
+        const archiveProductsData = [
+            { id: 1, name: "ساعة ذكية ماركة X", description: "ساعة ذكية بشاشة AMOLED ومقاومة الماء", price: "450 ريال", category: "إلكترونيات" },
+            { id: 2, name: "حقيبة كتف جلدية", description: "حقيبة كتف جلد طبيعي مقاس وسط", price: "180 ريال", category: "أزياء" },
+            { id: 3, name: "سماعات لاسلكية", description: "سماعات بلوتوث مع عزل للضجيج", price: "320 ريال", category: "إلكترونيات" },
+            { id: 4, name: "طقم أدوات مطبخ", description: "طقم أدوات مطبخ من الاستانلس ستيل", price: "275 ريال", category: "أدوات منزلية" },
+            { id: 5, name: "مصباح مكتب LED", description: "مصباح مكتب ذكي مع تغيير درجة الحرارة", price: "120 ريال", category: "إلكترونيات" },
+            { id: 6, name: "سجادة صلاة", description: "سجادة صلاة قابلة للطي مع جيب للحمل", price: "65 ريال", category: "منتجات دينية" }
+        ];
+
+        // بيانات وهمية للمنتجات في المتجر
+        const storeProductsData = [
+            { id: 101, name: "هاتف ذكي بشاشة 6.5 بوصة", description: "هاتف ذكي بذاكرة 128GB وكاميرا رباعية", price: "2200 ريال", category: "إلكترونيات", pinned: false, hidden: false, label: null, videoUrl: null },
+            { id: 102, name: "حذاء رياضي للرجال", description: "حذاء رياضي مريح للمشي والرياضة", price: "340 ريال", category: "أزياء", pinned: true, hidden: false, label: "وصل حديثاً", videoUrl: null },
+            { id: 103, name: "لابتوب محمول 15 بوصة", description: "لابتوب بمعالج i7 وذاكرة 16GB", price: "4200 ريال", category: "إلكترونيات", pinned: false, hidden: true, label: "عرض خاص", videoUrl: null },
+            { id: 104, name: "طقم أدوات حديقة", description: "طقم كامل من أدوات الزراعة والحديقة", price: "580 ريال", category: "أدوات منزلية", pinned: true, hidden: false, label: "تخفيض", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
+            { id: 105, name: "ساعة حائط ديكورية", description: "ساعة حائط كبيرة بتصميم عصري", price: "190 ريال", category: "ديكور", pinned: false, hidden: false, label: "سعر جديد", videoUrl: null },
+            { id: 106, name: "طاولة طعام قابلة للطي", description: "طاولة طعام خشبية قابلة للطي لتوفير المساحة", price: "750 ريال", category: "أثاث", pinned: false, hidden: false, label: null, videoUrl: null },
+            { id: 107, name: "كاميرا مراقبة لاسلكية", description: "كاميرا مراقبة بدقة 4K مع رؤية ليلية", price: "890 ريال", category: "إلكترونيات", pinned: false, hidden: false, label: "وصل حديثاً", videoUrl: null },
+            { id: 108, name: "مكنسة كهربائية لاسلكية", description: "مكنسة قوية بشفط عالي وبطارية طويلة الأمد", price: "670 ريال", category: "أدوات منزلية", pinned: true, hidden: false, label: null, videoUrl: null }
+        ];
+
+        // بيانات وهمية لطلبات الشراء
+        const purchaseOrdersData = [
+            { id: 1001, customerName: "أحمد محمد", productSerial: "PROD-2023-001", status: "تم البيع", details: { email: "ahmed@example.com", phone: "0501234567", category: "إلكترونيات", payment: "بطاقة ائتمان", note: "الطلب عاجل، يرجى التوصيل خلال 24 ساعة" } },
+            { id: 1002, customerName: "سارة عبدالله", productSerial: "PROD-2023-045", status: "طلب معلق", details: { email: "sara@example.com", phone: "0557654321", category: "أزياء", payment: "تحويل بنكي", note: "أرغب في تغيير اللون إلى الأسود إن أمكن" } },
+            { id: 1003, customerName: "خالد سعد", productSerial: "PROD-2023-078", status: "تم البيع", details: { email: "khaled@example.com", phone: "0549876543", category: "أدوات منزلية", payment: "الدفع عند الاستلام", note: "يرجى الاتصال قبل التوصيل" } },
+            { id: 1004, customerName: "فاطمة ناصر", productSerial: "PROD-2023-112", status: "طلب معلق", details: { email: "fatema@example.com", phone: "0531122334", category: "ديكور", payment: "بطاقة ائتمان", note: "هل يتوفر نفس المنتج بحجم أكبر؟" } }
+        ];
+
+        // بيانات وهمية لطلبات عروض السعر
+        const quoteOrdersData = [
+            { id: 2001, title: "طلب عرض سعر لـ 50 وحدة هواتف ذكية", customerName: "شركة التقنية المتطورة", date: "2023-10-15 14:30", status: "تم الرد", details: { email: "tech@company.com", phone: "0112345678", category: "كميات جملة", note: "نحتاج عرض سعر لـ 50 وحدة من الهواتف الذكية مع شحن مجاني" } },
+            { id: 2002, title: "استشارة في تصميم موقع إلكتروني", customerName: "محمد العلي", date: "2023-10-16 10:15", status: "طلب معلق", details: { email: "m.ali@example.com", phone: "0508765432", category: "استشارات", note: "أرغب في استشارة حول تصميم موقع لمتجر إلكتروني متكامل" } },
+            { id: 2003, title: "عرض سعر لمستلزمات مكتبية", customerName: "مكتبة النور", date: "2023-10-14 16:45", status: "تم الرد", details: { email: "alnoor@library.com", phone: "0145678901", category: "كميات جملة", note: "نحتاج عرض سعر لمستلزمات مكتبية لمدة 6 أشهر" } },
+            { id: 2004, title: "طلب استشارة تسويقية", customerName: "سعود الكبير", date: "2023-10-17 09:20", status: "طلب معلق", details: { email: "saud@example.com", phone: "0567890123", category: "استشارات", note: "أحتاج استشارة في تسويق منتجات العطور عبر الإنترنت" } }
+        ];
+
+        // بيانات وهمية لأفكار المشاريع
+        const projectIdeasData = [
+            { id: 3001, title: "منصة تعليمية إلكترونية", description: "منصة متكاملة لتقديم الدورات التعليمية عبر الإنترنت مع شهادات معتمدة." },
+            { id: 3002, title: "تطبيق توصيل طعام محلي", description: "تطبيق يربط المطاعم المحلية مع العملاء لتوصيل الطعام بسرعة وكفاءة." },
+            { id: 3003, title: "متجر إلكتروني للمنتجات اليدوية", description: "متجر متخصص في بيع المنتجات اليدوية والحرفية من الحرفيين المحليين." },
+            { id: 3004, title: "منصة للعمل الحر", description: "منصة تسمح للعاملين لحسابهم الخاص بالعثور على مشاريع ومنح العملاء إيجاد محترفين." },
+            { id: 3005, title: "تطبيق إدارة المصروفات", description: "تطبيق يساعد الأفراد في تتبع وإدارة مصروفاتهم الشهرية مع تحليلات ذكية." },
+            { id: 3006, title: "موقع عقارات ذكي", description: "منصة عقارية متقدمة مع تقنية الواقع الافتراضي لجولات المنازل عن بعد." },
+            { id: 3007, title: "متجر مستلزمات الحيوانات الأليفة", description: "متجر إلكتروني متخصص في منتجات العناية بالحيوانات الأليفة مع خدمة التوصيل السريع." }
+        ];
+
+        // متغيرات حالة
+        let currentOrderId = null;
+        let currentQuoteId = null;
+        let videoInputVisible = null;
+
+        // تهيئة الصفحة عند التحميل
+        document.addEventListener('DOMContentLoaded', function() {
+            renderArchiveProducts();
+            renderStoreProducts();
+            renderPurchaseOrders();
+            renderQuoteOrders();
+            renderProjectIdeas();
+            
+            // تفعيل تبديل الوضع الداكن
+            document.getElementById('darkModeToggle').addEventListener('click', toggleDarkMode);
+            
+            // إضافة حدث للنقر خارج النوافذ المنبثقة لإغلاقها
+            window.addEventListener('click', function(event) {
+                const modals = document.querySelectorAll('.modal');
+                modals.forEach(modal => {
+                    if (event.target === modal) {
+                        modal.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // عرض منتجات الأرشيف
+        function renderArchiveProducts() {
+            const container = document.getElementById('archiveProducts');
+            container.innerHTML = '';
+            
+            archiveProductsData.forEach(product => {
+                const productItem = document.createElement('div');
+                productItem.className = 'product-item';
+                productItem.innerHTML = `
+                    <div class="product-info">
+                        <h4>${product.name}</h4>
+                        <p>${product.description}</p>
+                        <p><strong>السعر:</strong> ${product.price}</p>
+                        <p><strong>الفئة:</strong> ${product.category}</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-sm" onclick="importToStore(${product.id})">
+                            <i class="fas fa-download"></i> استيراد إلى المتجر
+                        </button>
+                    </div>
+                `;
+                container.appendChild(productItem);
+            });
+        }
+
+        // عرض منتجات المتجر
+        function renderStoreProducts() {
+            const container = document.getElementById('storeProducts');
+            container.innerHTML = '';
+            
+            storeProductsData.forEach(product => {
+                const productItem = document.createElement('div');
+                productItem.className = 'product-item';
+                productItem.innerHTML = `
+                    <div class="product-info">
+                        <h4>${product.name} ${product.label ? `<span class="badge-status7 ${getBadgeClass(product.label)}">${product.label}</span>` : ''}</h4>
+                        <p>${product.description}</p>
+                        <p><strong>السعر:</strong> ${product.price}</p>
+                        <p><strong>الفئة:</strong> ${product.category}</p>
+                        ${product.pinned ? '<p><i class="fas fa-thumbtack" style="color: var(--primary-color);"></i> <small>مثبت في الرئيسية</small></p>' : ''}
+                        ${product.hidden ? '<p><i class="fas fa-eye-slash" style="color: var(--danger-color);"></i> <small>مخفي</small></p>' : ''}
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn btn-danger btn-sm" onclick="deleteProduct(${product.id})">
+                            <i class="fas fa-trash"></i> حذف المنتج
+                        </button>
+                        <button class="btn btn-warning btn-sm" id="pinBtn${product.id}" onclick="togglePin(${product.id})">
+                            <i class="fas fa-thumbtack"></i> ${product.pinned ? 'إلغاء التثبيت' : 'تثبيت في الرئيسية'}
+                        </button>
+                        <button class="btn btn-info btn-sm" id="hideBtn${product.id}" onclick="toggleHide(${product.id})">
+                            <i class="fas fa-eye"></i> ${product.hidden ? 'إلغاء إخفاء المنتج' : 'إخفاء المنتج'}
+                        </button>
+                        <select class="btn btn-outline btn-sm" onchange="addLabel(${product.id}, this.value)" style="padding: 5px 10px;">
+                            <option value="">إضافة ملصق</option>
+                            <option value="وصل حديثاً" ${product.label === 'وصل حديثاً' ? 'selected' : ''}>وصل حديثاً</option>
+                            <option value="عرض خاص" ${product.label === 'عرض خاص' ? 'selected' : ''}>عرض خاص</option>
+                            <option value="سعر جديد" ${product.label === 'سعر جديد' ? 'selected' : ''}>سعر جديد</option>
+                            <option value="تخفيض" ${product.label === 'تخفيض' ? 'selected' : ''}>تخفيض</option>
+                        </select>
+                        <button class="btn btn-outline btn-sm" onclick="showVideoInput(${product.id})">
+                            <i class="fas fa-video"></i> رابط فيديو المنتج
+                        </button>
+                    </div>
+                    <div class="video-input-container" id="videoInput${product.id}">
+                        <input type="text" class="video-input" id="videoUrl${product.id}" placeholder="الصق رابط Embed من يوتيوب هنا..." value="${product.videoUrl || ''}">
+                        <button class="btn btn-primary btn-sm" onclick="saveVideoUrl(${product.id})">حفظ</button>
+                        <button class="btn btn-outline btn-sm" onclick="hideVideoInput(${product.id})">إلغاء</button>
+                    </div>
+                    ${product.videoUrl ? `
+                    <div style="margin-top: 10px;">
+                        <iframe width="100%" height="150" src="${product.videoUrl}" frameborder="0" allowfullscreen></iframe>
+                    </div>` : ''}
+                `;
+                container.appendChild(productItem);
+            });
+        }
+
+        // عرض طلبات الشراء
+        function renderPurchaseOrders() {
+            const container = document.getElementById('purchaseOrders');
+            container.innerHTML = '';
+            
+            purchaseOrdersData.forEach(order => {
+                const orderCard = document.createElement('div');
+                orderCard.className = 'order-card';
+                orderCard.innerHTML = `
+                    <div class="order-header">
+                        <h4>${order.customerName}</h4>
+                        <span class="order-status ${order.status === 'تم البيع' ? 'status-sold' : 'status-pending'}">${order.status}</span>
+                    </div>
+                    <div class="order-info">
+                        <p><strong>الرقم التسلسلي:</strong> ${order.productSerial}</p>
+                        <p><strong>التصنيف:</strong> ${order.details.category}</p>
+                        <p><strong>وسيلة الدفع:</strong> ${order.details.payment}</p>
+                    </div>
+                    <div class="order-actions">
+                        <button class="btn btn-primary btn-sm" onclick="previewProduct('${order.productSerial}')">
+                            <i class="fas fa-eye"></i> معاينة المنتج المطلوب
+                        </button>
+                        <button class="btn btn-info btn-sm" onclick="showOrderDetails(${order.id})">
+                            <i class="fas fa-info-circle"></i> تفاصيل الطلب
+                        </button>
+                    </div>
+                `;
+                container.appendChild(orderCard);
+            });
+        }
+
+        // عرض طلبات عروض السعر
+        function renderQuoteOrders() {
+            const container = document.getElementById('quoteOrders');
+            container.innerHTML = '';
+            
+            quoteOrdersData.forEach(order => {
+                const orderCard = document.createElement('div');
+                orderCard.className = 'order-card';
+                orderCard.innerHTML = `
+                    <div class="order-header">
+                        <h4>${order.title}</h4>
+                        <span class="order-status ${order.status === 'تم الرد' ? 'status-replied' : 'status-pending'}">${order.status}</span>
+                    </div>
+                    <div class="order-info">
+                        <p><strong>مقدم الطلب:</strong> ${order.customerName}</p>
+                        <p><strong>التاريخ والوقت:</strong> ${order.date}</p>
+                        <p><strong>التصنيف:</strong> ${order.details.category}</p>
+                    </div>
+                    <div class="order-actions">
+                        <button class="btn btn-info btn-sm" onclick="showQuotePreview(${order.id})">
+                            <i class="fas fa-eye"></i> معاينة
+                        </button>
+                    </div>
+                `;
+                container.appendChild(orderCard);
+            });
+        }
+
+        // عرض أفكار المشاريع
+        function renderProjectIdeas() {
+            const container = document.getElementById('projectIdeas');
+            container.innerHTML = '';
+            
+            projectIdeasData.forEach(idea => {
+                const ideaCard = document.createElement('div');
+                ideaCard.className = 'project-idea-card';
+                ideaCard.innerHTML = `
+                    <h4>${idea.title}</h4>
+                    <p>${idea.description}</p>
+                    <div class="project-actions">
+                        <button class="btn btn-warning" onclick="editIdea(${idea.id})">
+                            <i class="fas fa-edit"></i> تعديل
+                        </button>
+                        <button class="btn btn-danger" onclick="deleteIdea(${idea.id})">
+                            <i class="fas fa-trash"></i> حذف
+                        </button>
+                    </div>
+                `;
+                container.appendChild(ideaCard);
+            });
+        }
+
+        // ====== دوال التفاعل ======
+
+        // استيراد منتج من الأرشيف إلى المتجر
+        function importToStore(productId) {
+            const product = archiveProductsData.find(p => p.id === productId);
+            if (product) {
+                // إنشاء منتج جديد للمتجر
+                const newProduct = {
+                    id: storeProductsData.length + 1,
+                    name: product.name,
+                    description: product.description,
+                    price: product.price,
+                    category: product.category,
+                    pinned: false,
+                    hidden: false,
+                    label: null,
+                    videoUrl: null
+                };
+                
+                storeProductsData.push(newProduct);
+                renderStoreProducts();
+                alert(`تم استيراد المنتج "${product.name}" إلى المتجر بنجاح`);
+            }
+        }
+
+        // حذف منتج من المتجر
+        function deleteProduct(productId) {
+            if (confirm('سيتم حذف المنتج من كل المتجر.. هل تؤكد ذلك؟')) {
+                const index = storeProductsData.findIndex(p => p.id === productId);
+                if (index !== -1) {
+                    const productName = storeProductsData[index].name;
+                    storeProductsData.splice(index, 1);
+                    renderStoreProducts();
+                    alert(`تم حذف المنتج "${productName}" بنجاح`);
+                }
+            }
+        }
+
+        // تبديل حالة التثبيت
+        function togglePin(productId) {
+            const product = storeProductsData.find(p => p.id === productId);
+            if (product) {
+                product.pinned = !product.pinned;
+                renderStoreProducts();
+            }
+        }
+
+        // تبديل حالة الإخفاء
+        function toggleHide(productId) {
+            const product = storeProductsData.find(p => p.id === productId);
+            if (product) {
+                product.hidden = !product.hidden;
+                renderStoreProducts();
+            }
+        }
+
+        // إضافة ملصق للمنتج
+        function addLabel(productId, label) {
+            const product = storeProductsData.find(p => p.id === productId);
+            if (product) {
+                product.label = label || null;
+                renderStoreProducts();
+            }
+        }
+
+        // عرض حقل إدخال رابط الفيديو
+        function showVideoInput(productId) {
+            // إخفاء أي حقل إدخال مرئي مسبقًا
+            if (videoInputVisible) {
+                hideVideoInput(videoInputVisible);
+            }
+            
+            const videoInput = document.getElementById(`videoInput${productId}`);
+            videoInput.classList.add('show');
+            videoInputVisible = productId;
+        }
+
+        // إخفاء حقل إدخال رابط الفيديو
+        function hideVideoInput(productId) {
+            const videoInput = document.getElementById(`videoInput${productId}`);
+            videoInput.classList.remove('show');
+            videoInputVisible = null;
+        }
+
+        // حفظ رابط الفيديو
+        function saveVideoUrl(productId) {
+            const videoUrl = document.getElementById(`videoUrl${productId}`).value;
+            const product = storeProductsData.find(p => p.id === productId);
+            
+            if (product) {
+                product.videoUrl = videoUrl || null;
+                hideVideoInput(productId);
+                renderStoreProducts();
+            }
+        }
+
+        // معاينة المنتج المطلوب
+        function previewProduct(productSerial) {
+            alert(`معاينة المنتج ذو الرقم التسلسلي: ${productSerial}\n\nهذه الميزة تعرض تفاصيل المنتج المطلوب. في التطبيق الحقيقي، سيتم ربطها بصفحة المنتج.`);
+        }
+
+        // عرض تفاصيل الطلب في نافذة منبثقة
+        function showOrderDetails(orderId) {
+            currentOrderId = orderId;
+            const order = purchaseOrdersData.find(o => o.id === orderId);
+            
+            if (order) {
+                const content = document.getElementById('orderDetailsContent');
+                content.innerHTML = `
+                    <div class="detail-row">
+                        <span class="detail-label">الحالة:</span>
+                        <span class="detail-value ${order.status === 'تم البيع' ? 'status-sold' : 'status-pending'}">${order.status}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">اسم مقدم الطلب:</span>
+                        <span class="detail-value">${order.customerName}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">البريد الإلكتروني:</span>
+                        <span class="detail-value">${order.details.email}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">رقم الهاتف:</span>
+                        <span class="detail-value">${order.details.phone}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">تصنيف الطلب:</span>
+                        <span class="detail-value">${order.details.category}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">الرقم التسلسلي:</span>
+                        <span class="detail-value">${order.productSerial}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">وسيلة الدفع:</span>
+                        <span class="detail-value">${order.details.payment}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">نص الطلب:</span>
+                        <span class="detail-value">${order.details.note}</span>
+                    </div>
+                `;
+                
+                openModal('orderDetailsModal');
+            }
+        }
+
+        // عرض معاينة طلب عرض السعر
+        function showQuotePreview(orderId) {
+            currentQuoteId = orderId;
+            const order = quoteOrdersData.find(o => o.id === orderId);
+            
+            if (order) {
+                const content = document.getElementById('quotePreviewContent');
+                content.innerHTML = `
+                    <div class="detail-row">
+                        <span class="detail-label">الحالة:</span>
+                        <span class="detail-value ${order.status === 'تم الرد' ? 'status-replied' : 'status-pending'}">${order.status}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">عنوان الطلب:</span>
+                        <span class="detail-value">${order.title}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">اسم مقدم الطلب:</span>
+                        <span class="detail-value">${order.customerName}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">البريد الإلكتروني:</span>
+                        <span class="detail-value">${order.details.email}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">رقم الهاتف:</span>
+                        <span class="detail-value">${order.details.phone}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">التصنيف:</span>
+                        <span class="detail-value">${order.details.category}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">نص الطلب:</span>
+                        <span class="detail-value">${order.details.note}</span>
+                    </div>
+                `;
+                
+                openModal('quotePreviewModal');
+            }
+        }
+
+        // تعديل فكرة مشروع
+        function editIdea(ideaId) {
+            const idea = projectIdeasData.find(i => i.id === ideaId);
+            if (idea) {
+                const newTitle = prompt('أدخل العنوان الجديد لفكرة المشروع:', idea.title);
+                const newDescription = prompt('أدخل الوصف الجديد لفكرة المشروع:', idea.description);
+                
+                if (newTitle && newDescription) {
+                    idea.title = newTitle;
+                    idea.description = newDescription;
+                    renderProjectIdeas();
+                    alert('تم تحديث فكرة المشروع بنجاح');
+                }
+            }
+        }
+
+        // حذف فكرة مشروع
+        function deleteIdea(ideaId) {
+            if (confirm('هل أنت متأكد من حذف فكرة المشروع؟')) {
+                const index = projectIdeasData.findIndex(i => i.id === ideaId);
+                if (index !== -1) {
+                    const ideaName = projectIdeasData[index].title;
+                    projectIdeasData.splice(index, 1);
+                    renderProjectIdeas();
+                    alert(`تم حذف فكرة المشروع "${ideaName}" بنجاح`);
+                }
+            }
+        }
+
+        // ====== دوال النوافذ المنبثقة ======
+        
+        // فتح نافذة منبثقة
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        // إغلاق نافذة منبثقة
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        // تأكيد الصفقة
+        function confirmOrder() {
+            if (currentOrderId) {
+                const order = purchaseOrdersData.find(o => o.id === currentOrderId);
+                if (order) {
+                    order.status = 'تم البيع';
+                    renderPurchaseOrders();
+                    closeModal('orderDetailsModal');
+                    alert('تم تأكيد الصفقة بنجاح');
+                }
+            }
+        }
+
+        // الرد على الطلب
+        function replyToOrder() {
+            const reply = prompt('أدخل ردك على طلب الشراء:');
+            if (reply) {
+                alert('تم إرسال الرد بنجاح');
+                closeModal('orderDetailsModal');
+            }
+        }
+
+        // حذف الطلب
+        function deleteOrder() {
+            if (confirm('هل أنت متأكد من حذف الطلب؟')) {
+                const index = purchaseOrdersData.findIndex(o => o.id === currentOrderId);
+                if (index !== -1) {
+                    purchaseOrdersData.splice(index, 1);
+                    renderPurchaseOrders();
+                    closeModal('orderDetailsModal');
+                    alert('تم حذف الطلب بنجاح');
+                }
+            }
+        }
+
+        // الرد على طلب عرض السعر
+        function replyToQuote() {
+            const reply = prompt('أدخل ردك على طلب عرض السعر:');
+            if (reply) {
+                const order = quoteOrdersData.find(o => o.id === currentQuoteId);
+                if (order) {
+                    order.status = 'تم الرد';
+                    renderQuoteOrders();
+                    closeModal('quotePreviewModal');
+                    alert('تم إرسال الرد بنجاح');
+                }
+            }
+        }
+
+        // حذف طلب عرض السعر
+        function deleteQuote() {
+            if (confirm('هل أنت متأكد من حذف طلب عرض السعر؟')) {
+                const index = quoteOrdersData.findIndex(o => o.id === currentQuoteId);
+                if (index !== -1) {
+                    quoteOrdersData.splice(index, 1);
+                    renderQuoteOrders();
+                    closeModal('quotePreviewModal');
+                    alert('تم حذف طلب عرض السعر بنجاح');
+                }
+            }
+        }
+
+        // ====== دوال مساعدة ======
+        
+        // تبديل الوضع الداكن
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            const toggleBtn = document.getElementById('darkModeToggle');
+            const icon = toggleBtn.querySelector('i');
+            const text = toggleBtn.querySelector('span');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                icon.className = 'fas fa-sun';
+                text.textContent = 'الوضع المضيء';
+            } else {
+                icon.className = 'fas fa-moon';
+                text.textContent = 'الوضع الداكن';
+            }
+        }
+
+        // الحصول على فئة الملصق المناسبة
+        function getBadgeClass(label) {
+            switch(label) {
+                case 'وصل حديثاً': return 'new-product7';
+                case 'عرض خاص': return 'offer7';
+                case 'سعر جديد': return 'new-price7';
+                case 'تخفيض': return 'discount7';
+                default: return '';
+            }
+        }
+    </script>
+</body>
+</html>
